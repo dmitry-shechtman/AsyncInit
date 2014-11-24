@@ -12,4 +12,4 @@ A generic implementation of the asynchronous factory pattern.
 `AsyncInitBase`
 `AsyncInitBase<T>`
 
-Please read [this article]http://shecht.wordpress.com/?p=244 for more details.
+Please read [this article](http://shecht.wordpress.com/?p=244) for more details.
