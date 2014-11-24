@@ -6,10 +6,8 @@ async/await extensions.
 
 A generic implementation of the asynchronous factory pattern.
 
-`IAsyncInit`
-`IAsyncInit<T>`
-`AsyncActivator`
-`AsyncInitBase`
-`AsyncInitBase<T>`
+* [IAsyncInit](`IAsyncInit`)
+* [AsyncActivator](`AsyncActivator`)
+* [AsyncInitBase](`AsyncInitBase`)
 
-Please read [this article](http://shecht.wordpress.com/?p=244) for more details.
+Please read [this article](http://shecht.wordpress.com/2014/11/24/asyncactivator-yet-another-take-on-the-net-async-constructor-problem/) for more details.
