@@ -11,7 +11,7 @@ namespace DmitryShechtman.Tasks
         where T : CancelableAsyncInitBase<T>
     {
         /// <summary>
-        /// Deriving types should implement a private parameterless constructor.
+        /// Deriving types should define a private parameterless constructor.
         /// </summary>
         /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
         protected CancelableAsyncInitBase(object dummy)
@@ -60,7 +60,7 @@ namespace DmitryShechtman.Tasks
         where T : CancelableAsyncInitBase<T, TArg>
     {
         /// <summary>
-        /// Deriving types should implement a private parameterless constructor.
+        /// Deriving types should define a private parameterless constructor.
         /// </summary>
         /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
         protected CancelableAsyncInitBase(object dummy)
