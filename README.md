@@ -6,11 +6,11 @@ async/await extensions.
 
 A generic implementation of the asynchronous factory pattern.
 
-* [`IAsyncInit`](IAsyncInit.cs)
-* [`ICancelableAsyncInit`](ICancelableAsyncInit.cs)
-* [`AsyncActivator`](AsyncActivator.cs)
-* [`AsyncInitBase`](AsyncInitBase.cs)
-* [`CancelableAsyncInitBase`](CancelableAsyncInitBase.cs)
+* [`IAsyncInit`](AsyncInit/IAsyncInit.cs)
+* [`ICancelableAsyncInit`](AsyncInit/ICancelableAsyncInit.cs)
+* [`AsyncActivator`](AsyncInit/AsyncActivator.cs)
+* [`AsyncInitBase`](AsyncInit/AsyncInitBase.cs)
+* [`CancelableAsyncInitBase`](AsyncInit/CancelableAsyncInitBase.cs)
 
 Documentation:
 
