@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 
-namespace DmitryShechtman.Tasks
+namespace Ditto.AsyncInit
 {
     /// <summary>
     /// Interface for asynchronously initialized types supporting cancellation.

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Reflection;
 
-namespace DmitryShechtman.Tasks
+namespace Ditto.AsyncInit
 {
     /// <summary>
     /// Provides utility methods for AsyncActivator.
