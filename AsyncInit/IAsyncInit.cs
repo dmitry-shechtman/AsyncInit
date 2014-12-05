@@ -17,7 +17,7 @@ namespace Ditto.AsyncInit
     /// <summary>
     /// Interface for asynchronously initialized types.
     /// </summary>
-    /// <typeparam name="TArg"></typeparam>
+    /// <typeparam name="TArg">The argument type.</typeparam>
     public interface IAsyncInit<TArg>
     {
         /// <summary>

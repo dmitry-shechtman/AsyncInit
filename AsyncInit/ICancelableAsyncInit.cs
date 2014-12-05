@@ -19,7 +19,7 @@ namespace Ditto.AsyncInit
     /// <summary>
     /// Interface for asynchronously initialized types supporting cancellation.
     /// </summary>
-    /// <typeparam name="TArg"></typeparam>
+    /// <typeparam name="TArg">The argument type.</typeparam>
     public interface ICancelableAsyncInit<TArg>
     {
         /// <summary>
