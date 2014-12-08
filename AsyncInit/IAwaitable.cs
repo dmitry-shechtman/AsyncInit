@@ -1,8 +1,4 @@
-﻿#if SILVERLIGHT
-using Microsoft.Runtime.CompilerServices;
-#else
-using System.Runtime.CompilerServices;
-#endif
+﻿using System.Runtime.CompilerServices;
 
 namespace Ditto.AsyncInit
 {
