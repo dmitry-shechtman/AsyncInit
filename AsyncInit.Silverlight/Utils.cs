@@ -17,7 +17,7 @@ namespace Ditto.AsyncInit
         {
             var ctor = typeof(T).GetConstructor(BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[0], null);
             if (ctor == null)
-                throw new MissingMemberException("No parameterless constructor defined for this object.");
+                throw new MissingMethodException("No parameterless constructor defined for this object.");
             return (T)ctor.Invoke(null);
         }
     }
