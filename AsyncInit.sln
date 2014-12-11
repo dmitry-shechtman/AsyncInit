@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncInit", "AsyncInit\AsyncInit.csproj", "{5D05A77A-2FC8-4566-90F4-853D7E7B76E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncInit", "AsyncInit\Portable\AsyncInit.csproj", "{5D05A77A-2FC8-4566-90F4-853D7E7B76E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

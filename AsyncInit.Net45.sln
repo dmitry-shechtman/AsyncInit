@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncInit.Net45", "AsyncInit.Net45\AsyncInit.Net45.csproj", "{F38501B6-5961-468B-B98B-777FFF19A1EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncInit.Net45", "AsyncInit\Net45\AsyncInit.Net45.csproj", "{F38501B6-5961-468B-B98B-777FFF19A1EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

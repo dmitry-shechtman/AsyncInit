@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncInit.Silverlight", "AsyncInit.Silverlight\AsyncInit.Silverlight.csproj", "{826891F8-3620-4D30-BB2F-09341A4656F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncInit.Silverlight", "AsyncInit\Silverlight\AsyncInit.Silverlight.csproj", "{826891F8-3620-4D30-BB2F-09341A4656F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

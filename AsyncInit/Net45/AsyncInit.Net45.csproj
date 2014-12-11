@@ -43,22 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\AsyncInit\AsyncActivator.cs">
+    <Compile Include="..\Portable\AsyncActivator.cs">
       <Link>AsyncActivator.cs</Link>
     </Compile>
-    <Compile Include="..\AsyncInit\AsyncInitBase.cs">
+    <Compile Include="..\Portable\AsyncInitBase.cs">
       <Link>AsyncInitBase.cs</Link>
     </Compile>
-    <Compile Include="..\AsyncInit\CancelableAsyncInitBase.cs">
+    <Compile Include="..\Portable\CancelableAsyncInitBase.cs">
       <Link>CancelableAsyncInitBase.cs</Link>
     </Compile>
-    <Compile Include="..\AsyncInit\IAsyncInit.cs">
+    <Compile Include="..\Portable\IAsyncInit.cs">
       <Link>IAsyncInit.cs</Link>
     </Compile>
-    <Compile Include="..\AsyncInit\IAwaitable.cs">
+    <Compile Include="..\Portable\IAwaitable.cs">
       <Link>IAwaitable.cs</Link>
     </Compile>
-    <Compile Include="..\AsyncInit\ICancelableAsyncInit.cs">
+    <Compile Include="..\Portable\ICancelableAsyncInit.cs">
       <Link>ICancelableAsyncInit.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
