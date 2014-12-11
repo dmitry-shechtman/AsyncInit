@@ -4,11 +4,11 @@
 
 A generic implementation of the asynchronous factory pattern.
 
-* [`IAsyncInit`](AsyncInit/IAsyncInit.cs)
-* [`ICancelableAsyncInit`](AsyncInit/ICancelableAsyncInit.cs)
-* [`AsyncActivator`](AsyncInit/AsyncActivator.cs)
-* [`AsyncInitBase`](AsyncInit/AsyncInitBase.cs)
-* [`CancelableAsyncInitBase`](AsyncInit/CancelableAsyncInitBase.cs)
+* [`IAsyncInit`](AsyncInit/Portable/IAsyncInit.cs)
+* [`ICancelableAsyncInit`](AsyncInit/Portable/ICancelableAsyncInit.cs)
+* [`AsyncActivator`](AsyncInit/Portable/AsyncActivator.cs)
+* [`AsyncInitBase`](AsyncInit/Portable/AsyncInitBase.cs)
+* [`CancelableAsyncInitBase`](AsyncInit/Portable/CancelableAsyncInitBase.cs)
 
 Documentation:
 
