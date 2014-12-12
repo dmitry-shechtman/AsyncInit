@@ -55,9 +55,6 @@
     <Compile Include="..\Portable\IAsyncInit.cs">
       <Link>IAsyncInit.cs</Link>
     </Compile>
-    <Compile Include="..\Portable\IAwaitable.cs">
-      <Link>IAwaitable.cs</Link>
-    </Compile>
     <Compile Include="..\Portable\ICancelableAsyncInit.cs">
       <Link>ICancelableAsyncInit.cs</Link>
     </Compile>
