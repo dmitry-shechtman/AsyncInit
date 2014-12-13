@@ -97,11 +97,11 @@
     <Compile Include="..\Portable\ITaskListener.cs">
       <Link>ITaskListener.cs</Link>
     </Compile>
+    <Compile Include="..\Portable\PropertySupport.cs">
+      <Link>PropertySupport.cs</Link>
+    </Compile>
     <Compile Include="..\Portable\StubTaskListener.cs">
       <Link>StubTaskListener.cs</Link>
-    </Compile>
-    <Compile Include="..\Portable\Utils.cs">
-      <Link>Utils.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
