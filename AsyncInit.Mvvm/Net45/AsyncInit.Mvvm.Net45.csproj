@@ -72,9 +72,6 @@
     <Compile Include="..\Portable\PropertySupport.cs">
       <Link>PropertySupport.cs</Link>
     </Compile>
-    <Compile Include="..\Portable\StubTaskListener.cs">
-      <Link>StubTaskListener.cs</Link>
-    </Compile>
     <Compile Include="CommandBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

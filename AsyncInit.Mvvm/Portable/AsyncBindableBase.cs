@@ -62,7 +62,9 @@ namespace Ditto.AsyncInit.Mvvm
         {
             if (getValueAsync == null)
                 throw new ArgumentNullException("getValueAsync");
-            return DoGetProperty(ct => getValueAsync(), cancellationToken, taskListener ?? StubTaskListener.Instance, propertyName);
+            if (taskListener == null)
+                taskListener = AggregateTaskListener.Empty;
+            return DoGetProperty(ct => getValueAsync(), cancellationToken, taskListener, propertyName);
         }
 
         /// <summary>
@@ -80,7 +82,9 @@ namespace Ditto.AsyncInit.Mvvm
         {
             if (getValueAsync == null)
                 throw new ArgumentNullException("getValueAsync");
-            return DoGetProperty(ct => getValueAsync(), cancellationToken, taskListener ?? StubTaskListener.Instance, propertyName);
+            if (taskListener == null)
+                taskListener = AggregateTaskListener.Empty;
+            return DoGetProperty(ct => getValueAsync(), cancellationToken, taskListener, propertyName);
         }
 
         /// <summary>
@@ -98,7 +102,9 @@ namespace Ditto.AsyncInit.Mvvm
         {
             if (getValueAsync == null)
                 throw new ArgumentNullException("getValueAsync");
-            return DoGetProperty(getValueAsync, cancellationToken, taskListener ?? StubTaskListener.Instance, propertyName);
+            if (taskListener == null)
+                taskListener = AggregateTaskListener.Empty;
+            return DoGetProperty(getValueAsync, cancellationToken, taskListener, propertyName);
         }
 
         /// <summary>
@@ -116,7 +122,9 @@ namespace Ditto.AsyncInit.Mvvm
         {
             if (getValueAsync == null)
                 throw new ArgumentNullException("getValueAsync");
-            return DoGetProperty(getValueAsync, cancellationToken, taskListener ?? StubTaskListener.Instance, propertyName);
+            if (taskListener == null)
+                taskListener = AggregateTaskListener.Empty;
+            return DoGetProperty(getValueAsync, cancellationToken, taskListener, propertyName);
         }
 
         /// <summary>
