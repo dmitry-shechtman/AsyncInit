@@ -1,6 +1,6 @@
 ﻿namespace Ditto.AsyncInit.Mvvm
 {
-    internal class StubTaskListener : ITaskListener
+    internal sealed class StubTaskListener : ITaskListener
     {
         public static readonly StubTaskListener Instance = new StubTaskListener();
 

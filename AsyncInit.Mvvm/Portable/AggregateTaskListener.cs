@@ -6,7 +6,7 @@ namespace Ditto.AsyncInit.Mvvm
     /// <summary>
     /// Task listener to propagate notifications to multiple listeners.
     /// </summary>
-    public class AggregateTaskListener : ITaskListener
+    public sealed class AggregateTaskListener : ITaskListener
     {
         private readonly IEnumerable<ITaskListener> _listeners;
 

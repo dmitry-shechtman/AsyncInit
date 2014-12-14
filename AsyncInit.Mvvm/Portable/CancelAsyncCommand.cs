@@ -7,7 +7,7 @@ namespace Ditto.AsyncInit.Mvvm
     /// <summary>
     /// Command for cancelling an asynchronous operation.
     /// </summary>
-    public class CancelAsyncCommand : CommandBase, ICommand, IDisposable, ITaskListener
+    public sealed class CancelAsyncCommand : CommandBase, ICommand, IDisposable, ITaskListener
     {
         private bool _isRunning;
         private CancellationTokenSource _cts = new CancellationTokenSource();
