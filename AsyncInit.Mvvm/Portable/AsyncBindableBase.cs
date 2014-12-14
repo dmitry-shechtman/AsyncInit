@@ -124,7 +124,7 @@ namespace Ditto.AsyncInit.Mvvm
         /// </summary>
         /// <typeparam name="T">Property type.</typeparam>
         /// <param name="getValueAsync">Asynchronous function to get the value.</param>
-        /// <param name="cancelCommand">Cancel command</param>
+        /// <param name="cancelCommand">Cancel command.</param>
         /// <param name="propertyName">Property name.</param>
         /// <returns>The property's value if the function successfully completed; otherwise, <value>null</value>.</returns>
         protected T GetProperty<T>(Func<CancellationToken, Task<T>> getValueAsync, CancelAsyncCommand cancelCommand,
@@ -141,7 +141,7 @@ namespace Ditto.AsyncInit.Mvvm
         /// </summary>
         /// <typeparam name="T">Property type.</typeparam>
         /// <param name="getValueAsync">Asynchronous function to get the value.</param>
-        /// <param name="cancelCommand">Cancel command</param>
+        /// <param name="cancelCommand">Cancel command.</param>
         /// <param name="propertyName">Property name.</param>
         /// <returns>The property's value if the function successfully completed; otherwise, <value>null</value>.</returns>
         protected T? GetProperty<T>(Func<CancellationToken, Task<T?>> getValueAsync, CancelAsyncCommand cancelCommand,

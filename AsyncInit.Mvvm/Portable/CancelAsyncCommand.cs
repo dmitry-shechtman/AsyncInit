@@ -42,7 +42,8 @@ namespace Ditto.AsyncInit.Mvvm
         /// Gets a value indicating whether the asynchronous operation can be canceled.
         /// </summary>
         /// <param name="parameter">Ignored.</param>
-        /// <returns></returns>
+        /// <returns><value>true</value> if the operation can be canceled; otherwise,
+        /// <value>false.</value></returns>
         public bool CanExecute(object parameter)
         {
             return _isRunning && !_cts.IsCancellationRequested;
