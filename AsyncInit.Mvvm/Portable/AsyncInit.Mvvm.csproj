@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="AggregateTaskListener.cs" />
     <Compile Include="AsyncBindableBase.cs" />
+    <Compile Include="AsyncPropertyHelper.cs" />
     <Compile Include="BindableBase.cs" />
     <Compile Include="CancelAsyncCommand.cs" />
     <Compile Include="CommandBase.cs" />
