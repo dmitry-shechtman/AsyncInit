@@ -58,12 +58,6 @@
     <Compile Include="..\Portable\BindableBase.cs">
       <Link>BindableBase.cs</Link>
     </Compile>
-    <Compile Include="..\Portable\CancelAsyncCommand.cs">
-      <Link>CancelAsyncCommand.cs</Link>
-    </Compile>
-    <Compile Include="..\Portable\CommandBase.cs">
-      <Link>CommandBase.cs</Link>
-    </Compile>
     <Compile Include="..\Portable\ITaskListener.cs">
       <Link>ITaskListener.cs</Link>
     </Compile>

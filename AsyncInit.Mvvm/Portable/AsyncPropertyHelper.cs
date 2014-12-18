@@ -126,40 +126,6 @@ namespace Ditto.AsyncInit.Mvvm
         }
 
         /// <summary>
-        /// Asynchronously gets the value of a property.
-        /// </summary>
-        /// <typeparam name="T">Property type.</typeparam>
-        /// <param name="getValueAsync">Asynchronous function to get the value.</param>
-        /// <param name="cancelCommand">Cancel command.</param>
-        /// <param name="propertyName">Property name.</param>
-        /// <returns>The property's value if the function successfully completed; otherwise, <value>null</value>.</returns>
-        public T Get<T>(Func<CancellationToken, Task<T>> getValueAsync, CancelAsyncCommand cancelCommand,
-            [CallerMemberName] string propertyName = null)
-            where T : class
-        {
-            if (getValueAsync == null)
-                throw new ArgumentNullException("getValueAsync");
-            return DoGetProperty(getValueAsync, cancelCommand, propertyName);
-        }
-
-        /// <summary>
-        /// Asynchronously gets the value of a property.
-        /// </summary>
-        /// <typeparam name="T">Property type.</typeparam>
-        /// <param name="getValueAsync">Asynchronous function to get the value.</param>
-        /// <param name="cancelCommand">Cancel command.</param>
-        /// <param name="propertyName">Property name.</param>
-        /// <returns>The property's value if the function successfully completed; otherwise, <value>null</value>.</returns>
-        public T? Get<T>(Func<CancellationToken, Task<T?>> getValueAsync, CancelAsyncCommand cancelCommand,
-            [CallerMemberName] string propertyName = null)
-            where T : struct
-        {
-            if (getValueAsync == null)
-                throw new ArgumentNullException("getValueAsync");
-            return DoGetProperty(getValueAsync, cancelCommand, propertyName);
-        }
-
-        /// <summary>
         /// Invalidates a specified property or the entire entity.
         /// </summary>
         /// <param name="propertyName">The name of the property to invalidate, or <value>null</value>
@@ -186,13 +152,6 @@ namespace Ditto.AsyncInit.Mvvm
             T value = getValue();
             AddProperty(value, propertyName);
             return value;
-        }
-
-        internal T DoGetProperty<T>(Func<CancellationToken, Task<T>> getValueAsync, CancelAsyncCommand cancelCommand, string propertyName)
-        {
-            if (cancelCommand == null)
-                throw new ArgumentNullException("cancelCommand");
-            return DoGetProperty(getValueAsync, cancelCommand.CancellationToken, cancelCommand, propertyName);
         }
 
         internal T DoGetProperty<T>(Func<CancellationToken, Task<T>> getValueAsync, CancellationToken cancellationToken, ITaskListener taskListener, string propertyName)

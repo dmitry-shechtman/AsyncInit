@@ -46,8 +46,6 @@
     <Compile Include="AsyncBindableBase.cs" />
     <Compile Include="AsyncPropertyHelper.cs" />
     <Compile Include="BindableBase.cs" />
-    <Compile Include="CancelAsyncCommand.cs" />
-    <Compile Include="CommandBase.cs" />
     <Compile Include="ITaskListener.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyInfoExtensions.cs" />

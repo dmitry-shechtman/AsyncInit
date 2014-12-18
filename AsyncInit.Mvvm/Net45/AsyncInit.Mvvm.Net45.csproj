@@ -43,7 +43,6 @@
     <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop">
       <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
     </Reference>
-    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
@@ -66,16 +65,12 @@
     <Compile Include="..\Portable\BindableBase.cs">
       <Link>BindableBase.cs</Link>
     </Compile>
-    <Compile Include="..\Portable\CancelAsyncCommand.cs">
-      <Link>CancelAsyncCommand.cs</Link>
-    </Compile>
     <Compile Include="..\Portable\ITaskListener.cs">
       <Link>ITaskListener.cs</Link>
     </Compile>
     <Compile Include="..\Portable\PropertySupport.cs">
       <Link>PropertySupport.cs</Link>
     </Compile>
-    <Compile Include="CommandBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
