@@ -61,13 +61,11 @@
     <Compile Include="..\Portable\ITaskListener.cs">
       <Link>ITaskListener.cs</Link>
     </Compile>
-    <Compile Include="..\Portable\PropertyInfoExtensions.cs">
-      <Link>PropertyInfoExtensions.cs</Link>
-    </Compile>
     <Compile Include="..\Portable\PropertySupport.cs">
       <Link>PropertySupport.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyInfoExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Threading.Tasks">
