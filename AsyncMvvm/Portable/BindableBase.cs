@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 
-namespace Ditto.AsyncInit.Mvvm
+namespace Ditto.AsyncMvvm
 {
     /// <summary>
     /// Implementation of <see cref="INotifyPropertyChanged"/> to simplify models.

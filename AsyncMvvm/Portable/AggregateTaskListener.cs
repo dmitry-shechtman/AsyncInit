@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Ditto.AsyncInit.Mvvm
+namespace Ditto.AsyncMvvm
 {
     /// <summary>
     /// Task listener to propagate notifications to multiple listeners.

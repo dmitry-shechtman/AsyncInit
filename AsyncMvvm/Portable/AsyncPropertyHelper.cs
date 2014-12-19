@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Ditto.AsyncInit.Mvvm
+namespace Ditto.AsyncMvvm
 {
     /// <summary>
     /// Asynchronous property helper.

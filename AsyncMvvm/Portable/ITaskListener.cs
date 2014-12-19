@@ -1,4 +1,4 @@
-﻿namespace Ditto.AsyncInit.Mvvm
+﻿namespace Ditto.AsyncMvvm
 {
     /// <summary>
     /// Interface for task listeners.

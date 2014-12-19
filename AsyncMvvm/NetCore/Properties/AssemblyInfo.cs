@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Ditto.AsyncInit.Mvvm")]
-[assembly: AssemblyDescription("Portable Ditto.AsyncInit.Mvvm library")]
+[assembly: AssemblyTitle("Ditto.AsyncMvvm")]
+[assembly: AssemblyDescription("NetCore Ditto.AsyncMvvm library")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Dmitry Shechtman")]
-[assembly: AssemblyProduct("Ditto.AsyncInit")]
+[assembly: AssemblyProduct("Ditto.AsyncMvvm")]
 [assembly: AssemblyCopyright("Copyright © Dmitry Shechtman 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Ditto.AsyncInit.Mvvm
+namespace Ditto.AsyncMvvm
 {
     internal static class PropertyInfoExtensions
     {

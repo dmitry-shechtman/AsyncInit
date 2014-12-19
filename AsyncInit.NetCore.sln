@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncInit", "AsyncInit\Portable\AsyncInit.csproj", "{5D05A77A-2FC8-4566-90F4-853D7E7B76E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncInit.Mvvm.NetCore", "AsyncInit.Mvvm\NetCore\AsyncInit.Mvvm.NetCore.csproj", "{7BBE63CC-B6D9-4387-BEA3-7D87F5F9C10C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMvvm.NetCore", "AsyncMvvm\NetCore\AsyncMvvm.NetCore.csproj", "{7BBE63CC-B6D9-4387-BEA3-7D87F5F9C10C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

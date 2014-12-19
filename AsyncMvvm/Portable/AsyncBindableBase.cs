@@ -1,4 +1,4 @@
-﻿namespace Ditto.AsyncInit.Mvvm
+﻿namespace Ditto.AsyncMvvm
 {
     /// <summary>
     /// Base class for entities with asynchronous initialization support.

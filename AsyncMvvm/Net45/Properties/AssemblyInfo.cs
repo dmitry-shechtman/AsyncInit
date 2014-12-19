@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Ditto.AsyncInit.Mvvm")]
-[assembly: AssemblyDescription("Silverlight Ditto.AsyncInit.Mvvm library")]
+[assembly: AssemblyTitle("Ditto.AsyncMvvm")]
+[assembly: AssemblyDescription(".NET 4.5 Ditto.AsyncMvvm library")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Dmitry Shechtman")]
-[assembly: AssemblyProduct("Ditto.AsyncInit")]
+[assembly: AssemblyProduct("Ditto.AsyncMvvm")]
 [assembly: AssemblyCopyright("Copyright © Dmitry Shechtman 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b7fcc9f1-d1e5-4bd3-96af-1519395253ce")]
+[assembly: Guid("1f0582ce-458d-45ce-8aa6-5dca7aabdd8e")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -29,7 +29,8 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-// You can specify all the values or you can default the Revision and Build Numbers 
+// You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
