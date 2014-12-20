@@ -12,9 +12,6 @@ namespace Ditto.AsyncMvvm
     /// <summary>
     /// Implementation of <see cref="INotifyPropertyChanged"/> to simplify models.
     /// </summary>
-#if NETFX_CORE
-    [Windows.Foundation.Metadata.WebHostHidden]
-#endif
     public abstract class BindableBase : INotifyPropertyChanged
     {
         /// <summary>

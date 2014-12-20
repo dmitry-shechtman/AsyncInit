@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncInit", "AsyncInit\Portable\AsyncInit.csproj", "{5D05A77A-2FC8-4566-90F4-853D7E7B76E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMvvm.NetCore", "AsyncMvvm\NetCore\AsyncMvvm.NetCore.csproj", "{7BBE63CC-B6D9-4387-BEA3-7D87F5F9C10C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMvvm", "AsyncMvvm\Portable\AsyncMvvm.csproj", "{D04341A1-9DAF-4026-A8A2-168A9B14C075}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMvvm.Calculated", "AsyncMvvm.Calculated\Portable\AsyncMvvm.Calculated.csproj", "{5D992E4B-C7BB-4631-A432-01F987760285}"
@@ -21,10 +19,6 @@ Global
 		{5D05A77A-2FC8-4566-90F4-853D7E7B76E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D05A77A-2FC8-4566-90F4-853D7E7B76E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D05A77A-2FC8-4566-90F4-853D7E7B76E3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7BBE63CC-B6D9-4387-BEA3-7D87F5F9C10C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7BBE63CC-B6D9-4387-BEA3-7D87F5F9C10C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7BBE63CC-B6D9-4387-BEA3-7D87F5F9C10C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7BBE63CC-B6D9-4387-BEA3-7D87F5F9C10C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D04341A1-9DAF-4026-A8A2-168A9B14C075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D04341A1-9DAF-4026-A8A2-168A9B14C075}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D04341A1-9DAF-4026-A8A2-168A9B14C075}.Release|Any CPU.ActiveCfg = Release|Any CPU
