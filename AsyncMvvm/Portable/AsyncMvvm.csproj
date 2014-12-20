@@ -44,10 +44,14 @@
   <ItemGroup>
     <Compile Include="AggregateTaskListener.cs" />
     <Compile Include="AsyncBindableBase.cs" />
+    <Compile Include="AsyncProperty.cs" />
     <Compile Include="AsyncPropertyHelper.cs" />
     <Compile Include="BindableBase.cs" />
+    <Compile Include="IProperty.cs" />
     <Compile Include="ITaskListener.cs" />
+    <Compile Include="LazyProperty.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyBase.cs" />
     <Compile Include="PropertyDictionary.cs" />
     <Compile Include="PropertySupport.cs" />
   </ItemGroup>

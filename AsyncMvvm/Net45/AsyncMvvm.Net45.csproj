@@ -59,14 +59,26 @@
     <Compile Include="..\Portable\AsyncBindableBase.cs">
       <Link>AsyncBindableBase.cs</Link>
     </Compile>
+    <Compile Include="..\Portable\AsyncProperty.cs">
+      <Link>AsyncProperty.cs</Link>
+    </Compile>
     <Compile Include="..\Portable\AsyncPropertyHelper.cs">
       <Link>AsyncPropertyHelper.cs</Link>
     </Compile>
     <Compile Include="..\Portable\BindableBase.cs">
       <Link>BindableBase.cs</Link>
     </Compile>
+    <Compile Include="..\Portable\IProperty.cs">
+      <Link>IProperty.cs</Link>
+    </Compile>
     <Compile Include="..\Portable\ITaskListener.cs">
       <Link>ITaskListener.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\LazyProperty.cs">
+      <Link>LazyProperty.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\PropertyBase.cs">
+      <Link>PropertyBase.cs</Link>
     </Compile>
     <Compile Include="..\Portable\PropertyDictionary.cs">
       <Link>PropertyDictionary.cs</Link>

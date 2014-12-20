@@ -34,7 +34,7 @@ namespace Ditto.AsyncMvvm
         {
             if (getValue == null)
                 throw new ArgumentNullException("getValue");
-            return DoGetProperty(getValue, propertyName);
+            return DoGet(getValue, propertyName);
         }
 
         /// <summary>
@@ -48,33 +48,10 @@ namespace Ditto.AsyncMvvm
         /// <returns>The property's value if the function successfully completed; otherwise, <value>null</value>.</returns>
         public T Get<T>(Func<Task<T>> getValueAsync, CancellationToken cancellationToken = default(CancellationToken),
             ITaskListener taskListener = null, [CallerMemberName] string propertyName = null)
-            where T : class
         {
             if (getValueAsync == null)
                 throw new ArgumentNullException("getValueAsync");
-            if (taskListener == null)
-                taskListener = AggregateTaskListener.Empty;
-            return DoGetProperty(ct => getValueAsync(), cancellationToken, taskListener, propertyName);
-        }
-
-        /// <summary>
-        /// Asynchronously gets the value of a property.
-        /// </summary>
-        /// <typeparam name="T">Property type.</typeparam>
-        /// <param name="getValueAsync">Asynchronous function to get the value.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
-        /// <param name="taskListener">Task listener.</param>
-        /// <param name="propertyName">Property name.</param>
-        /// <returns>The property's value if the function successfully completed; otherwise, <value>null</value>.</returns>
-        public T? Get<T>(Func<Task<T?>> getValueAsync, CancellationToken cancellationToken = default(CancellationToken),
-            ITaskListener taskListener = null, [CallerMemberName] string propertyName = null)
-            where T : struct
-        {
-            if (getValueAsync == null)
-                throw new ArgumentNullException("getValueAsync");
-            if (taskListener == null)
-                taskListener = AggregateTaskListener.Empty;
-            return DoGetProperty(ct => getValueAsync(), cancellationToken, taskListener, propertyName);
+            return DoGet(ct => getValueAsync(), cancellationToken, taskListener, propertyName);
         }
 
         /// <summary>
@@ -88,33 +65,10 @@ namespace Ditto.AsyncMvvm
         /// <returns>The property's value if the function successfully completed; otherwise, <value>null</value>.</returns>
         public T Get<T>(Func<CancellationToken, Task<T>> getValueAsync, CancellationToken cancellationToken = default(CancellationToken),
             ITaskListener taskListener = null, [CallerMemberName] string propertyName = null)
-            where T : class
         {
             if (getValueAsync == null)
                 throw new ArgumentNullException("getValueAsync");
-            if (taskListener == null)
-                taskListener = AggregateTaskListener.Empty;
-            return DoGetProperty(getValueAsync, cancellationToken, taskListener, propertyName);
-        }
-
-        /// <summary>
-        /// Asynchronously gets the value of a property.
-        /// </summary>
-        /// <typeparam name="T">Property type.</typeparam>
-        /// <param name="getValueAsync">Asynchronous function to get the value.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
-        /// <param name="taskListener">Task listener.</param>
-        /// <param name="propertyName">Property name.</param>
-        /// <returns>The property's value if the function successfully completed; otherwise, <value>null</value>.</returns>
-        public T? Get<T>(Func<CancellationToken, Task<T?>> getValueAsync, CancellationToken cancellationToken = default(CancellationToken),
-            ITaskListener taskListener = null, [CallerMemberName] string propertyName = null)
-            where T : struct
-        {
-            if (getValueAsync == null)
-                throw new ArgumentNullException("getValueAsync");
-            if (taskListener == null)
-                taskListener = AggregateTaskListener.Empty;
-            return DoGetProperty(getValueAsync, cancellationToken, taskListener, propertyName);
+            return DoGet(getValueAsync, cancellationToken, taskListener, propertyName);
         }
 
         /// <summary>
@@ -125,90 +79,114 @@ namespace Ditto.AsyncMvvm
         public void Invalidate(string propertyName)
         {
             if (string.IsNullOrEmpty(propertyName))
-                _properties.Clear();
-            else
-                _properties.Remove(propertyName);
-            _onPropertyChanged(propertyName);
-        }
-
-        internal T DoGetProperty<T>(Func<T> getValue, string propertyName)
-        {
-            T value;
-            if (!_properties.TryGetValue(propertyName, out value))
-                value = DoDoGetProperty(getValue, propertyName);
-            return value;
-        }
-
-        private T DoDoGetProperty<T>(Func<T> getValue, string propertyName)
-        {
-            T value = getValue();
-            _properties.Add(propertyName, value);
-            return value;
-        }
-
-        internal T DoGetProperty<T>(Func<CancellationToken, Task<T>> getValueAsync, CancellationToken cancellationToken, ITaskListener taskListener, string propertyName)
-        {
-            T value;
-            if (!_properties.TryGetValue(propertyName, out value))
-                DoDoGetProperty(getValueAsync, cancellationToken, taskListener, propertyName);
-            return value;
-        }
-
-        private void DoDoGetProperty<T>(Func<CancellationToken, Task<T>> getValueAsync, CancellationToken cancellationToken, ITaskListener taskListener, string propertyName)
-        {
-            _properties.Add(propertyName, null);
-            var taskScheduler = TaskScheduler.FromCurrentSynchronizationContext();
-            TaskEx.Run(() => DoGetPropertyAsync(getValueAsync, cancellationToken, taskListener))
-                .ContinueWith(task => OnGetPropertyCompleted(task, taskListener, propertyName),
-                    cancellationToken, TaskContinuationOptions.None, taskScheduler);
-        }
-
-        private static async Task<T> DoGetPropertyAsync<T>(Func<CancellationToken, Task<T>> getValueAsync,
-            CancellationToken cancellationToken, ITaskListener taskListener)
-        {
-            cancellationToken.ThrowIfCancellationRequested();
-            taskListener.NotifyTaskStarting();
-            return await getValueAsync(cancellationToken).ConfigureAwait(false);
-        }
-
-        private void OnGetPropertyCompleted<T>(Task<T> task, ITaskListener taskListener, string propertyName)
-        {
-            switch (task.Status)
             {
-                case TaskStatus.RanToCompletion:
-                    OnGetPropertyRanToCompletion(task.Result, taskListener, propertyName);
-                    break;
-                case TaskStatus.Canceled:
-                    OnGetPropertyCanceled(taskListener, propertyName);
-                    break;
-                case TaskStatus.Faulted:
-                    OnGetPropertyFaulted(taskListener, propertyName);
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        private void OnGetPropertyRanToCompletion<T>(T value, ITaskListener taskListener, string propertyName)
-        {
-            if (!object.Equals(value, null))
-            {
-                _properties.SetValue(propertyName, value);
+                _properties.Invalidate(false);
                 _onPropertyChanged(propertyName);
             }
-            taskListener.NotifyTaskCompleted(true);
+            else
+            {
+                var property = GetProperty(propertyName);
+                if (property != null)
+                    property.Invalidate(true, propertyName);
+            }
         }
 
-        private void OnGetPropertyCanceled(ITaskListener taskListener, string propertyName)
+        /// <summary>
+        /// Gets the value of a lazy property.
+        /// </summary>
+        /// <typeparam name="T">The type of the property value.</typeparam>
+        /// <param name="getValue">The delegate used to calculate the property value.</param>
+        /// <param name="propertyName">The name of the property.</param>
+        private T DoGet<T>(Func<T> getValue, string propertyName)
         {
-            _properties.Remove(propertyName);
-            taskListener.NotifyTaskCompleted(null);
+            return GetOrAddLazyProperty(getValue, propertyName).GetValue();
         }
 
-        private void OnGetPropertyFaulted(ITaskListener taskListener, string propertyName)
+        /// <summary>
+        /// Gets the value of an asynchronous property.
+        /// </summary>
+        /// <typeparam name="T">The type of the property value.</typeparam>
+        /// <param name="getValueAsync">The delegate used to calculate the property value.</param>
+        /// <param name="cancellationToken">The cancellation token.</param>
+        /// <param name="taskListener">The task listener.</param>
+        /// <param name="propertyName">The name of the property.</param>
+        private T DoGet<T>(Func<CancellationToken, Task<T>> getValueAsync, CancellationToken cancellationToken, ITaskListener taskListener, string propertyName)
         {
-            _properties.Remove(propertyName);
-            taskListener.NotifyTaskCompleted(false);
+            return GetOrAddAsyncProperty(getValueAsync, propertyName).GetValue(cancellationToken, taskListener, propertyName);
+        }
+
+        /// <summary>
+        /// Creates a lazy property.
+        /// </summary>
+        /// <typeparam name="T">The type of the property value.</typeparam>
+        /// <param name="getValue">The delegate used to calculate the property value.</param>
+        private LazyProperty<T> CreateLazyProperty<T>(Func<T> getValue)
+        {
+            return new LazyProperty<T>(NotifyValueChanged, getValue);
+        }
+
+        /// <summary>
+        /// Creates an asynchronous property.
+        /// </summary>
+        /// <typeparam name="T">The type of the property value.</typeparam>
+        /// <param name="getValueAsync">The delegate used to calculate the property value.</param>
+        private AsyncProperty<T> CreateAsyncProperty<T>(Func<CancellationToken, Task<T>> getValueAsync)
+        {
+            return new AsyncProperty<T>(NotifyValueChanged, getValueAsync);
+        }
+
+        /// <summary>
+        /// Retrieves the specified lazy property if it exists; otherwise, creates the lazy property and returns it.
+        /// </summary>
+        /// <typeparam name="T">The type of the property value.</typeparam>
+        /// <param name="getValue">The delegate used to calculate the property value.</param>
+        /// <param name="propertyName">The name of the property.</param>
+        private LazyProperty<T> GetOrAddLazyProperty<T>(Func<T> getValue, string propertyName)
+        {
+            return GetOrAddProperty(() => CreateLazyProperty(getValue), propertyName);
+        }
+
+        /// <summary>
+        /// Retrieves the specified asynchronous property if it exists; otherwise, creates the asynchronous property and returns it.
+        /// </summary>
+        /// <typeparam name="T">The type of the property value.</typeparam>
+        /// <param name="getValueAsync">The delegate used to calculate the property value.</param>
+        /// <param name="propertyName">The name of the property.</param>
+        private AsyncProperty<T> GetOrAddAsyncProperty<T>(Func<CancellationToken, Task<T>> getValueAsync, string propertyName)
+        {
+            return GetOrAddProperty(() => CreateAsyncProperty(getValueAsync), propertyName);
+        }
+
+        /// <summary>
+        /// Retrieves the specified property if it exists; otherwise, returns <value>null</value>.
+        /// </summary>
+        /// <param name="propertyName">The name of the property.</param>
+        private IProperty GetProperty(string propertyName)
+        {
+            return _properties.GetValueOrDefault(propertyName);
+        }
+
+        /// <summary>
+        /// Retrieves the specified property if it exists; otherwise, creates the property and returns it.
+        /// </summary>
+        /// <typeparam name="TProperty">The type of the property.</typeparam>
+        /// <param name="createProperty">The delegate used to create the property.</param>
+        /// <param name="propertyName">The name of the property.</param>
+        private TProperty GetOrAddProperty<TProperty>(Func<TProperty> createProperty, string propertyName)
+            where TProperty : IProperty
+        {
+            return _properties.GetOrAdd(createProperty, propertyName);
+        }
+
+        /// <summary>
+        /// Notifies on change in property value.
+        /// </summary>
+        /// <typeparam name="T">The type of the property value.</typeparam>
+        /// <param name="value">The new value of the property.</param>
+        /// <param name="propertyName">The name of the property.</param>
+        private void NotifyValueChanged<T>(T value, string propertyName)
+        {
+            _onPropertyChanged(propertyName);
         }
     }
 }
