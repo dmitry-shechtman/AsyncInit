@@ -4,7 +4,7 @@ using System;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace Ditto.AsyncMvvm
+namespace Ditto.AsyncMvvm.Internal
 {
     internal static class PropertySupport
     {

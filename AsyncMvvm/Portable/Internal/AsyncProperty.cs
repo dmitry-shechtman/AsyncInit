@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Ditto.AsyncMvvm
+namespace Ditto.AsyncMvvm.Internal
 {
     /// <summary>
     /// Asynchronous property.

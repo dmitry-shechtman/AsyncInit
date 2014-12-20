@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Ditto.AsyncMvvm
+namespace Ditto.AsyncMvvm.Internal
 {
     /// <summary>
     /// Lazy property.
