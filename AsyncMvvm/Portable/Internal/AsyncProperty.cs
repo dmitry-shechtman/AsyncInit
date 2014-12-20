@@ -52,45 +52,35 @@ namespace Ditto.AsyncMvvm.Internal
         {
             var scheduler = TaskScheduler.FromCurrentSynchronizationContext();
             listener = listener ?? AggregateTaskListener.Empty;
+            Task.Factory.StartNew(() => GetValueAsync(token, listener, propertyName),
+                CancellationToken.None, TaskCreationOptions.None, scheduler);
+        }
+
+        private async Task GetValueAsync(CancellationToken token, ITaskListener listener, string propertyName)
+        {
             listener.NotifyTaskStarting();
-            TaskEx.Run(() => _getValueAsync(token))
-                .ContinueWith(task => OnGetValueCompleted(task, listener, propertyName),
-                    CancellationToken.None, TaskContinuationOptions.None, scheduler);
-        }
-
-        private void OnGetValueCompleted(Task<T> task, ITaskListener listener, string propertyName)
-        {
-            switch (task.Status)
+            T value = default(T);
+            bool? isSuccess;
+            try
             {
-                case TaskStatus.RanToCompletion:
-                    OnGetValueRanToCompletion(task.Result, listener, propertyName);
-                    break;
-                case TaskStatus.Canceled:
-                    OnGetValueCanceled(listener, propertyName);
-                    break;
-                case TaskStatus.Faulted:
-                    OnGetValueFaulted(listener, propertyName);
-                    break;
-                default:
-                    break;
+                value = await _getValueAsync(token);
+                isSuccess = true;
             }
-            _isCalculating = false;
-        }
-
-        private void OnGetValueRanToCompletion(T value, ITaskListener listener, string propertyName)
-        {
-            DoSetValue(value, propertyName);
-            listener.NotifyTaskCompleted(true);
-        }
-
-        private void OnGetValueCanceled(ITaskListener listener, string propertyName)
-        {
-            listener.NotifyTaskCompleted(null);
-        }
-
-        private void OnGetValueFaulted(ITaskListener listener, string propertyName)
-        {
-            listener.NotifyTaskCompleted(false);
+            catch (OperationCanceledException)
+            {
+                isSuccess = null;
+            }
+            catch
+            {
+                isSuccess = false;
+            }
+            finally
+            {
+                _isCalculating = false;
+            }
+            if (isSuccess == true)
+                DoSetValue(value, propertyName);
+            listener.NotifyTaskCompleted(isSuccess);
         }
     }
 }
