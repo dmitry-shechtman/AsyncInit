@@ -12,4 +12,12 @@
         /// <param name="propertyName">The name of the property.</param>
         void Invalidate(bool isNotify, string propertyName);
     }
+
+    /// <summary>
+    /// Interface for properties.
+    /// </summary>
+    /// <typeparam name="T">The type of the property value.</typeparam>
+    public interface IProperty<T> : IProperty
+    {
+    }
 }

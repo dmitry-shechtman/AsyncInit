@@ -6,7 +6,7 @@ namespace Ditto.AsyncMvvm
     /// Interface for lazy properties.
     /// </summary>
     /// <typeparam name="T">The type of the property value.</typeparam>
-    public interface ILazyProperty<T> : IProperty
+    public interface ILazyProperty<T> : IProperty<T>
     {
         /// <summary>
         /// Gets the property value.

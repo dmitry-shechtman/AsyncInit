@@ -7,7 +7,7 @@ namespace Ditto.AsyncMvvm
     /// Interface for asynchronous properties.
     /// </summary>
     /// <typeparam name="T">The type of the property value.</typeparam>
-    public interface IAsyncProperty<T> : IProperty
+    public interface IAsyncProperty<T> : IProperty<T>
     {
         /// <summary>
         /// Gets the property value.
