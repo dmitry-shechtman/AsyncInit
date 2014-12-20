@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
@@ -48,7 +49,25 @@ namespace Ditto.AsyncMvvm
         /// </summary>
         /// <param name="propertyName">The name of the property to invalidate, or <value>null</value>
         /// or <see cref="String.Empty"/> to invalidate the entire entity.</param>
-        void Invalidate([CallerMemberName] string propertyName = null);
+        /// <returns><value>true</value> if successful.</returns>
+        /// <exception cref="NotSupportedException"/>
+        bool Invalidate([CallerMemberName] string propertyName = null);
+
+        /// <summary>
+        /// Invalidates the specified property.
+        /// </summary>
+        /// <typeparam name="T">The type of the property value.</typeparam>
+        /// <param name="propertyExpression">The property expression (e.g. p => p.PropertyName).</param>
+        /// <returns><value>true</value> if successful.</returns>
+        bool Invalidate<T>(Expression<Func<T>> propertyExpression);
+
+        /// <summary>
+        /// Invalidates the specified property.
+        /// </summary>
+        /// <typeparam name="T">The type of the property value.</typeparam>
+        /// <param name="propertyName">The name of the property.</param>
+        /// <returns><value>true</value> if successful.</returns>
+        bool Invalidate<T>(string propertyName);
 
         /// <summary>
         /// Retrieves the specified lazy property if it exists; otherwise, returns <value>null</value>.

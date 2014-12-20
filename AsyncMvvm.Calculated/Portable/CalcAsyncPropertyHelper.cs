@@ -71,6 +71,23 @@ namespace Ditto.AsyncMvvm.Calculated
         }
 
         /// <summary>
+        /// Invalidates the specified property.
+        /// </summary>
+        /// <typeparam name="T">The type of the property value.</typeparam>
+        /// <param name="propertyName">The name of the property.</param>
+        /// <returns><value>true</value> if successful.</returns>
+        public override bool Invalidate<T>(string propertyName)
+        {
+            if (base.Invalidate<T>(propertyName))
+                return true;
+            var calculatedProperty = _propertyHelper.GetCalculatedProperty<T>(propertyName);
+            if (calculatedProperty == null)
+                return false;
+            calculatedProperty.Invalidate();
+            return true;
+        }
+
+        /// <summary>
         /// Creates a lazy property.
         /// </summary>
         /// <typeparam name="T">The type of the property value.</typeparam>
@@ -138,6 +155,7 @@ namespace Ditto.AsyncMvvm.Calculated
         /// <summary>
         /// Invalidates the entire entity.
         /// </summary>
+        /// <exception cref="NotSupportedException"/>
         protected override void InvalidateEntity()
         {
             throw new NotSupportedException();

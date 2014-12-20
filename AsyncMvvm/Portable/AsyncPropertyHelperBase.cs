@@ -1,6 +1,7 @@
 ﻿using Ditto.AsyncMvvm.Internal;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
@@ -73,16 +74,39 @@ namespace Ditto.AsyncMvvm
         /// </summary>
         /// <param name="propertyName">The name of the property to invalidate, or <value>null</value>
         /// or <see cref="String.Empty"/> to invalidate the entire entity.</param>
-        public void Invalidate([CallerMemberName] string propertyName = null)
+        /// <returns><value>true</value> if successful.</returns>
+        /// <exception cref="NotSupportedException"/>
+        public bool Invalidate([CallerMemberName] string propertyName = null)
         {
             if (string.IsNullOrEmpty(propertyName))
-                InvalidateEntity();
-            else
             {
-                var property = GetProperty(propertyName);
-                if (property != null)
-                    property.Invalidate(true, propertyName);
+                InvalidateEntity();
+                return true;
             }
+            return InvalidateProperty(propertyName);
+        }
+
+        /// <summary>
+        /// Invalidates the specified property.
+        /// </summary>
+        /// <typeparam name="T">The type of the property value.</typeparam>
+        /// <param name="propertyExpression">The property expression (e.g. p => p.PropertyName).</param>
+        /// <returns><value>true</value> if successful.</returns>
+        public bool Invalidate<T>(Expression<Func<T>> propertyExpression)
+        {
+            var propertyName = PropertySupport.ExtractPropertyName(propertyExpression);
+            return Invalidate<T>(propertyName);
+        }
+
+        /// <summary>
+        /// Invalidates the specified property.
+        /// </summary>
+        /// <typeparam name="T">The type of the property value.</typeparam>
+        /// <param name="propertyName">The name of the property.</param>
+        /// <returns><value>true</value> if successful.</returns>
+        public virtual bool Invalidate<T>(string propertyName)
+        {
+            return InvalidateProperty(propertyName);
         }
 
         /// <summary>
@@ -171,6 +195,7 @@ namespace Ditto.AsyncMvvm
         /// <summary>
         /// Invalidates the entire entity.
         /// </summary>
+        /// <exception cref="NotSupportedException"/>
         protected abstract void InvalidateEntity();
 
         /// <summary>
@@ -191,6 +216,20 @@ namespace Ditto.AsyncMvvm
         protected void NotifyPropertyChanged(string propertyName)
         {
             _onPropertyChanged(propertyName);
+        }
+
+        /// <summary>
+        /// Invalidates the specified property.
+        /// </summary>
+        /// <param name="propertyName">The name of the property.</param>
+        /// <returns><value>true</value> if successful.</returns>
+        private bool InvalidateProperty(string propertyName)
+        {
+            var property = GetProperty(propertyName);
+            if (property == null)
+                return false;
+            property.Invalidate(true, propertyName);
+            return true;
         }
     }
 }
