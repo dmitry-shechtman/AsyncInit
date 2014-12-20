@@ -25,12 +25,11 @@ namespace Ditto.AsyncMvvm
         /// </summary>
         /// <typeparam name="T">The type of the property value.</typeparam>
         /// <param name="getValueAsync">The delegate used to calculate the property value.</param>
-        /// <param name="token">The optional cancellation token.</param>
         /// <param name="listener">The optional task listener.</param>
         /// <param name="comparer">The optional equality comparer.</param>
         /// <param name="propertyName">The name of the property.</param>
-        T Get<T>(Func<Task<T>> getValueAsync, CancellationToken token = default(CancellationToken),
-            ITaskListener listener = null, IEqualityComparer<T> comparer = null, [CallerMemberName] string propertyName = null);
+        T Get<T>(Func<Task<T>> getValueAsync, ITaskListener listener = null, IEqualityComparer<T> comparer = null,
+            [CallerMemberName] string propertyName = null);
 
         /// <summary>
         /// Gets the value of an asynchronous property.
