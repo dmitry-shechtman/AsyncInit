@@ -10,7 +10,7 @@
         /// <summary>
         /// Creates a new instance of the entity.
         /// </summary>
-        public AsyncBindableBase()
+        protected AsyncBindableBase()
         {
             _propertyHelper = new AsyncPropertyHelper(OnPropertyChanged);
         }
