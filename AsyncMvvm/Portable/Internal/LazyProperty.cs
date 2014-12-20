@@ -38,6 +38,18 @@ namespace Ditto.AsyncMvvm.Internal
             return DoGetValue();
         }
 
+        /// <summary>
+        /// Sets the property value.
+        /// </summary>
+        /// <param name="value">The new property value.</param>
+        /// <param name="propertyName">The name of the property.</param>
+        public void SetValue(T value, string propertyName = null)
+        {
+            if (propertyName == null)
+                throw new ArgumentNullException("propertyName");
+            DoSetValue(value, propertyName);
+        }
+
         private void CalculateValue()
         {
             var value = _getValue();

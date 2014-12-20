@@ -13,5 +13,12 @@ namespace Ditto.AsyncMvvm
         /// </summary>
         /// <param name="propertyName">The name of the property.</param>
         T GetValue([CallerMemberName] string propertyName = null);
+
+        /// <summary>
+        /// Sets the property value.
+        /// </summary>
+        /// <param name="value">The new property value.</param>
+        /// <param name="propertyName">The name of the property.</param>
+        void SetValue(T value, [CallerMemberName] string propertyName = null);
     }
 }
