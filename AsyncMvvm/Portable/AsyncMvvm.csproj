@@ -48,6 +48,7 @@
     <Compile Include="BindableBase.cs" />
     <Compile Include="ITaskListener.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyDictionary.cs" />
     <Compile Include="PropertySupport.cs" />
   </ItemGroup>
   <ItemGroup>

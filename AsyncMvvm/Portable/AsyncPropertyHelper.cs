@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,14 +10,7 @@ namespace Ditto.AsyncMvvm
     /// </summary>
     public class AsyncPropertyHelper
     {
-        /// <summary>
-        /// Property storage.
-        /// </summary>
-        private readonly IDictionary<string, object> _storage;
-
-        /// <summary>
-        /// Property change notification delegate.
-        /// </summary>
+        private readonly PropertyDictionary _properties;
         private readonly Action<string> _onPropertyChanged;
 
         /// <summary>
@@ -27,8 +19,8 @@ namespace Ditto.AsyncMvvm
         /// <param name="onPropertyChanged">Property change notification delegate.</param>
         public AsyncPropertyHelper(Action<string> onPropertyChanged)
         {
-            _storage = new Dictionary<string, object>();
-            _onPropertyChanged = onPropertyChanged;
+            this._properties = new PropertyDictionary();
+            this._onPropertyChanged = onPropertyChanged;
         }
 
         /// <summary>
@@ -133,16 +125,16 @@ namespace Ditto.AsyncMvvm
         public void Invalidate(string propertyName)
         {
             if (string.IsNullOrEmpty(propertyName))
-                ClearProperties();
+                _properties.Clear();
             else
-                RemoveProperty(propertyName);
+                _properties.Remove(propertyName);
             _onPropertyChanged(propertyName);
         }
 
         internal T DoGetProperty<T>(Func<T> getValue, string propertyName)
         {
             T value;
-            if (!TryGetProperty(out value, propertyName))
+            if (!_properties.TryGetValue(propertyName, out value))
                 value = DoDoGetProperty(getValue, propertyName);
             return value;
         }
@@ -150,21 +142,21 @@ namespace Ditto.AsyncMvvm
         private T DoDoGetProperty<T>(Func<T> getValue, string propertyName)
         {
             T value = getValue();
-            AddProperty(value, propertyName);
+            _properties.Add(propertyName, value);
             return value;
         }
 
         internal T DoGetProperty<T>(Func<CancellationToken, Task<T>> getValueAsync, CancellationToken cancellationToken, ITaskListener taskListener, string propertyName)
         {
             T value;
-            if (!TryGetProperty(out value, propertyName))
+            if (!_properties.TryGetValue(propertyName, out value))
                 DoDoGetProperty(getValueAsync, cancellationToken, taskListener, propertyName);
             return value;
         }
 
         private void DoDoGetProperty<T>(Func<CancellationToken, Task<T>> getValueAsync, CancellationToken cancellationToken, ITaskListener taskListener, string propertyName)
         {
-            AddProperty(null, propertyName);
+            _properties.Add(propertyName, null);
             var taskScheduler = TaskScheduler.FromCurrentSynchronizationContext();
             TaskEx.Run(() => DoGetPropertyAsync(getValueAsync, cancellationToken, taskListener))
                 .ContinueWith(task => OnGetPropertyCompleted(task, taskListener, propertyName),
@@ -201,7 +193,7 @@ namespace Ditto.AsyncMvvm
         {
             if (!object.Equals(value, null))
             {
-                SetProperty(value, propertyName);
+                _properties.SetValue(propertyName, value);
                 _onPropertyChanged(propertyName);
             }
             taskListener.NotifyTaskCompleted(true);
@@ -209,73 +201,14 @@ namespace Ditto.AsyncMvvm
 
         private void OnGetPropertyCanceled(ITaskListener taskListener, string propertyName)
         {
-            RemoveProperty(propertyName);
+            _properties.Remove(propertyName);
             taskListener.NotifyTaskCompleted(null);
         }
 
         private void OnGetPropertyFaulted(ITaskListener taskListener, string propertyName)
         {
-            RemoveProperty(propertyName);
+            _properties.Remove(propertyName);
             taskListener.NotifyTaskCompleted(false);
-        }
-
-        /// <summary>
-        /// Gets a property's value from the storage.
-        /// </summary>
-        /// <typeparam name="T">Property type.</typeparam>
-        /// <param name="value">The property's value if found; otherwise, the default value for
-        /// <typeparamref name="T"/>.</param>
-        /// <param name="propertyName">The name of the property to get.</param>
-        /// <returns><value>true</value> if value was found.</returns>
-        private bool TryGetProperty<T>(out T value, string propertyName)
-        {
-            if (propertyName == null)
-                throw new ArgumentNullException("propertyName");
-            object result;
-            if (_storage.TryGetValue(propertyName, out result))
-            {
-                value = (T)result;
-                return true;
-            }
-            value = default(T);
-            return false;
-        }
-
-        /// <summary>
-        /// Adds a property's value to the storage.
-        /// </summary>
-        /// <param name="value">The property's value, or <value>null</value> for a placeholder.</param>
-        /// <param name="propertyName">The name of the property to add.</param>
-        private void AddProperty(object value, string propertyName)
-        {
-            _storage.Add(propertyName, value);
-        }
-
-        /// <summary>
-        /// Sets a property's value in the storage.
-        /// </summary>
-        /// <param name="value">The property's value.</param>
-        /// <param name="propertyName">The name of the property to set.</param>
-        private void SetProperty(object value, string propertyName)
-        {
-            _storage[propertyName] = value;
-        }
-
-        /// <summary>
-        /// Removes a property's value from the storage.
-        /// </summary>
-        /// <param name="propertyName">The name of the property to remove.</param>
-        private void RemoveProperty(string propertyName)
-        {
-            _storage.Remove(propertyName);
-        }
-
-        /// <summary>
-        /// Removes all properties' values from the storage.
-        /// </summary>
-        private void ClearProperties()
-        {
-            _storage.Clear();
         }
     }
 }
