@@ -9,7 +9,7 @@ namespace Ditto.AsyncMvvm.Internal
     /// Asynchronous property.
     /// </summary>
     /// <typeparam name="T">The type of the property value.</typeparam>
-    public class AsyncProperty<T> : PropertyBase<T>
+    internal class AsyncProperty<T> : PropertyBase<T>, IAsyncProperty<T>
     {
         private readonly Func<CancellationToken, Task<T>> _getValueAsync;
         private bool _isCalculating;
@@ -23,6 +23,8 @@ namespace Ditto.AsyncMvvm.Internal
         public AsyncProperty(Action<T, string> onValueChanged, Func<CancellationToken, Task<T>> getValueAsync, IEqualityComparer<T> comparer)
             : base(onValueChanged, comparer)
         {
+            if (getValueAsync == null)
+                throw new ArgumentNullException("getValueAsync");
             this._getValueAsync = getValueAsync;
         }
 
@@ -34,6 +36,8 @@ namespace Ditto.AsyncMvvm.Internal
         /// <param name="propertyName">The name of the property.</param>
         public T GetValue(CancellationToken token, ITaskListener listener, string propertyName)
         {
+            if (propertyName == null)
+                throw new ArgumentNullException("propertyName");
             if (!IsValueValid)
                 CalculateValue(token, listener, propertyName);
             return DoGetValue();

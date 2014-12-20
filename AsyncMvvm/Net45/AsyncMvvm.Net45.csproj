@@ -65,6 +65,15 @@
     <Compile Include="..\Portable\BindableBase.cs">
       <Link>BindableBase.cs</Link>
     </Compile>
+    <Compile Include="..\Portable\IAsyncProperty.cs">
+      <Link>IAsyncProperty.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\IAsyncPropertyHelper.cs">
+      <Link>IAsyncPropertyHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\ILazyProperty.cs">
+      <Link>ILazyProperty.cs</Link>
+    </Compile>
     <Compile Include="..\Portable\Internal\AsyncProperty.cs">
       <Link>Internal\AsyncProperty.cs</Link>
     </Compile>

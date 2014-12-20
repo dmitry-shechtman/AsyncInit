@@ -6,7 +6,7 @@ namespace Ditto.AsyncMvvm.Internal
     /// <summary>
     /// Base class for properties.
     /// </summary>
-    public abstract class PropertyBase<T> : IProperty
+    internal abstract class PropertyBase<T> : IProperty
     {
         private readonly Action<T, string> _onValueChanged;
         private readonly IEqualityComparer<T> _comparer;
@@ -31,6 +31,8 @@ namespace Ditto.AsyncMvvm.Internal
         /// <param name="propertyName">The name of the property.</param>
         public void Invalidate(bool isNotify, string propertyName)
         {
+            if (propertyName == null)
+                throw new ArgumentNullException("propertyName");
             _value = default(T);
             _isValueValid = false;
             if (isNotify)

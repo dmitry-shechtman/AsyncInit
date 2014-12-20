@@ -7,7 +7,7 @@ namespace Ditto.AsyncMvvm.Internal
     /// Lazy property.
     /// </summary>
     /// <typeparam name="T">The type of the property value.</typeparam>
-    public class LazyProperty<T> : PropertyBase<T>
+    internal class LazyProperty<T> : PropertyBase<T>, ILazyProperty<T>
     {
         private readonly Func<T> _getValue;
 
@@ -20,14 +20,19 @@ namespace Ditto.AsyncMvvm.Internal
         public LazyProperty(Action<T, string> onValueChanged, Func<T> getValue, IEqualityComparer<T> comparer)
             : base(onValueChanged, comparer)
         {
+            if (getValue == null)
+                throw new ArgumentNullException("getValue");
             this._getValue = getValue;
         }
 
         /// <summary>
         /// Gets the property value.
         /// </summary>
-        public T GetValue()
+        /// <param name="propertyName">The name of the property.</param>
+        public T GetValue(string propertyName)
         {
+            if (propertyName == null)
+                throw new ArgumentNullException("propertyName");
             if (!IsValueValid)
                 CalculateValue();
             return DoGetValue();
