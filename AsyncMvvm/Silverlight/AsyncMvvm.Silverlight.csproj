@@ -88,6 +88,9 @@
     <Compile Include="..\Portable\AsyncPropertyHelper.cs">
       <Link>AsyncPropertyHelper.cs</Link>
     </Compile>
+    <Compile Include="..\Portable\AsyncPropertyHelperBase.cs">
+      <Link>AsyncPropertyHelperBase.cs</Link>
+    </Compile>
     <Compile Include="..\Portable\BindableBase.cs">
       <Link>BindableBase.cs</Link>
     </Compile>
