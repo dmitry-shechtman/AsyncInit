@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Ditto.AsyncMvvm
 {
@@ -13,10 +14,11 @@ namespace Ditto.AsyncMvvm
         /// <summary>
         /// Creates a new lazy property instance.
         /// </summary>
-        /// <param name="onPropertyChanged">Property change notification delegate.</param>
+        /// <param name="onValueChanged">Value change notification delegate.</param>
         /// <param name="getValue">The delegate used to calculate the property value.</param>
-        public LazyProperty(Action<T, string> onPropertyChanged, Func<T> getValue)
-            : base(onPropertyChanged)
+        /// <param name="comparer">The optional equality comparer.</param>
+        public LazyProperty(Action<T, string> onValueChanged, Func<T> getValue, IEqualityComparer<T> comparer)
+            : base(onValueChanged, comparer)
         {
             this._getValue = getValue;
         }

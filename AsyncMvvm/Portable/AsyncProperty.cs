@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -16,10 +17,11 @@ namespace Ditto.AsyncMvvm
         /// <summary>
         /// Creates a new asynchronous property instance.
         /// </summary>
-        /// <param name="onPropertyChanged">Property change notification delegate.</param>
+        /// <param name="onValueChanged">Value change notification delegate.</param>
         /// <param name="getValueAsync">The delegate used to calculate the property value.</param>
-        public AsyncProperty(Action<T, string> onPropertyChanged, Func<CancellationToken, Task<T>> getValueAsync)
-            : base(onPropertyChanged)
+        /// <param name="comparer">The optional equality comparer.</param>
+        public AsyncProperty(Action<T, string> onValueChanged, Func<CancellationToken, Task<T>> getValueAsync, IEqualityComparer<T> comparer)
+            : base(onValueChanged, comparer)
         {
             this._getValueAsync = getValueAsync;
         }

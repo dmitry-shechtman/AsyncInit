@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Ditto.AsyncMvvm
 {
@@ -7,17 +8,20 @@ namespace Ditto.AsyncMvvm
     /// </summary>
     public abstract class PropertyBase<T> : IProperty
     {
-        private readonly Action<T, string> _onPropertyChanged;
+        private readonly Action<T, string> _onValueChanged;
+        private readonly IEqualityComparer<T> _comparer;
         private T _value;
         private bool _isValueValid;
 
         /// <summary>
         /// Creates a new property instance.
         /// </summary>
-        /// <param name="onPropertyChanged">Property change notification delegate.</param>
-        protected PropertyBase(Action<T, string> onPropertyChanged)
+        /// <param name="onValueChanged">Value change notification delegate.</param>
+        /// <param name="comparer">The optional equality comparer.</param>
+        protected PropertyBase(Action<T, string> onValueChanged, IEqualityComparer<T> comparer)
         {
-            this._onPropertyChanged = onPropertyChanged;
+            this._onValueChanged = onValueChanged;
+            this._comparer = comparer ?? EqualityComparer<T>.Default;
         }
 
         /// <summary>
@@ -48,7 +52,7 @@ namespace Ditto.AsyncMvvm
         /// <param name="propertyName">The name of the property.</param>
         protected void DoSetValue(T value, string propertyName)
         {
-            if (!object.Equals(_value, value))
+            if (!_comparer.Equals(_value, value))
             {
                 DoSetValue(value);
                 NotifyValueChanged(propertyName);
@@ -73,9 +77,13 @@ namespace Ditto.AsyncMvvm
             get { return _isValueValid; }
         }
 
+        /// <summary>
+        /// Notifies on change in property value.
+        /// </summary>
+        /// <param name="propertyName">The name of the property.</param>
         private void NotifyValueChanged(string propertyName)
         {
-            _onPropertyChanged(_value, propertyName);
+            _onValueChanged(_value, propertyName);
         }
     }
 }

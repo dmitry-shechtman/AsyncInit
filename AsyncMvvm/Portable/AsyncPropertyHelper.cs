@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
@@ -24,51 +25,51 @@ namespace Ditto.AsyncMvvm
         }
 
         /// <summary>
-        /// Gets the value of a property.
+        /// Gets the value of a lazy property.
         /// </summary>
-        /// <typeparam name="T">Property type.</typeparam>
-        /// <param name="getValue">Function to get the value.</param>
-        /// <param name="propertyName">Property name.</param>
-        /// <returns>The property's value.</returns>
-        public T Get<T>(Func<T> getValue, [CallerMemberName] string propertyName = null)
+        /// <typeparam name="T">The type of the property value.</typeparam>
+        /// <param name="getValue">The delegate used to calculate the property value.</param>
+        /// <param name="comparer">The optional equality comparer.</param>
+        /// <param name="propertyName">The name of the property.</param>
+        public T Get<T>(Func<T> getValue, IEqualityComparer<T> comparer = null, [CallerMemberName] string propertyName = null)
         {
             if (getValue == null)
                 throw new ArgumentNullException("getValue");
-            return DoGet(getValue, propertyName);
+            return DoGet(getValue, comparer, propertyName);
         }
 
         /// <summary>
-        /// Asynchronously gets the value of a property.
+        /// Gets the value of an asynchronous property.
         /// </summary>
-        /// <typeparam name="T">Property type.</typeparam>
-        /// <param name="getValueAsync">Asynchronous function to get the value.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
-        /// <param name="taskListener">Task listener.</param>
-        /// <param name="propertyName">Property name.</param>
-        /// <returns>The property's value if the function successfully completed; otherwise, <value>null</value>.</returns>
-        public T Get<T>(Func<Task<T>> getValueAsync, CancellationToken cancellationToken = default(CancellationToken),
-            ITaskListener taskListener = null, [CallerMemberName] string propertyName = null)
+        /// <typeparam name="T">The type of the property value.</typeparam>
+        /// <param name="getValueAsync">The delegate used to calculate the property value.</param>
+        /// <param name="token">The optional cancellation token.</param>
+        /// <param name="listener">The optional task listener.</param>
+        /// <param name="comparer">The optional equality comparer.</param>
+        /// <param name="propertyName">The name of the property.</param>
+        public T Get<T>(Func<Task<T>> getValueAsync, CancellationToken token = default(CancellationToken),
+            ITaskListener listener = null, IEqualityComparer<T> comparer = null, [CallerMemberName] string propertyName = null)
         {
             if (getValueAsync == null)
                 throw new ArgumentNullException("getValueAsync");
-            return DoGet(ct => getValueAsync(), cancellationToken, taskListener, propertyName);
+            return DoGet(ct => getValueAsync(), token, listener, comparer, propertyName);
         }
 
         /// <summary>
-        /// Asynchronously gets the value of a property.
+        /// Gets the value of an asynchronous property.
         /// </summary>
-        /// <typeparam name="T">Property type.</typeparam>
-        /// <param name="getValueAsync">Asynchronous function to get the value.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
-        /// <param name="taskListener">Task listener.</param>
-        /// <param name="propertyName">Property name.</param>
-        /// <returns>The property's value if the function successfully completed; otherwise, <value>null</value>.</returns>
-        public T Get<T>(Func<CancellationToken, Task<T>> getValueAsync, CancellationToken cancellationToken = default(CancellationToken),
-            ITaskListener taskListener = null, [CallerMemberName] string propertyName = null)
+        /// <typeparam name="T">The type of the property value.</typeparam>
+        /// <param name="getValueAsync">The delegate used to calculate the property value.</param>
+        /// <param name="token">The optional cancellation token.</param>
+        /// <param name="listener">The optional task listener.</param>
+        /// <param name="comparer">The optional equality comparer.</param>
+        /// <param name="propertyName">The name of the property.</param>
+        public T Get<T>(Func<CancellationToken, Task<T>> getValueAsync, CancellationToken token = default(CancellationToken),
+            ITaskListener listener = null, IEqualityComparer<T> comparer = null, [CallerMemberName] string propertyName = null)
         {
             if (getValueAsync == null)
                 throw new ArgumentNullException("getValueAsync");
-            return DoGet(getValueAsync, cancellationToken, taskListener, propertyName);
+            return DoGet(getValueAsync, token, listener, comparer, propertyName);
         }
 
         /// <summary>
@@ -96,10 +97,11 @@ namespace Ditto.AsyncMvvm
         /// </summary>
         /// <typeparam name="T">The type of the property value.</typeparam>
         /// <param name="getValue">The delegate used to calculate the property value.</param>
+        /// <param name="comparer">The optional equality comparer.</param>
         /// <param name="propertyName">The name of the property.</param>
-        private T DoGet<T>(Func<T> getValue, string propertyName)
+        private T DoGet<T>(Func<T> getValue, IEqualityComparer<T> comparer, string propertyName)
         {
-            return GetOrAddLazyProperty(getValue, propertyName).GetValue();
+            return GetOrAddLazyProperty(getValue, comparer, propertyName).GetValue();
         }
 
         /// <summary>
@@ -107,12 +109,13 @@ namespace Ditto.AsyncMvvm
         /// </summary>
         /// <typeparam name="T">The type of the property value.</typeparam>
         /// <param name="getValueAsync">The delegate used to calculate the property value.</param>
-        /// <param name="cancellationToken">The cancellation token.</param>
-        /// <param name="taskListener">The task listener.</param>
+        /// <param name="token">The optional cancellation token.</param>
+        /// <param name="listener">The optional task listener.</param>
+        /// <param name="comparer">The optional equality comparer.</param>
         /// <param name="propertyName">The name of the property.</param>
-        private T DoGet<T>(Func<CancellationToken, Task<T>> getValueAsync, CancellationToken cancellationToken, ITaskListener taskListener, string propertyName)
+        private T DoGet<T>(Func<CancellationToken, Task<T>> getValueAsync, CancellationToken token, ITaskListener listener, IEqualityComparer<T> comparer, string propertyName)
         {
-            return GetOrAddAsyncProperty(getValueAsync, propertyName).GetValue(cancellationToken, taskListener, propertyName);
+            return GetOrAddAsyncProperty(getValueAsync, comparer, propertyName).GetValue(token, listener, propertyName);
         }
 
         /// <summary>
@@ -120,9 +123,10 @@ namespace Ditto.AsyncMvvm
         /// </summary>
         /// <typeparam name="T">The type of the property value.</typeparam>
         /// <param name="getValue">The delegate used to calculate the property value.</param>
-        private LazyProperty<T> CreateLazyProperty<T>(Func<T> getValue)
+        /// <param name="comparer">The optional equality comparer.</param>
+        private LazyProperty<T> CreateLazyProperty<T>(Func<T> getValue, IEqualityComparer<T> comparer)
         {
-            return new LazyProperty<T>(NotifyValueChanged, getValue);
+            return new LazyProperty<T>(NotifyValueChanged, getValue, comparer);
         }
 
         /// <summary>
@@ -130,9 +134,10 @@ namespace Ditto.AsyncMvvm
         /// </summary>
         /// <typeparam name="T">The type of the property value.</typeparam>
         /// <param name="getValueAsync">The delegate used to calculate the property value.</param>
-        private AsyncProperty<T> CreateAsyncProperty<T>(Func<CancellationToken, Task<T>> getValueAsync)
+        /// <param name="comparer">The optional equality comparer.</param>
+        private AsyncProperty<T> CreateAsyncProperty<T>(Func<CancellationToken, Task<T>> getValueAsync, IEqualityComparer<T> comparer)
         {
-            return new AsyncProperty<T>(NotifyValueChanged, getValueAsync);
+            return new AsyncProperty<T>(NotifyValueChanged, getValueAsync, comparer);
         }
 
         /// <summary>
@@ -140,10 +145,11 @@ namespace Ditto.AsyncMvvm
         /// </summary>
         /// <typeparam name="T">The type of the property value.</typeparam>
         /// <param name="getValue">The delegate used to calculate the property value.</param>
+        /// <param name="comparer">The optional equality comparer.</param>
         /// <param name="propertyName">The name of the property.</param>
-        private LazyProperty<T> GetOrAddLazyProperty<T>(Func<T> getValue, string propertyName)
+        private LazyProperty<T> GetOrAddLazyProperty<T>(Func<T> getValue, IEqualityComparer<T> comparer, string propertyName)
         {
-            return GetOrAddProperty(() => CreateLazyProperty(getValue), propertyName);
+            return GetOrAddProperty(() => CreateLazyProperty(getValue, comparer), propertyName);
         }
 
         /// <summary>
@@ -151,10 +157,11 @@ namespace Ditto.AsyncMvvm
         /// </summary>
         /// <typeparam name="T">The type of the property value.</typeparam>
         /// <param name="getValueAsync">The delegate used to calculate the property value.</param>
+        /// <param name="comparer">The optional equality comparer.</param>
         /// <param name="propertyName">The name of the property.</param>
-        private AsyncProperty<T> GetOrAddAsyncProperty<T>(Func<CancellationToken, Task<T>> getValueAsync, string propertyName)
+        private AsyncProperty<T> GetOrAddAsyncProperty<T>(Func<CancellationToken, Task<T>> getValueAsync, IEqualityComparer<T> comparer, string propertyName)
         {
-            return GetOrAddProperty(() => CreateAsyncProperty(getValueAsync), propertyName);
+            return GetOrAddProperty(() => CreateAsyncProperty(getValueAsync, comparer), propertyName);
         }
 
         /// <summary>
