@@ -16,8 +16,8 @@ namespace Ditto.AsyncInit
         /// <returns>A reference to the newly created object.</returns>
         public static T CreateInstance<T>()
         {
-            var typeInfo = typeof(T).GetTypeInfo();
-            var ctor = typeInfo.DeclaredConstructors.SingleOrDefault(c => c.GetParameters().Length == 0);
+            var ctor = typeof(T).GetConstructors(BindingFlags.NonPublic | BindingFlags.Instance)
+                .SingleOrDefault(c => c.GetParameters().Length == 0);
             if (ctor == null)
                 throw new MissingMemberException("No parameterless constructor defined for this object.");
             return (T)ctor.Invoke(null);
