@@ -68,39 +68,5 @@ namespace Ditto.AsyncMvvm
         /// <param name="propertyName">The name of the property.</param>
         /// <returns><value>true</value> if successful.</returns>
         bool Invalidate<T>(string propertyName);
-
-        /// <summary>
-        /// Retrieves the specified lazy property if it exists; otherwise, returns <value>null</value>.
-        /// </summary>
-        /// <typeparam name="T">The type of the property value.</typeparam>
-        /// <param name="propertyName">The name of the property.</param>
-        ILazyProperty<T> GetLazyProperty<T>([CallerMemberName] string propertyName = null);
-
-        /// <summary>
-        /// Retrieves the specified asynchronous property if it exists; otherwise, returns <value>null</value>.
-        /// </summary>
-        /// <typeparam name="T">The type of the property value.</typeparam>
-        /// <param name="propertyName">The name of the property.</param>
-        IAsyncProperty<T> GetAsyncProperty<T>([CallerMemberName] string propertyName = null);
-
-        /// <summary>
-        /// Retrieves the specified lazy property if it exists; otherwise, creates the lazy property and returns it.
-        /// </summary>
-        /// <typeparam name="T">The type of the property value.</typeparam>
-        /// <param name="getValue">The delegate used to calculate the property value.</param>
-        /// <param name="comparer">The optional equality comparer.</param>
-        /// <param name="propertyName">The name of the property.</param>
-        ILazyProperty<T> GetOrAddLazyProperty<T>(Func<T> getValue, IEqualityComparer<T> comparer = null,
-            [CallerMemberName] string propertyName = null);
-
-        /// <summary>
-        /// Retrieves the specified asynchronous property if it exists; otherwise, creates the asynchronous property and returns it.
-        /// </summary>
-        /// <typeparam name="T">The type of the property value.</typeparam>
-        /// <param name="getValueAsync">The delegate used to calculate the property value.</param>
-        /// <param name="comparer">The optional equality comparer.</param>
-        /// <param name="propertyName">The name of the property.</param>
-        IAsyncProperty<T> GetOrAddAsyncProperty<T>(Func<CancellationToken, Task<T>> getValueAsync,
-            IEqualityComparer<T> comparer = null, [CallerMemberName] string propertyName = null);
     }
 }
