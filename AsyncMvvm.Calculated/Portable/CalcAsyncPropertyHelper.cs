@@ -36,11 +36,12 @@ namespace Ditto.AsyncMvvm.Calculated
         }
 
         /// <summary>
-        /// Gets the value of a trigger property.
+        /// Implements the getter for a trigger property.
         /// </summary>
         /// <typeparam name="T">The type of the property value.</typeparam>
         /// <param name="value">The initial value of the property.</param>
-        /// <param name="comparer">The optional equality comparer.</param>
+        /// <param name="comparer">The optional comparer used to determine when the value of the property has changed.
+        /// If this is specified, then the same comparer should be passed to the setter implementation.</param>
         /// <param name="propertyName">The name of the property.</param>
         public T Get<T>(T value, IEqualityComparer<T> comparer = null, [CallerMemberName] string propertyName = null)
         {
@@ -48,11 +49,12 @@ namespace Ditto.AsyncMvvm.Calculated
         }
 
         /// <summary>
-        /// Sets the value of a trigger property.
+        /// Implements the setter for a trigger property.
         /// </summary>
         /// <typeparam name="T">The type of the property value.</typeparam>
         /// <param name="value">The new value of the property.</param>
-        /// <param name="comparer">The optional equality comparer.</param>
+        /// <param name="comparer">The optional comparer used to determine when the value of the property has changed.
+        /// If this is specified, then the same comparer should be passed to the setter implementation.</param>
         /// <param name="propertyName">The name of the property.</param>
         public void Set<T>(T value, IEqualityComparer<T> comparer = null, [CallerMemberName] string propertyName = null)
         {
@@ -60,7 +62,7 @@ namespace Ditto.AsyncMvvm.Calculated
         }
 
         /// <summary>
-        /// Gets the value of a calculated property.
+        /// Implements the getter for a calculated property.
         /// </summary>
         /// <typeparam name="T">The type of the property value.</typeparam>
         /// <param name="calculateValue">The delegate used to calculate the property value.</param>
@@ -76,7 +78,7 @@ namespace Ditto.AsyncMvvm.Calculated
         /// <typeparam name="T">The type of the property value.</typeparam>
         /// <param name="propertyName">The name of the property.</param>
         /// <returns><value>true</value> if successful.</returns>
-        public override bool Invalidate<T>(string propertyName)
+        public override bool Invalidate<T>([CallerMemberName] string propertyName = null)
         {
             if (base.Invalidate<T>(propertyName))
                 return true;
@@ -136,7 +138,7 @@ namespace Ditto.AsyncMvvm.Calculated
             if (propertyName == null)
                 throw new ArgumentNullException("propertyName");
             var triggerPropertyName = "$" + propertyName;
-            return (TProperty)_propertyHelper.Get(() => createProperty(), null, triggerPropertyName);
+            return (TProperty)_propertyHelper.Get<IProperty>(() => createProperty(), null, triggerPropertyName);
         }
 
         /// <summary>
