@@ -104,10 +104,9 @@ namespace Ditto.AsyncMvvm.Calculated
         /// </summary>
         /// <typeparam name="T">The type of the property value.</typeparam>
         /// <param name="getValueAsync">The delegate used to calculate the property value.</param>
-        /// <param name="comparer">The equality comparer.</param>
-        protected override IAsyncProperty<T> CreateAsyncProperty<T>(Func<CancellationToken, Task<T>> getValueAsync, IEqualityComparer<T> comparer)
+        protected override IAsyncProperty<T> CreateAsyncProperty<T>(Func<CancellationToken, Task<T>> getValueAsync)
         {
-            var property = base.CreateAsyncProperty(getValueAsync, comparer);
+            var property = base.CreateAsyncProperty(getValueAsync);
             return new AsyncTriggerProperty<T>(NotifyPropertyChanged, property);
         }
 
