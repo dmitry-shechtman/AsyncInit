@@ -16,7 +16,7 @@ namespace Ditto.AsyncMvvm
         private readonly Action<string> _onPropertyChanged;
 
         /// <summary>
-        /// Creates a new property helper.
+        /// Creates a new property helper instance.
         /// </summary>
         /// <param name="onPropertyChanged">Property change notification delegate.</param>
         protected AsyncPropertyHelperBase(Action<string> onPropertyChanged)
@@ -102,7 +102,7 @@ namespace Ditto.AsyncMvvm
         /// <typeparam name="T">The type of the property value.</typeparam>
         /// <param name="propertyName">The name of the property.</param>
         /// <returns><value>true</value> if successful.</returns>
-        public virtual bool Invalidate<T>(string propertyName)
+        public virtual bool Invalidate<T>([CallerMemberName] string propertyName = null)
         {
             return InvalidateProperty(propertyName);
         }
@@ -182,7 +182,7 @@ namespace Ditto.AsyncMvvm
         /// <param name="propertyName">The name of the property.</param>
         protected virtual void NotifyValueChanged<T>(T value, string propertyName)
         {
-            _onPropertyChanged(propertyName);
+            NotifyPropertyChanged(propertyName);
         }
 
         /// <summary>

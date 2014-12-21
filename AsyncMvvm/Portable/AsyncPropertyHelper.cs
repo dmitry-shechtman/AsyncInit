@@ -11,7 +11,7 @@ namespace Ditto.AsyncMvvm
         private readonly PropertyDictionary _properties;
 
         /// <summary>
-        /// Creates a new property helper.
+        /// Creates a new property helper instance.
         /// </summary>
         /// <param name="onPropertyChanged">Property change notification delegate.</param>
         public AsyncPropertyHelper(Action<string> onPropertyChanged)

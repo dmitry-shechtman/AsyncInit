@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Ditto.AsyncMvvm
 {
     /// <summary>
-    /// Asynchronous property helper.
+    /// Interface for asynchronous property helpers.
     /// </summary>
     public interface IAsyncPropertyHelper
     {
@@ -64,6 +64,6 @@ namespace Ditto.AsyncMvvm
         /// <typeparam name="T">The type of the property value.</typeparam>
         /// <param name="propertyName">The name of the property.</param>
         /// <returns><value>true</value> if successful.</returns>
-        bool Invalidate<T>(string propertyName);
+        bool Invalidate<T>([CallerMemberName] string propertyName = null);
     }
 }

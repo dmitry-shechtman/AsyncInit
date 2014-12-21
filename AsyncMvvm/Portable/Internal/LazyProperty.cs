@@ -43,7 +43,7 @@ namespace Ditto.AsyncMvvm.Internal
         /// </summary>
         /// <param name="value">The new property value.</param>
         /// <param name="propertyName">The name of the property.</param>
-        public void SetValue(T value, string propertyName = null)
+        public void SetValue(T value, string propertyName)
         {
             if (propertyName == null)
                 throw new ArgumentNullException("propertyName");
