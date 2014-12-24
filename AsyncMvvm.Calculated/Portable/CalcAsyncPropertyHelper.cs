@@ -164,7 +164,7 @@ namespace Ditto.AsyncMvvm.Calculated
 
         private void NotifyPropertyChanged(PropertyChangedEventArgs e)
         {
-            NotifyPropertyChanged(e.PropertyName);
+            NotifyValueChanged(e.PropertyName);
         }
 
         private static Action<string> Adapt(Action<PropertyChangedEventArgs> onPropertyChanged)

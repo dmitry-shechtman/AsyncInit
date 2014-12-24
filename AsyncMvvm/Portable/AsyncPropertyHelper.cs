@@ -46,7 +46,18 @@ namespace Ditto.AsyncMvvm
         protected override void InvalidateEntity()
         {
             _properties.Invalidate(false);
-            NotifyPropertyChanged(string.Empty);
+            NotifyValueChanged(string.Empty);
+        }
+
+        /// <summary>
+        /// Notifies on change in property value.
+        /// </summary>
+        /// <typeparam name="T">The type of the property value.</typeparam>
+        /// <param name="value">The new value of the property.</param>
+        /// <param name="propertyName">The name of the property.</param>
+        protected override void NotifyValueChanged<T>(T value, string propertyName)
+        {
+            NotifyValueChanged(propertyName);
         }
     }
 }
