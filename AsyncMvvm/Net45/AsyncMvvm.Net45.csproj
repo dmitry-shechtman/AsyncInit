@@ -59,6 +59,9 @@
     <Compile Include="..\Portable\AsyncPropertyHelperBase.cs">
       <Link>AsyncPropertyHelperBase.cs</Link>
     </Compile>
+    <Compile Include="..\Portable\AsyncValidationHelper.cs">
+      <Link>AsyncValidationHelper.cs</Link>
+    </Compile>
     <Compile Include="..\Portable\BindableBase.cs">
       <Link>BindableBase.cs</Link>
     </Compile>
@@ -67,6 +70,9 @@
     </Compile>
     <Compile Include="..\Portable\IAsyncPropertyHelper.cs">
       <Link>IAsyncPropertyHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\IAsyncValidationHelper.cs">
+      <Link>IAsyncValidationHelper.cs</Link>
     </Compile>
     <Compile Include="..\Portable\ILazyProperty.cs">
       <Link>ILazyProperty.cs</Link>

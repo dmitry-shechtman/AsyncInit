@@ -46,8 +46,10 @@
     <Compile Include="AsyncBindableBase.cs" />
     <Compile Include="AsyncHelperBase.cs" />
     <Compile Include="AsyncPropertyHelperBase.cs" />
+    <Compile Include="AsyncValidationHelper.cs" />
     <Compile Include="IAsyncProperty.cs" />
     <Compile Include="IAsyncPropertyHelper.cs" />
+    <Compile Include="IAsyncValidationHelper.cs" />
     <Compile Include="ILazyProperty.cs" />
     <Compile Include="Internal\AsyncProperty.cs" />
     <Compile Include="AsyncPropertyHelper.cs" />
