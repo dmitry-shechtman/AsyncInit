@@ -11,7 +11,7 @@ namespace Ditto.AsyncMvvm.Calculated
     /// <summary>
     /// Asynchronous and calculated property helper.
     /// </summary>
-    public class CalcAsyncPropertyHelper : AsyncPropertyHelperBase, ICalcAsyncPropertyHelper
+    public class CalculatedAsyncPropertyHelper : AsyncPropertyHelperBase, ICalculatedAsyncPropertyHelper
     {
         private readonly CalculatedProperties.PropertyHelper _propertyHelper;
 
@@ -19,7 +19,7 @@ namespace Ditto.AsyncMvvm.Calculated
         /// Creates a new property helper instance.
         /// </summary>
         /// <param name="onPropertyChanged">Property change notification delegate.</param>
-        public CalcAsyncPropertyHelper(Action<string> onPropertyChanged)
+        public CalculatedAsyncPropertyHelper(Action<string> onPropertyChanged)
             : base(onPropertyChanged)
         {
             this._propertyHelper = new CalculatedProperties.PropertyHelper(NotifyPropertyChanged);
@@ -29,7 +29,7 @@ namespace Ditto.AsyncMvvm.Calculated
         /// Creates a new property helper instance.
         /// </summary>
         /// <param name="onPropertyChanged">Property change notification delegate.</param>
-        public CalcAsyncPropertyHelper(Action<PropertyChangedEventArgs> onPropertyChanged)
+        public CalculatedAsyncPropertyHelper(Action<PropertyChangedEventArgs> onPropertyChanged)
             : base(Adapt(onPropertyChanged))
         {
             this._propertyHelper = new CalculatedProperties.PropertyHelper(onPropertyChanged);

@@ -45,14 +45,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Portable\CalcAsyncBindableBase.cs">
-      <Link>CalcAsyncBindableBase.cs</Link>
+    <Compile Include="..\Portable\CalculatedAsyncBindableBase.cs">
+      <Link>CalculatedAsyncBindableBase.cs</Link>
     </Compile>
-    <Compile Include="..\Portable\CalcAsyncPropertyHelper.cs">
-      <Link>CalcAsyncPropertyHelper.cs</Link>
+    <Compile Include="..\Portable\CalculatedAsyncPropertyHelper.cs">
+      <Link>CalculatedAsyncPropertyHelper.cs</Link>
     </Compile>
-    <Compile Include="..\Portable\ICalcAsyncPropertyHelper.cs">
-      <Link>ICalcAsyncPropertyHelper.cs</Link>
+    <Compile Include="..\Portable\ICalculatedAsyncPropertyHelper.cs">
+      <Link>ICalculatedAsyncPropertyHelper.cs</Link>
     </Compile>
     <Compile Include="..\Portable\Internal\AsyncTriggerProperty.cs">
       <Link>Internal\AsyncTriggerProperty.cs</Link>
@@ -78,9 +78,7 @@
       <HintPath>..\..\packages\Nito.CalculatedProperties.1.0.0\lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+MonoTouch10\CalculatedProperties.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">

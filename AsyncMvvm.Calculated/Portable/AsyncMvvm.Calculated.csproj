@@ -38,9 +38,9 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CalcAsyncBindableBase.cs" />
-    <Compile Include="CalcAsyncPropertyHelper.cs" />
-    <Compile Include="ICalcAsyncPropertyHelper.cs" />
+    <Compile Include="CalculatedAsyncBindableBase.cs" />
+    <Compile Include="CalculatedAsyncPropertyHelper.cs" />
+    <Compile Include="ICalculatedAsyncPropertyHelper.cs" />
     <Compile Include="Internal\AsyncTriggerProperty.cs" />
     <Compile Include="Internal\ITriggerProperty.cs" />
     <Compile Include="Internal\LazyTriggerProperty.cs" />

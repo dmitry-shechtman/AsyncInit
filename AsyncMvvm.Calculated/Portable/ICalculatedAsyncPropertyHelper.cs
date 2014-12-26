@@ -7,7 +7,7 @@ namespace Ditto.AsyncMvvm.Calculated
     /// <summary>
     /// Interface for asynchronous and calculated property helpers.
     /// </summary>
-    public interface ICalcAsyncPropertyHelper : IAsyncPropertyHelper
+    public interface ICalculatedAsyncPropertyHelper : IAsyncPropertyHelper
     {
         /// <summary>
         /// Implements the getter for a trigger property.
