@@ -1,0 +1,95 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Ditto.AsyncInit
+{
+<#@ include file="AsyncInit.t4"#>
+    /// <summary>
+    /// Base class for asynchronously initialized types supporting cancellation.
+    /// </summary>
+    /// <typeparam name="T">The deriving type.</typeparam>
+<#
+	for (int j = 0; j < i; ++j)
+	{
+#>
+    /// <typeparam name="<#= baseTArgs[j] #>">The type of the <#= argNames[j] #>initialization argument.</typeparam>
+<#
+	}
+#>
+    public abstract class CancelableAsyncInitBase<#= tArgList #> : AsyncInitBase<#= tArgList #>, ICancelableAsyncInit<#= baseTArgList #>
+        where T : CancelableAsyncInitBase<#= tArgList #>
+    {
+        /// <summary>
+        /// Deriving types should define a private parameterless constructor.
+        /// </summary>
+        /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        protected CancelableAsyncInitBase(object dummy)
+            : base(dummy)
+        {
+        }
+
+        /// <summary>
+        /// Asynchronously creates and initializes an instance.
+        /// </summary>
+<#
+	for (int j = 0; j < i; ++j)
+	{
+#>
+        /// <param name="<#= baseArgs[j] #>">The <#= argNames[j] #>initialization argument.</param>
+<#
+	}
+#>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        public static Task<T> CreateAsync(<#= cancelParamList #>)
+        {
+            return AsyncActivator.CreateAsync<#= tArgList #>(<#= cancelArgList #>);
+        }
+
+        /// <summary>
+        /// Asynchronously initializes an instance.
+        /// </summary>
+<#
+	for (int j = 0; j < i; ++j)
+	{
+#>
+        /// <param name="<#= baseArgs[j] #>">The <#= argNames[j] #>initialization argument.</param>
+<#
+	}
+#>
+        /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        protected override Task InitAsync(<#= baseParamList #>)
+        {
+            return InitAsync(<#= cancelBaseArgList #>);
+        }
+
+        /// <summary>
+        /// Asynchronously initializes an instance. Overridden by the deriving type.
+        /// </summary>
+<#
+	for (int j = 0; j < i; ++j)
+	{
+#>
+        /// <param name="<#= baseArgs[j] #>">The <#= argNames[j] #>initialization argument.</param>
+<#
+	}
+#>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        protected abstract Task InitAsync(<#= cancelParamList #>);
+
+        Task ICancelableAsyncInit<#= baseTArgList #>.InitAsync(<#= cancelParamList #>)
+        {
+            return InitAsync(<#= cancelArgList #>);
+        }
+    }
+
+<#
+}
+#>
+}

@@ -45,21 +45,69 @@
   <ItemGroup>
     <Compile Include="..\Portable\AsyncActivator.cs">
       <Link>AsyncActivator.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AsyncActivator.tt</DependentUpon>
     </Compile>
     <Compile Include="..\Portable\AsyncInitBase.cs">
       <Link>AsyncInitBase.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AsyncInitBase.tt</DependentUpon>
     </Compile>
     <Compile Include="..\Portable\CancelableAsyncInitBase.cs">
       <Link>CancelableAsyncInitBase.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CancelableAsyncInitBase.tt</DependentUpon>
     </Compile>
     <Compile Include="..\Portable\IAsyncInit.cs">
       <Link>IAsyncInit.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IAsyncInit.tt</DependentUpon>
     </Compile>
     <Compile Include="..\Portable\ICancelableAsyncInit.cs">
       <Link>ICancelableAsyncInit.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ICancelableAsyncInit.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Portable\AsyncActivator.tt">
+      <Link>AsyncActivator.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AsyncActivator.cs</LastGenOutput>
+    </None>
+    <None Include="..\Portable\AsyncInit.t4">
+      <Link>AsyncInit.t4</Link>
+    </None>
+    <None Include="..\Portable\AsyncInitBase.tt">
+      <Link>AsyncInitBase.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AsyncInitBase.cs</LastGenOutput>
+    </None>
+    <None Include="..\Portable\CancelableAsyncInitBase.tt">
+      <Link>CancelableAsyncInitBase.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CancelableAsyncInitBase.cs</LastGenOutput>
+    </None>
+    <None Include="..\Portable\IAsyncInit.tt">
+      <Link>IAsyncInit.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IAsyncInit.cs</LastGenOutput>
+    </None>
+    <None Include="..\Portable\ICancelableAsyncInit.tt">
+      <Link>ICancelableAsyncInit.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ICancelableAsyncInit.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

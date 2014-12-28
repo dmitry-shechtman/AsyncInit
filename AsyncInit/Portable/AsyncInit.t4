@@ -1,0 +1,25 @@
+﻿<#
+var ordinals = new[] { "first ", "second ", "third ", "fourth ", "fifth ", "sixth ", "seventh " };
+
+for (int i = 0; i <= ordinals.Length; ++i)
+{
+	var range = Enumerable.Range(0, i);
+	var argNames = i > 1 ? ordinals : new[] { "" };
+	var baseTArgs = range.Select(j => "TArg" + (i > 1 ? (j + 1).ToString() : "")).ToArray();
+	var baseTArgList = i > 0 ? "<" + string.Join(", ", baseTArgs) + ">" : "";
+	var baseDocTArgList = i > 0 ? "{" + string.Join(", ", baseTArgs) + "}" : "";
+	var tArgs = new[] { "T" }.Concat(baseTArgs);
+	var tArgList = "<" + string.Join(", ", tArgs) + ">";
+	var baseArgs = range.Select(j => "arg" + (i > 1 ? (j + 1).ToString() : "")).ToArray();
+    var baseArgList = string.Join(", ", baseArgs);
+	var baseParams = range.Select(j => baseTArgs[j] + " " + baseArgs[j]);
+	var baseParamList = string.Join(", ", baseParams);
+	var cancelRange = Enumerable.Range(0, i + 1);
+	var cancelTArgs = baseTArgs.Concat(new[] { "CancellationToken" }).ToArray();
+	var cancelArgs = baseArgs.Concat(new[] { "cancellationToken" }).ToArray();
+    var cancelArgList = string.Join(", ", cancelArgs);
+	var cancelBaseArgs = baseArgs.Concat(new[] { "CancellationToken.None" });
+	var cancelBaseArgList = string.Join(", ", cancelBaseArgs);
+	var cancelParams = cancelRange.Select(j => cancelTArgs[j] + " " + cancelArgs[j]);
+    var cancelParamList = string.Join(", ", cancelParams);
+#>

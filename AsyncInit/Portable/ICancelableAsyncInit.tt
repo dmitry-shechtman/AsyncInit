@@ -1,0 +1,44 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Ditto.AsyncInit
+{
+<#@ include file="AsyncInit.t4"#>
+    /// <summary>
+    /// Interface for asynchronously initialized types supporting cancellation.
+    /// </summary>
+<#
+	for (int j = 0; j < i; ++j)
+	{
+#>
+    /// <typeparam name="<#= baseTArgs[j] #>">The type of the <#= argNames[j] #>initialization argument.</typeparam>
+<#
+	}
+#>
+    public interface ICancelableAsyncInit<#= baseTArgList #>
+    {
+        /// <summary>
+        /// Asynchronously initializes an instance.
+        /// </summary>
+<#
+	for (int j = 0; j < i; ++j)
+	{
+#>
+        /// <param name="<#= baseArgs[j] #>">The <#= argNames[j] #>initialization argument.</param>
+<#
+	}
+#>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        Task InitAsync(<#= cancelParamList #>);
+    }
+
+<#
+}
+#>
+}
