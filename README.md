@@ -6,6 +6,10 @@ A generic implementation of the asynchronous factory pattern.
 Usage
 -----
 
+0. Install `Ditto.AsyncInit`:
+
+        Install-Package Ditto.AsyncInit
+
 1. Determine the types of the initialization arguments (if any), e.g. `IProgress<long>`.
 
 2. Derive from the corresponding `AsyncInitBase` or `CancelableAsyncInitBase` _(recommended)_, specifying your class as the first generic type argument:
@@ -37,7 +41,7 @@ Usage
 Notice
 ------
 
-   Copyright Â© Dmitry Shechtman 2014
+   Copyright © Dmitry Shechtman 2014
 
    Licensed under the Apache License, Version 2.0 (the "License").
 
@@ -56,3 +60,4 @@ Links
 * [Code](https://github.com/dmitry-shechtman/AsyncInit)
 * [Wiki](https://github.com/dmitry-shechtman/AsyncInit/wiki)
 * [Blog](https://shecht.wordpress.com/category/asyncactivator/)
+* [NuGet](https://nuget.org/packages/Ditto.AsyncInit)
