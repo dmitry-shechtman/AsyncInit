@@ -19,6 +19,7 @@ namespace Ditto.AsyncInit
 <#
 	}
 #>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public interface IAsyncInit<#= baseTArgList #>
     {
         /// <summary>

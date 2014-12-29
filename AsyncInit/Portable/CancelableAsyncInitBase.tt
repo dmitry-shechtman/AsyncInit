@@ -21,6 +21,7 @@ namespace Ditto.AsyncInit
 <#
 	}
 #>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class CancelableAsyncInitBase<#= tArgList #> : AsyncInitBase<#= tArgList #>, ICancelableAsyncInit<#= baseTArgList #>
         where T : CancelableAsyncInitBase<#= tArgList #>
     {
@@ -46,6 +47,7 @@ namespace Ditto.AsyncInit
 #>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes")]
         public static Task<T> CreateAsync(<#= cancelParamList #>)
         {
             return AsyncActivator.CreateAsync<#= tArgList #>(<#= cancelArgList #>);

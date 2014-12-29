@@ -7,6 +7,7 @@ namespace Ditto.AsyncInit
     /// Base class for asynchronously initialized types supporting cancellation.
     /// </summary>
     /// <typeparam name="T">The deriving type.</typeparam>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class CancelableAsyncInitBase<T> : AsyncInitBase<T>, ICancelableAsyncInit
         where T : CancelableAsyncInitBase<T>
     {
@@ -24,6 +25,7 @@ namespace Ditto.AsyncInit
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes")]
         public static Task<T> CreateAsync(CancellationToken cancellationToken)
         {
             return AsyncActivator.CreateAsync<T>(cancellationToken);
@@ -56,6 +58,7 @@ namespace Ditto.AsyncInit
     /// </summary>
     /// <typeparam name="T">The deriving type.</typeparam>
     /// <typeparam name="TArg">The type of the initialization argument.</typeparam>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class CancelableAsyncInitBase<T, TArg> : AsyncInitBase<T, TArg>, ICancelableAsyncInit<TArg>
         where T : CancelableAsyncInitBase<T, TArg>
     {
@@ -74,6 +77,7 @@ namespace Ditto.AsyncInit
         /// <param name="arg">The initialization argument.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes")]
         public static Task<T> CreateAsync(TArg arg, CancellationToken cancellationToken)
         {
             return AsyncActivator.CreateAsync<T, TArg>(arg, cancellationToken);
@@ -109,6 +113,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="T">The deriving type.</typeparam>
     /// <typeparam name="TArg1">The type of the first initialization argument.</typeparam>
     /// <typeparam name="TArg2">The type of the second initialization argument.</typeparam>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class CancelableAsyncInitBase<T, TArg1, TArg2> : AsyncInitBase<T, TArg1, TArg2>, ICancelableAsyncInit<TArg1, TArg2>
         where T : CancelableAsyncInitBase<T, TArg1, TArg2>
     {
@@ -128,6 +133,7 @@ namespace Ditto.AsyncInit
         /// <param name="arg2">The second initialization argument.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes")]
         public static Task<T> CreateAsync(TArg1 arg1, TArg2 arg2, CancellationToken cancellationToken)
         {
             return AsyncActivator.CreateAsync<T, TArg1, TArg2>(arg1, arg2, cancellationToken);
@@ -166,6 +172,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg1">The type of the first initialization argument.</typeparam>
     /// <typeparam name="TArg2">The type of the second initialization argument.</typeparam>
     /// <typeparam name="TArg3">The type of the third initialization argument.</typeparam>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class CancelableAsyncInitBase<T, TArg1, TArg2, TArg3> : AsyncInitBase<T, TArg1, TArg2, TArg3>, ICancelableAsyncInit<TArg1, TArg2, TArg3>
         where T : CancelableAsyncInitBase<T, TArg1, TArg2, TArg3>
     {
@@ -186,6 +193,7 @@ namespace Ditto.AsyncInit
         /// <param name="arg3">The third initialization argument.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes")]
         public static Task<T> CreateAsync(TArg1 arg1, TArg2 arg2, TArg3 arg3, CancellationToken cancellationToken)
         {
             return AsyncActivator.CreateAsync<T, TArg1, TArg2, TArg3>(arg1, arg2, arg3, cancellationToken);
@@ -227,6 +235,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg2">The type of the second initialization argument.</typeparam>
     /// <typeparam name="TArg3">The type of the third initialization argument.</typeparam>
     /// <typeparam name="TArg4">The type of the fourth initialization argument.</typeparam>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class CancelableAsyncInitBase<T, TArg1, TArg2, TArg3, TArg4> : AsyncInitBase<T, TArg1, TArg2, TArg3, TArg4>, ICancelableAsyncInit<TArg1, TArg2, TArg3, TArg4>
         where T : CancelableAsyncInitBase<T, TArg1, TArg2, TArg3, TArg4>
     {
@@ -248,6 +257,7 @@ namespace Ditto.AsyncInit
         /// <param name="arg4">The fourth initialization argument.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes")]
         public static Task<T> CreateAsync(TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, CancellationToken cancellationToken)
         {
             return AsyncActivator.CreateAsync<T, TArg1, TArg2, TArg3, TArg4>(arg1, arg2, arg3, arg4, cancellationToken);
@@ -292,6 +302,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg3">The type of the third initialization argument.</typeparam>
     /// <typeparam name="TArg4">The type of the fourth initialization argument.</typeparam>
     /// <typeparam name="TArg5">The type of the fifth initialization argument.</typeparam>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class CancelableAsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5> : AsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5>, ICancelableAsyncInit<TArg1, TArg2, TArg3, TArg4, TArg5>
         where T : CancelableAsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5>
     {
@@ -314,6 +325,7 @@ namespace Ditto.AsyncInit
         /// <param name="arg5">The fifth initialization argument.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes")]
         public static Task<T> CreateAsync(TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, CancellationToken cancellationToken)
         {
             return AsyncActivator.CreateAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5>(arg1, arg2, arg3, arg4, arg5, cancellationToken);
@@ -361,6 +373,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg4">The type of the fourth initialization argument.</typeparam>
     /// <typeparam name="TArg5">The type of the fifth initialization argument.</typeparam>
     /// <typeparam name="TArg6">The type of the sixth initialization argument.</typeparam>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class CancelableAsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6> : AsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>, ICancelableAsyncInit<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>
         where T : CancelableAsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>
     {
@@ -384,6 +397,7 @@ namespace Ditto.AsyncInit
         /// <param name="arg6">The sixth initialization argument.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes")]
         public static Task<T> CreateAsync(TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6, CancellationToken cancellationToken)
         {
             return AsyncActivator.CreateAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>(arg1, arg2, arg3, arg4, arg5, arg6, cancellationToken);
@@ -434,6 +448,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg5">The type of the fifth initialization argument.</typeparam>
     /// <typeparam name="TArg6">The type of the sixth initialization argument.</typeparam>
     /// <typeparam name="TArg7">The type of the seventh initialization argument.</typeparam>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class CancelableAsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7> : AsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>, ICancelableAsyncInit<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>
         where T : CancelableAsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>
     {
@@ -458,6 +473,7 @@ namespace Ditto.AsyncInit
         /// <param name="arg7">The seventh initialization argument.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes")]
         public static Task<T> CreateAsync(TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6, TArg7 arg7, CancellationToken cancellationToken)
         {
             return AsyncActivator.CreateAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>(arg1, arg2, arg3, arg4, arg5, arg6, arg7, cancellationToken);

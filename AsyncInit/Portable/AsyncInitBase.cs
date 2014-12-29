@@ -6,6 +6,7 @@ namespace Ditto.AsyncInit
     /// Base class for asynchronously initialized types.
     /// </summary>
     /// <typeparam name="T">The deriving type.</typeparam>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class AsyncInitBase<T> : IAsyncInit
         where T : AsyncInitBase<T>
     {
@@ -13,6 +14,7 @@ namespace Ditto.AsyncInit
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
         /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "dummy")]
         protected AsyncInitBase(object dummy)
         {
         }
@@ -21,6 +23,7 @@ namespace Ditto.AsyncInit
         /// Asynchronously creates and initializes an instance.
         /// </summary>
         /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes")]
         public static Task<T> CreateAsync()
         {
             return AsyncActivator.CreateAsync<T>();
@@ -43,6 +46,7 @@ namespace Ditto.AsyncInit
     /// </summary>
     /// <typeparam name="T">The deriving type.</typeparam>
     /// <typeparam name="TArg">The type of the initialization argument.</typeparam>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class AsyncInitBase<T, TArg> : IAsyncInit<TArg>
         where T : AsyncInitBase<T, TArg>
     {
@@ -50,6 +54,7 @@ namespace Ditto.AsyncInit
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
         /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "dummy")]
         protected AsyncInitBase(object dummy)
         {
         }
@@ -59,6 +64,7 @@ namespace Ditto.AsyncInit
         /// </summary>
         /// <param name="arg">The initialization argument.</param>
         /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes")]
         public static Task<T> CreateAsync(TArg arg)
         {
             return AsyncActivator.CreateAsync<T, TArg>(arg);
@@ -83,6 +89,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="T">The deriving type.</typeparam>
     /// <typeparam name="TArg1">The type of the first initialization argument.</typeparam>
     /// <typeparam name="TArg2">The type of the second initialization argument.</typeparam>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class AsyncInitBase<T, TArg1, TArg2> : IAsyncInit<TArg1, TArg2>
         where T : AsyncInitBase<T, TArg1, TArg2>
     {
@@ -90,6 +97,7 @@ namespace Ditto.AsyncInit
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
         /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "dummy")]
         protected AsyncInitBase(object dummy)
         {
         }
@@ -100,6 +108,7 @@ namespace Ditto.AsyncInit
         /// <param name="arg1">The first initialization argument.</param>
         /// <param name="arg2">The second initialization argument.</param>
         /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes")]
         public static Task<T> CreateAsync(TArg1 arg1, TArg2 arg2)
         {
             return AsyncActivator.CreateAsync<T, TArg1, TArg2>(arg1, arg2);
@@ -126,6 +135,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg1">The type of the first initialization argument.</typeparam>
     /// <typeparam name="TArg2">The type of the second initialization argument.</typeparam>
     /// <typeparam name="TArg3">The type of the third initialization argument.</typeparam>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class AsyncInitBase<T, TArg1, TArg2, TArg3> : IAsyncInit<TArg1, TArg2, TArg3>
         where T : AsyncInitBase<T, TArg1, TArg2, TArg3>
     {
@@ -133,6 +143,7 @@ namespace Ditto.AsyncInit
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
         /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "dummy")]
         protected AsyncInitBase(object dummy)
         {
         }
@@ -144,6 +155,7 @@ namespace Ditto.AsyncInit
         /// <param name="arg2">The second initialization argument.</param>
         /// <param name="arg3">The third initialization argument.</param>
         /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes")]
         public static Task<T> CreateAsync(TArg1 arg1, TArg2 arg2, TArg3 arg3)
         {
             return AsyncActivator.CreateAsync<T, TArg1, TArg2, TArg3>(arg1, arg2, arg3);
@@ -172,6 +184,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg2">The type of the second initialization argument.</typeparam>
     /// <typeparam name="TArg3">The type of the third initialization argument.</typeparam>
     /// <typeparam name="TArg4">The type of the fourth initialization argument.</typeparam>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class AsyncInitBase<T, TArg1, TArg2, TArg3, TArg4> : IAsyncInit<TArg1, TArg2, TArg3, TArg4>
         where T : AsyncInitBase<T, TArg1, TArg2, TArg3, TArg4>
     {
@@ -179,6 +192,7 @@ namespace Ditto.AsyncInit
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
         /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "dummy")]
         protected AsyncInitBase(object dummy)
         {
         }
@@ -191,6 +205,7 @@ namespace Ditto.AsyncInit
         /// <param name="arg3">The third initialization argument.</param>
         /// <param name="arg4">The fourth initialization argument.</param>
         /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes")]
         public static Task<T> CreateAsync(TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4)
         {
             return AsyncActivator.CreateAsync<T, TArg1, TArg2, TArg3, TArg4>(arg1, arg2, arg3, arg4);
@@ -221,6 +236,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg3">The type of the third initialization argument.</typeparam>
     /// <typeparam name="TArg4">The type of the fourth initialization argument.</typeparam>
     /// <typeparam name="TArg5">The type of the fifth initialization argument.</typeparam>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class AsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5> : IAsyncInit<TArg1, TArg2, TArg3, TArg4, TArg5>
         where T : AsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5>
     {
@@ -228,6 +244,7 @@ namespace Ditto.AsyncInit
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
         /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "dummy")]
         protected AsyncInitBase(object dummy)
         {
         }
@@ -241,6 +258,7 @@ namespace Ditto.AsyncInit
         /// <param name="arg4">The fourth initialization argument.</param>
         /// <param name="arg5">The fifth initialization argument.</param>
         /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes")]
         public static Task<T> CreateAsync(TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5)
         {
             return AsyncActivator.CreateAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5>(arg1, arg2, arg3, arg4, arg5);
@@ -273,6 +291,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg4">The type of the fourth initialization argument.</typeparam>
     /// <typeparam name="TArg5">The type of the fifth initialization argument.</typeparam>
     /// <typeparam name="TArg6">The type of the sixth initialization argument.</typeparam>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class AsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6> : IAsyncInit<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>
         where T : AsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>
     {
@@ -280,6 +299,7 @@ namespace Ditto.AsyncInit
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
         /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "dummy")]
         protected AsyncInitBase(object dummy)
         {
         }
@@ -294,6 +314,7 @@ namespace Ditto.AsyncInit
         /// <param name="arg5">The fifth initialization argument.</param>
         /// <param name="arg6">The sixth initialization argument.</param>
         /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes")]
         public static Task<T> CreateAsync(TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6)
         {
             return AsyncActivator.CreateAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -328,6 +349,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg5">The type of the fifth initialization argument.</typeparam>
     /// <typeparam name="TArg6">The type of the sixth initialization argument.</typeparam>
     /// <typeparam name="TArg7">The type of the seventh initialization argument.</typeparam>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class AsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7> : IAsyncInit<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>
         where T : AsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>
     {
@@ -335,6 +357,7 @@ namespace Ditto.AsyncInit
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
         /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "dummy")]
         protected AsyncInitBase(object dummy)
         {
         }
@@ -350,6 +373,7 @@ namespace Ditto.AsyncInit
         /// <param name="arg6">The sixth initialization argument.</param>
         /// <param name="arg7">The seventh initialization argument.</param>
         /// <returns>A <see cref="Task"/> capturing the initialization.</returns>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1000:DoNotDeclareStaticMembersOnGenericTypes")]
         public static Task<T> CreateAsync(TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6, TArg7 arg7)
         {
             return AsyncActivator.CreateAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
