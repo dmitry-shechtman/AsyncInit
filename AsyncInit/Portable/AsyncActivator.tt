@@ -3,6 +3,7 @@
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ output extension=".cs" #>
+using Ditto.AsyncInit.Internal;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -36,7 +37,7 @@ namespace Ditto.AsyncInit
         public static async Task<T> CreateAsync<#= tArgList #>(<#= baseParamList #>)
             where T : IAsyncInit<#= baseTArgList #>
         {
-            T value = Utils.CreateInstance<T>();
+            T value = Utilities.CreateInstance<T>();
             await value.InitAsync(<#= baseArgList #>).ConfigureAwait(false);
             return value;
         }
@@ -64,7 +65,7 @@ namespace Ditto.AsyncInit
         public static async Task<T> CreateAsync<#= tArgList #>(<#= cancelParamList #>)
             where T : ICancelableAsyncInit<#= baseTArgList #>
         {
-            T value = Utils.CreateInstance<T>();
+            T value = Utilities.CreateInstance<T>();
             await value.InitAsync(<#= cancelArgList #>).ConfigureAwait(false);
             return value;
         }

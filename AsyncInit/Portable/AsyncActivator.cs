@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using Ditto.AsyncInit.Internal;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Ditto.AsyncInit
@@ -16,7 +17,7 @@ namespace Ditto.AsyncInit
         public static async Task<T> CreateAsync<T>()
             where T : IAsyncInit
         {
-            T value = Utils.CreateInstance<T>();
+            T value = Utilities.CreateInstance<T>();
             await value.InitAsync().ConfigureAwait(false);
             return value;
         }
@@ -30,7 +31,7 @@ namespace Ditto.AsyncInit
         public static async Task<T> CreateAsync<T>(CancellationToken cancellationToken)
             where T : ICancelableAsyncInit
         {
-            T value = Utils.CreateInstance<T>();
+            T value = Utilities.CreateInstance<T>();
             await value.InitAsync(cancellationToken).ConfigureAwait(false);
             return value;
         }
@@ -45,7 +46,7 @@ namespace Ditto.AsyncInit
         public static async Task<T> CreateAsync<T, TArg>(TArg arg)
             where T : IAsyncInit<TArg>
         {
-            T value = Utils.CreateInstance<T>();
+            T value = Utilities.CreateInstance<T>();
             await value.InitAsync(arg).ConfigureAwait(false);
             return value;
         }
@@ -61,7 +62,7 @@ namespace Ditto.AsyncInit
         public static async Task<T> CreateAsync<T, TArg>(TArg arg, CancellationToken cancellationToken)
             where T : ICancelableAsyncInit<TArg>
         {
-            T value = Utils.CreateInstance<T>();
+            T value = Utilities.CreateInstance<T>();
             await value.InitAsync(arg, cancellationToken).ConfigureAwait(false);
             return value;
         }
@@ -78,7 +79,7 @@ namespace Ditto.AsyncInit
         public static async Task<T> CreateAsync<T, TArg1, TArg2>(TArg1 arg1, TArg2 arg2)
             where T : IAsyncInit<TArg1, TArg2>
         {
-            T value = Utils.CreateInstance<T>();
+            T value = Utilities.CreateInstance<T>();
             await value.InitAsync(arg1, arg2).ConfigureAwait(false);
             return value;
         }
@@ -96,7 +97,7 @@ namespace Ditto.AsyncInit
         public static async Task<T> CreateAsync<T, TArg1, TArg2>(TArg1 arg1, TArg2 arg2, CancellationToken cancellationToken)
             where T : ICancelableAsyncInit<TArg1, TArg2>
         {
-            T value = Utils.CreateInstance<T>();
+            T value = Utilities.CreateInstance<T>();
             await value.InitAsync(arg1, arg2, cancellationToken).ConfigureAwait(false);
             return value;
         }
@@ -115,7 +116,7 @@ namespace Ditto.AsyncInit
         public static async Task<T> CreateAsync<T, TArg1, TArg2, TArg3>(TArg1 arg1, TArg2 arg2, TArg3 arg3)
             where T : IAsyncInit<TArg1, TArg2, TArg3>
         {
-            T value = Utils.CreateInstance<T>();
+            T value = Utilities.CreateInstance<T>();
             await value.InitAsync(arg1, arg2, arg3).ConfigureAwait(false);
             return value;
         }
@@ -135,7 +136,7 @@ namespace Ditto.AsyncInit
         public static async Task<T> CreateAsync<T, TArg1, TArg2, TArg3>(TArg1 arg1, TArg2 arg2, TArg3 arg3, CancellationToken cancellationToken)
             where T : ICancelableAsyncInit<TArg1, TArg2, TArg3>
         {
-            T value = Utils.CreateInstance<T>();
+            T value = Utilities.CreateInstance<T>();
             await value.InitAsync(arg1, arg2, arg3, cancellationToken).ConfigureAwait(false);
             return value;
         }
@@ -156,7 +157,7 @@ namespace Ditto.AsyncInit
         public static async Task<T> CreateAsync<T, TArg1, TArg2, TArg3, TArg4>(TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4)
             where T : IAsyncInit<TArg1, TArg2, TArg3, TArg4>
         {
-            T value = Utils.CreateInstance<T>();
+            T value = Utilities.CreateInstance<T>();
             await value.InitAsync(arg1, arg2, arg3, arg4).ConfigureAwait(false);
             return value;
         }
@@ -178,7 +179,7 @@ namespace Ditto.AsyncInit
         public static async Task<T> CreateAsync<T, TArg1, TArg2, TArg3, TArg4>(TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, CancellationToken cancellationToken)
             where T : ICancelableAsyncInit<TArg1, TArg2, TArg3, TArg4>
         {
-            T value = Utils.CreateInstance<T>();
+            T value = Utilities.CreateInstance<T>();
             await value.InitAsync(arg1, arg2, arg3, arg4, cancellationToken).ConfigureAwait(false);
             return value;
         }
@@ -201,7 +202,7 @@ namespace Ditto.AsyncInit
         public static async Task<T> CreateAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5>(TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5)
             where T : IAsyncInit<TArg1, TArg2, TArg3, TArg4, TArg5>
         {
-            T value = Utils.CreateInstance<T>();
+            T value = Utilities.CreateInstance<T>();
             await value.InitAsync(arg1, arg2, arg3, arg4, arg5).ConfigureAwait(false);
             return value;
         }
@@ -225,7 +226,7 @@ namespace Ditto.AsyncInit
         public static async Task<T> CreateAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5>(TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, CancellationToken cancellationToken)
             where T : ICancelableAsyncInit<TArg1, TArg2, TArg3, TArg4, TArg5>
         {
-            T value = Utils.CreateInstance<T>();
+            T value = Utilities.CreateInstance<T>();
             await value.InitAsync(arg1, arg2, arg3, arg4, arg5, cancellationToken).ConfigureAwait(false);
             return value;
         }
@@ -250,7 +251,7 @@ namespace Ditto.AsyncInit
         public static async Task<T> CreateAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>(TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6)
             where T : IAsyncInit<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>
         {
-            T value = Utils.CreateInstance<T>();
+            T value = Utilities.CreateInstance<T>();
             await value.InitAsync(arg1, arg2, arg3, arg4, arg5, arg6).ConfigureAwait(false);
             return value;
         }
@@ -276,7 +277,7 @@ namespace Ditto.AsyncInit
         public static async Task<T> CreateAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>(TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6, CancellationToken cancellationToken)
             where T : ICancelableAsyncInit<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>
         {
-            T value = Utils.CreateInstance<T>();
+            T value = Utilities.CreateInstance<T>();
             await value.InitAsync(arg1, arg2, arg3, arg4, arg5, arg6, cancellationToken).ConfigureAwait(false);
             return value;
         }
@@ -303,7 +304,7 @@ namespace Ditto.AsyncInit
         public static async Task<T> CreateAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>(TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6, TArg7 arg7)
             where T : IAsyncInit<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>
         {
-            T value = Utils.CreateInstance<T>();
+            T value = Utilities.CreateInstance<T>();
             await value.InitAsync(arg1, arg2, arg3, arg4, arg5, arg6, arg7).ConfigureAwait(false);
             return value;
         }
@@ -331,7 +332,7 @@ namespace Ditto.AsyncInit
         public static async Task<T> CreateAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>(TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6, TArg7 arg7, CancellationToken cancellationToken)
             where T : ICancelableAsyncInit<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>
         {
-            T value = Utils.CreateInstance<T>();
+            T value = Utilities.CreateInstance<T>();
             await value.InitAsync(arg1, arg2, arg3, arg4, arg5, arg6, arg7, cancellationToken).ConfigureAwait(false);
             return value;
         }

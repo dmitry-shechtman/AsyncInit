@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace Ditto.AsyncInit
+namespace Ditto.AsyncInit.Internal
 {
     /// <summary>
     /// Provides utility methods for AsyncActivator.
     /// </summary>
-    public static class Utils
+    public static class Utilities
     {
         /// <summary>
         /// Creates an instance of the specified type.
