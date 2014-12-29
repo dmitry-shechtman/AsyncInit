@@ -37,12 +37,19 @@
     <DocumentationFile>bin\Release\Ditto.AsyncInit.xml</DocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>AsyncInit.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
     <None Include="AsyncActivator.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AsyncActivator.cs</LastGenOutput>
     </None>
+    <None Include="AsyncInit.pfx" />
     <None Include="AsyncInit.t4" />
     <None Include="AsyncInitBase.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

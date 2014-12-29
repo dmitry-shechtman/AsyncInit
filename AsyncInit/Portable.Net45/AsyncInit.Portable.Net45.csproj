@@ -37,6 +37,12 @@
     <DocumentationFile>bin\Release\Ditto.AsyncInit.xml</DocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\Portable\AsyncInit.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\Portable\AsyncActivator.cs">
       <Link>AsyncActivator.cs</Link>
@@ -78,6 +84,9 @@
       <Link>AsyncActivator.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AsyncActivator.cs</LastGenOutput>
+    </None>
+    <None Include="..\Portable\AsyncInit.pfx">
+      <Link>AsyncInit.pfx</Link>
     </None>
     <None Include="..\Portable\AsyncInit.t4">
       <Link>AsyncInit.t4</Link>
