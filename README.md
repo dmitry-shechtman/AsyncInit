@@ -37,6 +37,7 @@ Usage
 **Done!** Your class may now be consumed asynchronously:
 
     var service = await UniversalAnswerService.Create(progress, cancellationToken);
+    var answer = service.Answer;
 
 Notice
 ------
