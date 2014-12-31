@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Ditto.AsyncInit</id>
+    <version>1.0.3</version>
+    <title>AsyncInit</title>
+    <authors>Dmitry Shechtman</authors>
+    <owners>Dmitry Shechtman</owners>
+    <description>A generic implementation of the asynchronous factory pattern.</description>
+    <releaseNotes>Clarified usage example</releaseNotes>
+    <language>en-US</language>
+    <projectUrl>https://github.com/dmitry-shechtman/AsyncInit/</projectUrl>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright © Dmitry Shechtman 2014</copyright>
+    <tags>async await task constructor factory AsyncInit CancelableAsyncInit InitAsync AsyncActivator Ditto</tags>
+    <dependencies>
+      <group targetFramework=".NETPortable0.0-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10">
+        <dependency id="Microsoft.Bcl.Async" version="1.0.168" />
+      </group>
+      <group targetFramework=".NETPortable0.0-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
+      <group targetFramework=".NETFramework4.5" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="AsyncInit\Portable\bin\Release\Ditto.AsyncInit.dll" target="lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
+    <file src="AsyncInit\Portable\bin\Release\Ditto.AsyncInit.xml" target="lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
+    <file src="AsyncInit\Portable.Net45\bin\Release\Ditto.AsyncInit.dll" target="lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
+    <file src="AsyncInit\Portable.Net45\bin\Release\Ditto.AsyncInit.xml" target="lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
+    <file src="AsyncInit\Net45\bin\Release\Ditto.AsyncInit.dll" target="lib\net45" />
+    <file src="AsyncInit\Net45\bin\Release\Ditto.AsyncInit.xml" target="lib\net45" />
+    <file src="README.txt" target="README.txt" />
+    <file src="LICENSE" target="LICENSE" />
+    <file src="NOTICE" target="NOTICE" />
+  </files>
+</package>
