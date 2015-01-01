@@ -98,7 +98,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// <param name="container">Container strategy.</param>
         /// <param name="type">The type of object to resolve.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        private Task<object> ResolveInitializerAsync(IContainerStrategy container, Type type, CancellationToken cancellationToken)
+        private static Task<object> ResolveInitializerAsync(IContainerStrategy container, Type type, CancellationToken cancellationToken)
         {
             var initializerType = typeof(IAsyncInitializer<>).MakeGenericType(type);
             object initializer;

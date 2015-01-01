@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace Ditto.AsyncInit.Services
 {
@@ -50,12 +51,12 @@ namespace Ditto.AsyncInit.Services
 
         private static string GetMessage(Type type)
         {
-            return string.Format("Cannot initialize {0}.", type);
+            return string.Format(CultureInfo.CurrentCulture, "Cannot initialize {0}.", type);
         }
 
         private static string GetMessage(Type type, string innerMessage)
         {
-            return string.Format("Cannot initialize {0}: {1}", type, innerMessage);
+            return string.Format(CultureInfo.CurrentCulture, "Cannot initialize {0}: {1}", type, innerMessage);
         }
     }
 }
