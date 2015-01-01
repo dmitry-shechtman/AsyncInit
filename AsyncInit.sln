@@ -17,6 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		AsyncInit\README.txt = AsyncInit\README.txt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{677EE96F-B4FC-49E3-985E-AD31C4F26EBB}"
+	ProjectSection(SolutionItems) = preProject
+		AsyncInit\NuGet\Ditto.AsyncInit.nuspec = AsyncInit\NuGet\Ditto.AsyncInit.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,5 +43,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{677EE96F-B4FC-49E3-985E-AD31C4F26EBB} = {475D0F4B-FC41-4E66-BC4A-F6FDF26522C5}
 	EndGlobalSection
 EndGlobal
