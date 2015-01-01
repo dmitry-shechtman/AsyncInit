@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncInit.Services", "AsyncInit.Services\Portable\AsyncInit.Services.csproj", "{4C26F895-4F45-46A0-AA7B-02FBF5C6B337}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1F64B56E-6D1A-41BA-8300-CB464C6077CE}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Items\CommonAssemblyInfo.cs = Solution Items\CommonAssemblyInfo.cs
+		LICENSE = LICENSE
+		NOTICE = NOTICE
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{94CEF379-3DD7-4FEF-A662-E0A609CED367}"
+	ProjectSection(SolutionItems) = preProject
+		AsyncInit.Services\NuGet\Ditto.AsyncInit.Services.nuspec = AsyncInit.Services\NuGet\Ditto.AsyncInit.Services.nuspec
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C26F895-4F45-46A0-AA7B-02FBF5C6B337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C26F895-4F45-46A0-AA7B-02FBF5C6B337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C26F895-4F45-46A0-AA7B-02FBF5C6B337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C26F895-4F45-46A0-AA7B-02FBF5C6B337}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{94CEF379-3DD7-4FEF-A662-E0A609CED367} = {1F64B56E-6D1A-41BA-8300-CB464C6077CE}
+	EndGlobalSection
+EndGlobal

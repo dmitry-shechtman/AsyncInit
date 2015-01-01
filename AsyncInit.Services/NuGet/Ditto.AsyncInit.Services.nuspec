@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Ditto.AsyncInit.Services</id>
+    <version>1.0.0</version>
+    <title>AsyncInit Dependency Injection Support</title>
+    <authors>Dmitry Shechtman</authors>
+    <owners>Dmitry Shechtman</owners>
+    <summary>AsyncInit dependency injection support.</summary>
+    <description>
+Adds support for dependency injection to AsyncInit.
+
+Supported Platforms:
+
+* .NET Framework 4
+* Silverlight 5
+* Windows 8
+* Windows Phone Silverlight 8
+* Windows Phone 8.1
+* Xamarin.Android
+* Xamarin.iOS
+* Portable Class Libraries
+    </description>
+    <releaseNotes>Initial release</releaseNotes>
+    <language>en-US</language>
+    <projectUrl>https://github.com/dmitry-shechtman/AsyncInit/</projectUrl>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright © Dmitry Shechtman 2014-2015</copyright>
+    <tags>async await task constructor factory dependency injection DI IoC AsyncInit AsyncInitializer ContainerAsyncInitializerBase Ditto</tags>
+    <dependencies>
+      <group>
+        <dependency id="Ditto.AsyncInit" version="1.0.4" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="AsyncInit.Services\Portable\bin\Release\Ditto.AsyncInit.Services.dll" target="lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
+    <file src="AsyncInit.Services\Portable\bin\Release\Ditto.AsyncInit.Services.xml" target="lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
+    <file src="LICENSE" />
+    <file src="NOTICE" />
+  </files>
+</package>

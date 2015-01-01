@@ -1,0 +1,19 @@
+﻿<#
+var ordinals = new[] { "first ", "second ", "third ", "fourth ", "fifth ", "sixth ", "seventh " };
+
+for (int i = 1; i <= ordinals.Length; ++i)
+{
+	var range = Enumerable.Range(0, i);
+	var argNames = i > 1 ? ordinals : new[] { "" };
+	var baseTArgs = range.Select(j => "TArg" + (i > 1 ? (j + 1).ToString() : "")).ToArray();
+	var baseTArgList = "<" + string.Join(", ", baseTArgs) + ">";
+	var baseDocTArgList = "{" + string.Join(", ", baseTArgs) + "}";
+	var tArgs = new[] { "T" }.Concat(baseTArgs);
+	var tArgList = "<" + string.Join(", ", tArgs) + ">";
+	var baseArgs = range.Select(j => "arg" + (i > 1 ? (j + 1).ToString() : "")).ToArray();
+    var baseArgList = string.Join(", ", baseArgs);
+	var baseParams = range.Select(j => baseTArgs[j] + " " + baseArgs[j]);
+	var baseParamList = string.Join(", ", baseParams);
+	var objectParams = range.Select(j => "object " + baseArgs[j]);
+	var objectParamList = string.Join(", ", objectParams);
+#>
