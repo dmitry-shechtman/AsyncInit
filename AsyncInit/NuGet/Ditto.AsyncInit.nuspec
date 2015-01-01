@@ -29,8 +29,8 @@
     <file src="AsyncInit\Portable.Net45\bin\Release\Ditto.AsyncInit.xml" target="lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
     <file src="AsyncInit\Net45\bin\Release\Ditto.AsyncInit.dll" target="lib\net45" />
     <file src="AsyncInit\Net45\bin\Release\Ditto.AsyncInit.xml" target="lib\net45" />
-    <file src="README.txt" target="README.txt" />
-    <file src="LICENSE" target="LICENSE" />
-    <file src="NOTICE" target="NOTICE" />
+    <file src="AsyncInit\README.txt" />
+    <file src="LICENSE" />
+    <file src="NOTICE" />
   </files>
 </package>

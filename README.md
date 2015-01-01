@@ -14,6 +14,8 @@ Usage
 
 2. Derive from the corresponding `AsyncInitBase` or `CancelableAsyncInitBase` _(recommended)_, specifying your class as the first generic type argument:
 
+        using Ditto.AsyncInit;
+
         class UniversalAnswerService : CancelableAsyncInitBase<UniversalService, IProgress<long>>
         {
             public int Answer { get; private set; }
