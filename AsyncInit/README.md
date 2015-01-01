@@ -16,7 +16,7 @@ Usage
 
         using Ditto.AsyncInit;
 
-        class UniversalAnswerService : CancelableAsyncInitBase<UniversalService, IProgress<long>>
+        class UniversalAnswerService : CancelableAsyncInitBase<UniversalAnswerService, IProgress<long>>
         {
             public int Answer { get; private set; }
         }
