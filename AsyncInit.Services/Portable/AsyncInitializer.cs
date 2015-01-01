@@ -20,7 +20,7 @@ namespace Ditto.AsyncInit.Services
         /// <summary>
         /// An initializer with no initialization arguments.
         /// </summary>
-        public static readonly AsyncInitializer<TFrom, TTo> Empty = new AsyncInitializer<TFrom, TTo>(AsyncInitArgs.Empty);
+        public static readonly AsyncInitializer<TFrom, TTo> Empty = new AsyncInitializer<TFrom, TTo>(StaticArgumentsStrategy.Empty);
 
         private readonly IArgumentsStrategy _arguments;
 
