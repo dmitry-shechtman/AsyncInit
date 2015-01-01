@@ -3,6 +3,18 @@ AsyncInit
 
 A generic implementation of the asynchronous factory pattern.
 
+Supported Platforms
+-------------------
+
+* .NET Framework 4
+* Silverlight 5
+* Windows 8
+* Windows Phone Silverlight 8
+* Windows Phone 8.1
+* Xamarin.Android
+* Xamarin.iOS
+* Portable Class Libraries
+
 Usage
 -----
 
@@ -44,7 +56,7 @@ Usage
 Notice
 ------
 
-   Copyright © Dmitry Shechtman 2014-2015
+   Copyright Â© Dmitry Shechtman 2014-2015
 
    Licensed under the Apache License, Version 2.0 (the "License").
 
