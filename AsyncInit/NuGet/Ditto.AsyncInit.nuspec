@@ -6,7 +6,21 @@
     <title>AsyncInit</title>
     <authors>Dmitry Shechtman</authors>
     <owners>Dmitry Shechtman</owners>
-    <description>A generic implementation of the asynchronous factory pattern.</description>
+    <summary>A generic implementation of the asynchronous factory pattern.</summary>
+    <description>
+A generic implementation of the asynchronous factory pattern.
+
+Supported Platforms:
+
+* .NET Framework 4
+* Silverlight 5
+* Windows 8
+* Windows Phone Silverlight 8
+* Windows Phone 8.1
+* Xamarin.Android
+* Xamarin.iOS
+* Portable Class Libraries
+    </description>
     <releaseNotes>Clarified usage example</releaseNotes>
     <language>en-US</language>
     <projectUrl>https://github.com/dmitry-shechtman/AsyncInit/</projectUrl>
