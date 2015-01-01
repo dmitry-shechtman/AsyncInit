@@ -1,0 +1,43 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ output extension=".cs" #>
+using System;
+
+namespace Ditto.AsyncInit.Services
+{
+    partial class AsyncInitArgs
+    {
+<#@ include file="AsyncInit.Services.t4" #>
+<#
+	var typeList = string.Join(", ", range.Select(j => "typeof(" + baseTArgs[j] + ")"));
+#>
+        /// <summary>
+        /// Creates a new instance of asynchronous initialization arguments.
+        /// </summary>
+<#
+	for (int j = 0; j < i; ++j)
+	{
+#>
+        /// <typeparam name="<#= baseTArgs[j] #>">The type of the <#= argNames[j] #>argument.</typeparam>
+<#
+	}
+	for (int j = 0; j < i; ++j)
+	{
+#>
+        /// <param name="<#= baseArgs[j] #>">The <#= argNames[j] #>argument.</param>
+<#
+	}
+#>
+        public static AsyncInitArgs Create<#= baseTArgList #>(<#= baseParamList #>)
+        {
+            return new AsyncInitArgs(
+				new[] { <#= typeList #> },
+				new object[] { <#= baseArgList #> });
+        }
+
+<#
+}
+#>
+    }
+}

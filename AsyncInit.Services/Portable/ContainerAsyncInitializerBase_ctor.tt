@@ -1,0 +1,32 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ output extension=".cs" #>
+using Ditto.AsyncInit.Services.Internal;
+
+namespace Ditto.AsyncInit.Services
+{
+    partial class ContainerAsyncInitializerBase<TFrom, TTo, TContainer>
+    {
+<#@ include file="AsyncInit.Services.t4" #>
+        /// <summary>
+        /// Creates a new initializer with untyped initialization arguments.
+        /// </summary>
+<#
+	for (int j = 0; j < i; ++j)
+	{
+#>
+        /// <param name="<#= baseArgs[j] #>">The <#= argNames[j] #>argument.</param>
+<#
+	}
+#>
+        protected ContainerAsyncInitializerBase(<#= objectParamList #>)
+            : base(new MatchArgumentsStrategy(new[] { <#= baseArgList #> }))
+        {
+        }
+
+<#
+}
+#>
+    }
+}

@@ -1,24 +1,7 @@
-AsyncInit
-=========
+AsyncInit Dependency Injection Support
+======================================
 
-A generic implementation of the asynchronous factory pattern.
-
-Supported Platforms
--------------------
-
-* .NET Framework 4
-* Silverlight 5
-* Windows 8
-* Windows Phone Silverlight 8
-* Windows Phone 8.1
-* Xamarin.Android
-* Xamarin.iOS
-* Portable Class Libraries
-
-Usage
------
-
-See [wiki](https://github.com/dmitry-shechtman/AsyncInit/wiki).
+Adds support for dependency injection to AsyncInit.
 
 Notice
 ------
@@ -35,3 +18,11 @@ Notice
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+Links
+-----
+
+* [Code](https://github.com/dmitry-shechtman/AsyncInit)
+* [Wiki](https://github.com/dmitry-shechtman/AsyncInit/wiki)
+* [Blog](https://shecht.wordpress.com/category/asyncactivator/)
+* [NuGet](https://nuget.org/packages/Ditto.AsyncInit.Services)
