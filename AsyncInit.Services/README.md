@@ -1,10 +1,12 @@
 AsyncInit Dependency Injection Support
 ======================================
 
+Adds support for dependency injection to AsyncInit.
+
 Notice
 ------
 
-   Copyright © Dmitry Shechtman 2014-2015
+   Copyright Â© Dmitry Shechtman 2014-2015
 
    Licensed under the Apache License, Version 2.0 (the "License").
 
