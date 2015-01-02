@@ -1,0 +1,128 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ output extension=".cs" #>
+using Ditto.AsyncInit.Services;
+using Microsoft.Practices.Unity;
+using System;
+
+namespace Ditto.AsyncInit.Unity
+{
+    /// <summary>
+    /// Adds a set of asynchronous registration methods to <see cref="IUnityContainer"/>.
+    /// </summary>
+    public static class UnityRegisterAsyncTypeExtensions
+    {
+<#
+foreach (var map in new[] { false, true })
+foreach (var args in new[] { false, true })
+foreach (var name in new[] { false, true })
+foreach (var lifetimeManager in new[] { false, true })
+{
+	var tArgs = map
+		? new[] { "TFrom", "TTo" }
+		: new[] { "T" };
+	var tArgDocs = map
+		? new[] { "The requested type.", "The actual type." }
+		: new[] { "The type to register." };
+	var tArgList = "<" + string.Join(", ", tArgs) + ">";
+
+	var tFromArgList = map
+		? "<TFrom>"
+		: tArgList;
+	var tInitArgList = map
+		? tArgList
+		: "<T, T>";
+
+	var paramTypes = new List<string>(new[] { "IUnityContainer" });
+	var paramNames = new List<string>(new[] { "container" });
+	var paramDocs = new List<string>(new[] { "The container." });
+
+	if (name)
+	{
+		paramTypes.Add("string");
+		paramNames.Add("name");
+		paramDocs.Add("The name to use for registration.");
+	}
+
+	if (lifetimeManager)
+	{
+		paramTypes.Add("LifetimeManager");
+		paramNames.Add("lifetimeManager");
+		paramDocs.Add("The <see cref=\"LifetimeManager\"/> that controls the lifetime of the returned instance.");
+	}
+
+	if (args)
+	{
+		paramTypes.Add("AsyncInitArgs");
+		paramNames.Add("args");
+		paramDocs.Add("Initialization arguments.");
+	}
+	else
+	{
+		paramTypes.Add("params InjectionMember[]");
+		paramNames.Add("injectionMembers");
+		paramDocs.Add("Injection configuration objects.");
+	}
+
+	var paramList = string.Join(", ", Enumerable.Range(0, paramTypes.Count).Select(j => paramTypes[j] + " " + paramNames[j]));
+#>
+        /// <summary>
+        /// Registers the specified asynchronously initialized type with the container.
+        /// </summary>
+<#
+	for (int j = 0; j < tArgs.Length; ++j)
+	{
+#>
+        /// <typeparam name="<#= tArgs[j] #>"><#= tArgDocs[j] #></typeparam>
+<#
+	}
+	for (int j = 0; j < paramTypes.Count; ++j)
+	{
+#>
+        /// <param name="<#= paramNames[j] #>"><#= paramDocs[j] #></param>
+<#
+	}
+#>
+        public static IUnityContainer RegisterAsyncType<#= tArgList #>(this <#= paramList #>)
+<#
+	if (map)
+	{
+#>
+			where TTo : TFrom
+<#
+	}
+#>
+        {
+            if (container == null)
+                throw new ArgumentNullException("container");
+<#
+	var parms = new List<string>();
+	if (name)
+		parms.Add("name");
+	if (lifetimeManager)
+		parms.Add("lifetimeManager");
+	if (args)
+	{
+#>
+			var injectionMembers = CreateInjectionMembers(args);
+<#
+	}
+	parms.Add("injectionMembers");
+	var argList = string.Join(", ", parms);
+#>
+            return container.RegisterType<IAsyncInitializer<#= tFromArgList #>, UnityAsyncInitializer<#= tInitArgList #>>(<#= argList #>);
+        }
+
+<#
+}
+#>
+		private static InjectionConstructor[] CreateInjectionMembers(AsyncInitArgs args)
+		{
+            if (args == null)
+                throw new ArgumentNullException("args");
+			return new[] { new InjectionConstructor(args) };
+		}
+	}
+}

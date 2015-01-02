@@ -1,0 +1,103 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ output extension=".cs" #>
+using Ditto.AsyncInit.Services;
+using Microsoft.Practices.Unity;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Ditto.AsyncInit.Unity
+{
+    /// <summary>
+    /// Adds a set of asynchronous resolution methods to <see cref="IUnityContainer"/>.
+    /// </summary>
+    public static class UnityResolveAsyncTypeExtensions
+    {
+<#
+foreach (var args in new[] { false, true })
+foreach (var name in new[] { false, true })
+foreach (var token in new[] { false, true })
+{
+	var paramTypes = new List<string>(new[] { "IUnityContainer" });
+	var paramNames = new List<string>(new[] { "container" });
+	var paramDocs = new List<string>(new[] { "The container." });
+
+	if (name)
+	{
+		paramTypes.Add("string");
+		paramNames.Add("name");
+		paramDocs.Add("The name used for registration.");
+	}
+
+	if (args)
+	{
+		paramTypes.Add("AsyncInitArgs");
+		paramNames.Add("args");
+		paramDocs.Add("Initialization arguments.");
+	}
+
+	if (token)
+	{
+		paramTypes.Add("CancellationToken");
+		paramNames.Add("cancellationToken");
+		paramDocs.Add("Cancellation token.");
+	}
+
+	paramTypes.Add("params ResolverOverride[]");
+	paramNames.Add("overrides");
+	paramDocs.Add("Resolver overrides.");
+
+	var paramList = string.Join(", ", Enumerable.Range(0, paramTypes.Count).Select(j => paramTypes[j] + " " + paramNames[j]));
+#>
+        /// <summary>
+        /// Resolves and asynchronously initializes an instance.
+        /// </summary>
+        /// <typeparam name="T">The type of object to resolve.</typeparam>
+<#
+	for (int j = 0; j < paramTypes.Count; ++j)
+	{
+#>
+        /// <param name="<#= paramNames[j] #>"><#= paramDocs[j] #></param>
+<#
+	}
+#>
+        public static Task<T> ResolveAsync<T>(this <#= paramList #>)
+        {
+            if (container == null)
+                throw new ArgumentNullException("container");
+<#
+	var parms = new List<string>();
+	if (name)
+		parms.Add("name");
+	if (args)
+	{
+#>
+            overrides = overrides.Concat(CreateDependencyOverrides(args)).ToArray();
+<#
+	}
+	parms.Add("overrides");
+	var argList = string.Join(", ", parms);
+	var taskArgList = token
+		? "cancellationToken"
+		: "";
+#>
+            return container.Resolve<IAsyncInitializer<T>>(<#= argList #>).AsTask(<#= taskArgList #>);
+        }
+
+<#
+}
+#>
+		private static IEnumerable<DependencyOverride> CreateDependencyOverrides(AsyncInitArgs args)
+		{
+            if (args == null)
+                throw new ArgumentNullException("args");
+			for (int i = 0; i < args.Count; i++)
+				yield return new DependencyOverride(args.Types[i], args.Arguments[i]);
+		}
+	}
+}
