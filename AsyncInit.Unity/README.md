@@ -1,7 +1,7 @@
 ﻿AsyncInit Unity Dependency Injection
 ====================================
 
-AsyncInit Unity dependency injection.
+Adds support for asynchronously initialized types to Unity Container.
 
 Usage
 -----
