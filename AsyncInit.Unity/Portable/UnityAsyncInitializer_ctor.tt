@@ -1,0 +1,30 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ output extension=".cs" #>
+namespace Ditto.AsyncInit.Unity
+{
+	partial class UnityAsyncInitializer<TFrom, TTo>
+	{
+<#@ include file="..\..\AsyncInit.Services\Portable\AsyncInit.Services.t4" #>
+        /// <summary>
+        /// Creates a new initializer with untyped initialization arguments.
+        /// </summary>
+<#
+	for (int j = 0; j < i; ++j)
+	{
+#>
+        /// <param name="<#= baseArgs[j] #>">The <#= argNames[j] #>argument.</param>
+<#
+	}
+#>
+        public UnityAsyncInitializer(<#= objectParamList #>)
+            : base(<#= baseArgList #>)
+        {
+        }
+
+<#
+}
+#>
+	}
+}
