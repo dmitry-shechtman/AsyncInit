@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Ditto.AsyncInit.Unity</id>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <title>AsyncInit Unity Dependency Injection</title>
     <authors>Dmitry Shechtman</authors>
     <owners>Dmitry Shechtman</owners>
@@ -19,7 +19,7 @@ Supported Platforms:
 * Xamarin.iOS
 * Portable Class Libraries
     </description>
-    <releaseNotes>Initial release</releaseNotes>
+    <releaseNotes>Synced version numbers</releaseNotes>
     <language>en-US</language>
     <projectUrl>https://github.com/dmitry-shechtman/AsyncInit/</projectUrl>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
@@ -28,7 +28,7 @@ Supported Platforms:
     <tags>async await task constructor factory dependency injection DI IoC AsyncInit Unity Container RegisterAsyncType IsAsyncTypeRegistered ResolveAsync Ditto</tags>
     <dependencies>
       <group>
-        <dependency id="Ditto.AsyncInit.Services" version="1.0.0" />
+        <dependency id="Ditto.AsyncInit.Services" version="1.1.0" />
         <dependency id="Unity" version="3.5.1404.0" />
       </group>
     </dependencies>

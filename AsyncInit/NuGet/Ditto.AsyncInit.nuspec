@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Ditto.AsyncInit</id>
-    <version>1.0.4</version>
+    <version>1.1.0</version>
     <title>AsyncInit</title>
     <authors>Dmitry Shechtman</authors>
     <owners>Dmitry Shechtman</owners>
@@ -13,15 +13,15 @@ A generic implementation of the asynchronous factory pattern.
 Supported Platforms:
 
 * .NET Framework 4
-* Silverlight 5
+* Silverlight 4
 * Windows 8
-* Windows Phone Silverlight 8
+* Windows Phone Silverlight 7.1
 * Windows Phone 8.1
 * Xamarin.Android
 * Xamarin.iOS
 * Portable Class Libraries
     </description>
-    <releaseNotes>Clarified usage example</releaseNotes>
+    <releaseNotes>Added Silverlight 4 and Windows Phone 7.1 support</releaseNotes>
     <language>en-US</language>
     <projectUrl>https://github.com/dmitry-shechtman/AsyncInit/</projectUrl>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
@@ -29,7 +29,7 @@ Supported Platforms:
     <copyright>Copyright © Dmitry Shechtman 2014-2015</copyright>
     <tags>async await task constructor factory AsyncInit CancelableAsyncInit InitAsync AsyncActivator Ditto</tags>
     <dependencies>
-      <group targetFramework=".NETPortable0.0-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10">
+      <group targetFramework=".NETPortable0.0-net40+sl40+win+wp71">
         <dependency id="Microsoft.Bcl.Async" version="1.0.168" />
       </group>
       <group targetFramework=".NETPortable0.0-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
@@ -37,8 +37,8 @@ Supported Platforms:
     </dependencies>
   </metadata>
   <files>
-    <file src="AsyncInit\Portable\bin\Release\Ditto.AsyncInit.dll" target="lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
-    <file src="AsyncInit\Portable\bin\Release\Ditto.AsyncInit.xml" target="lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
+    <file src="AsyncInit\Portable\bin\Release\Ditto.AsyncInit.dll" target="lib\portable-net40+sl40+win+wp71" />
+    <file src="AsyncInit\Portable\bin\Release\Ditto.AsyncInit.xml" target="lib\portable-net40+sl40+win+wp71" />
     <file src="AsyncInit\Portable.Net45\bin\Release\Ditto.AsyncInit.dll" target="lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
     <file src="AsyncInit\Portable.Net45\bin\Release\Ditto.AsyncInit.xml" target="lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
     <file src="AsyncInit\Net45\bin\Release\Ditto.AsyncInit.dll" target="lib\net45" />

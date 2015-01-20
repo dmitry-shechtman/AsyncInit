@@ -5,15 +5,15 @@
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{53F47D28-6844-417B-A978-20832359D36F}</ProjectGuid>
+    <ProjectGuid>{9369455C-29F2-40DD-99A4-7286E8A8EEAA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ditto.AsyncInit.Unity</RootNamespace>
-    <AssemblyName>Ditto.AsyncInit.Unity</AssemblyName>
+    <RootNamespace>Ditto.AsyncInit.Services</RootNamespace>
+    <AssemblyName>Ditto.AsyncInit.Services</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -25,7 +25,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Debug\Ditto.AsyncInit.Unity.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\Ditto.AsyncInit.Services.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,61 +35,85 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Release\Ditto.AsyncInit.Unity.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\Ditto.AsyncInit.Services.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <None Include="..\Portable\AsyncInit.Services.t4">
+      <Link>AsyncInit.Services.t4</Link>
+    </None>
+    <None Include="..\Portable\AsyncInitArgs_Create.tt">
+      <Link>AsyncInitArgs_Create.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AsyncInitArgs_Create.cs</LastGenOutput>
+    </None>
+    <None Include="..\Portable\ContainerAsyncInitializerBase_ctor.tt">
+      <Link>ContainerAsyncInitializerBase_ctor.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ContainerAsyncInitializerBase_ctor.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
-    <None Include="UnityAsyncInitializer_ctor.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>UnityAsyncInitializer_ctor.cs</LastGenOutput>
-    </None>
-    <None Include="UnityRegisterAsyncTypeExtensions.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>UnityRegisterAsyncTypeExtensions.cs</LastGenOutput>
-    </None>
-    <None Include="UnityResolveAsyncExtensions.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>UnityResolveAsyncExtensions.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\Solution Items\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="..\Portable\AsyncInitArgs.cs">
+      <Link>AsyncInitArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\AsyncInitArgs_Create.cs">
+      <Link>AsyncInitArgs_Create.cs</Link>
+      <DependentUpon>AsyncInitArgs_Create.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="..\Portable\AsyncInitializer.cs">
+      <Link>AsyncInitializer.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\AsyncInitializerException.cs">
+      <Link>AsyncInitializerException.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\ContainerAsyncInitializerBase.cs">
+      <Link>ContainerAsyncInitializerBase.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\ContainerAsyncInitializerBase_ctor.cs">
+      <Link>ContainerAsyncInitializerBase_ctor.cs</Link>
+      <DependentUpon>ContainerAsyncInitializerBase_ctor.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="..\Portable\IAsyncInitializer.cs">
+      <Link>IAsyncInitializer.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\IContainerStrategy.cs">
+      <Link>IContainerStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\Internal\IArgumentsStrategy.cs">
+      <Link>Internal\IArgumentsStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\Internal\MatchArgumentsStrategy.cs">
+      <Link>Internal\MatchArgumentsStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\Internal\ResolveArgumentsStrategy.cs">
+      <Link>Internal\ResolveArgumentsStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\Internal\StaticArgumentsStrategy.cs">
+      <Link>Internal\StaticArgumentsStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\Internal\TypeArrayEqualityComparer.cs">
+      <Link>Internal\TypeArrayEqualityComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\Internal\TypeUtilities.cs">
+      <Link>Internal\TypeUtilities.cs</Link>
+    </Compile>
+    <Compile Include="Internal\TaskEx.cs" />
+    <Compile Include="Internal\TypeExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnityIsAsyncTypeRegisteredExtensions.cs" />
-    <Compile Include="UnityAsyncInitializer.cs" />
-    <Compile Include="UnityAsyncInitializer_ctor.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UnityAsyncInitializer_ctor.tt</DependentUpon>
-    </Compile>
-    <Compile Include="UnityContainerStrategy.cs" />
-    <Compile Include="UnityRegisterAsyncTypeExtensions.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UnityRegisterAsyncTypeExtensions.tt</DependentUpon>
-    </Compile>
-    <Compile Include="UnityResolveAsyncExtensions.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UnityResolveAsyncExtensions.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Ditto.AsyncInit">
       <HintPath>..\..\packages\Ditto.AsyncInit.1.1.0\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Ditto.AsyncInit.dll</HintPath>
     </Reference>
-    <Reference Include="Ditto.AsyncInit.Services">
-      <HintPath>..\..\packages\Ditto.AsyncInit.Services.1.1.0\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Ditto.AsyncInit.Services.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.Unity">
-      <HintPath>..\..\packages\Unity.3.5.1404.0\lib\portable-net45+wp80+win8+MonoAndroid10+MonoTouch10\Microsoft.Practices.Unity.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -13,7 +13,7 @@
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TargetFrameworkProfile>Profile328</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Profile88</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -63,6 +63,7 @@
     <Compile Include="Internal\ResolveArgumentsStrategy.cs" />
     <Compile Include="Internal\StaticArgumentsStrategy.cs" />
     <Compile Include="Internal\TypeArrayEqualityComparer.cs" />
+    <Compile Include="Internal\TypeExtensions.cs" />
     <Compile Include="Internal\TypeUtilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -80,7 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Ditto.AsyncInit">
-      <HintPath>..\..\packages\Ditto.AsyncInit.1.0.4\lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Ditto.AsyncInit.dll</HintPath>
+      <HintPath>..\..\packages\Ditto.AsyncInit.1.1.0\lib\portable-net40+sl40+win+wp71\Ditto.AsyncInit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks">
       <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
@@ -89,19 +90,18 @@
       <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.IO">
-      <HintPath>..\..\packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl5+win8+wp8+wpa81\System.IO.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl4+win8+wp71+wpa81\System.IO.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime">
-      <HintPath>..\..\packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl5+win8+wp8+wpa81\System.Runtime.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl4+win8+wp71+wpa81\System.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks">
-      <HintPath>..\..\packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl5+win8+wp8+wpa81\System.Threading.Tasks.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl4+win8+wp71+wpa81\System.Threading.Tasks.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">

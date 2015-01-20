@@ -60,7 +60,7 @@ namespace Ditto.AsyncInit.Services.Internal
         {
             var arg = _args[index];
             if (arg == null)
-                return type.IsValueType || TypeUtilities.IsNullable(type);
+                return type.GetIsValueType() || TypeUtilities.IsNullable(type);
             return type.IsAssignableFrom(arg.GetType());
         }
     }
