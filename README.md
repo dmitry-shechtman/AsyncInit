@@ -7,9 +7,9 @@ Supported Platforms
 -------------------
 
 * .NET Framework 4 _(4.5 for Unity DI)_
-* Silverlight 5 _(except Unity DI)_
+* Silverlight 4 _(except Unity DI)_
 * Windows 8
-* Windows Phone Silverlight 8
+* Windows Phone Silverlight 7.1 _(8 for Unity DI)_
 * Windows Phone 8.1 _(except Unity DI)_
 * Xamarin.Android
 * Xamarin.iOS
