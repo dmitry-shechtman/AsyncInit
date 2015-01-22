@@ -41,7 +41,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>..\Portable\AsyncInit.pfx</AssemblyOriginatorKeyFile>
@@ -71,6 +71,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CancelableAsyncInitBase.tt</DependentUpon>
     </Compile>
+    <Compile Include="..\Portable\GlobalSuppressions.cs">
+      <Link>GlobalSuppressions.cs</Link>
+    </Compile>
     <Compile Include="..\Portable\IAsyncInit.cs">
       <Link>IAsyncInit.cs</Link>
       <AutoGen>True</AutoGen>
@@ -90,9 +93,6 @@
       <Link>AsyncActivator.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AsyncActivator.cs</LastGenOutput>
-    </None>
-    <None Include="..\Portable\AsyncInit.pfx">
-      <Link>AsyncInit.pfx</Link>
     </None>
     <None Include="..\Portable\AsyncInit.t4">
       <Link>AsyncInit.t4</Link>
