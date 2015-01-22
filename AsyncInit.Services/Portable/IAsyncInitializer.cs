@@ -1,5 +1,4 @@
-﻿using Microsoft.Runtime.CompilerServices;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 
 namespace Ditto.AsyncInit.Services
@@ -11,11 +10,6 @@ namespace Ditto.AsyncInit.Services
     /// <see cref="IAsyncInit"/>/<see cref="ICancelableAsyncInit"/> interfaces).</typeparam>
     public interface IAsyncInitializer<T>
     {
-        /// <summary>
-        /// Gets an awaiter used to await the initialization.
-        /// </summary>
-        TaskAwaiter<T> GetAwaiter();
-
         /// <summary>
         /// Gets a task capturing the initialization.
         /// </summary>

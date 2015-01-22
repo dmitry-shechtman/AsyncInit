@@ -10,6 +10,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Solution Items\CommonAssemblyInfo.cs = Solution Items\CommonAssemblyInfo.cs
 		LICENSE = LICENSE
 		NOTICE = NOTICE
+		AsyncInit.Unity\README.txt = AsyncInit.Unity\README.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{FEF8C084-A674-4C38-90F0-8793E03FC6F9}"
+	ProjectSection(SolutionItems) = preProject
+		AsyncInit.Unity\NuGet\Ditto.AsyncInit.Unity.nuspec = AsyncInit.Unity\NuGet\Ditto.AsyncInit.Unity.nuspec
 	EndProjectSection
 EndProject
 Global
@@ -25,5 +31,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FEF8C084-A674-4C38-90F0-8793E03FC6F9} = {9DCB9530-8843-4973-9B1B-CEA11673EC69}
 	EndGlobalSection
 EndGlobal

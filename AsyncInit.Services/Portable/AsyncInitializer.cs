@@ -1,6 +1,5 @@
 ﻿using Ditto.AsyncInit.Internal;
 using Ditto.AsyncInit.Services.Internal;
-using Microsoft.Runtime.CompilerServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,14 +39,6 @@ namespace Ditto.AsyncInit.Services
         internal AsyncInitializer(IArgumentsStrategy arguments)
         {
             this._arguments = arguments;
-        }
-
-        /// <summary>
-        /// Gets an awaiter used to await the initialization.
-        /// </summary>
-        TaskAwaiter<TFrom> IAsyncInitializer<TFrom>.GetAwaiter()
-        {
-            return AsTask().GetAwaiter();
         }
 
         /// <summary>
@@ -142,7 +133,7 @@ namespace Ditto.AsyncInit.Services
         /// </summary>
         private IEnumerable<Type> GetInitTypes()
         {
-            if (!typeof(TTo).IsClass || typeof(TTo).IsAbstract)
+            if (!typeof(TTo).GetIsClass() || typeof(TTo).GetIsAbstract())
                 throw new AsyncInitializerException(typeof(TTo), "Must be a non-abstract class.");
 
             var initTypes = typeof(TTo).GetInterfaces()

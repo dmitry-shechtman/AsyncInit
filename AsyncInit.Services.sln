@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{94CEF379
 		AsyncInit.Services\NuGet\Ditto.AsyncInit.Services.nuspec = AsyncInit.Services\NuGet\Ditto.AsyncInit.Services.nuspec
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncInit.Services.Portable.Net45", "AsyncInit.Services\Portable.Net45\AsyncInit.Services.Portable.Net45.csproj", "{9369455C-29F2-40DD-99A4-7286E8A8EEAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4C26F895-4F45-46A0-AA7B-02FBF5C6B337}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C26F895-4F45-46A0-AA7B-02FBF5C6B337}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C26F895-4F45-46A0-AA7B-02FBF5C6B337}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9369455C-29F2-40DD-99A4-7286E8A8EEAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9369455C-29F2-40DD-99A4-7286E8A8EEAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9369455C-29F2-40DD-99A4-7286E8A8EEAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9369455C-29F2-40DD-99A4-7286E8A8EEAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

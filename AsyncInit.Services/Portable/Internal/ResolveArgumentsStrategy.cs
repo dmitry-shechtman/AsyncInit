@@ -74,7 +74,7 @@ namespace Ditto.AsyncInit.Services.Internal
         {
             if (type == null || TypeUtilities.IsTuple(type))
                 return type;
-            var baseType = type.BaseType;
+            var baseType = type.GetBaseType();
             return GetTupleType(baseType);
         }
 

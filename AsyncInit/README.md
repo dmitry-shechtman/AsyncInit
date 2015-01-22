@@ -38,13 +38,13 @@ Usage
 
 **Done!** Your class may now be consumed asynchronously:
 
-    var service = await UniversalAnswerService.Create(progress, cancellationToken);
+    var service = await UniversalAnswerService.CreateAsync(progress, cancellationToken);
     var answer = service.Answer;
 
 Notice
 ------
 
-   Copyright © Dmitry Shechtman 2014-2015
+   Copyright Â© Dmitry Shechtman 2014-2015
 
    Licensed under the Apache License, Version 2.0 (the "License").
 

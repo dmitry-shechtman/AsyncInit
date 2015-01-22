@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Ditto.AsyncInit.Unity</id>
+    <version>1.1.1-prerelease</version>
+    <title>AsyncInit Unity Dependency Injection</title>
+    <authors>Dmitry Shechtman</authors>
+    <owners>Dmitry Shechtman</owners>
+    <summary>Adds support for asynchronously initialized types to Unity Container.</summary>
+    <description>
+Adds support for asynchronously initialized types to Unity Container.
+
+Supported Platforms:
+
+* .NET Framework 4.5
+* Windows 8
+* Windows Phone Silverlight 8
+* Windows Phone 8.1
+* Xamarin.Android
+* Xamarin.iOS
+* Portable Class Libraries
+    </description>
+    <releaseNotes>Added Windows Phone 8.1 support</releaseNotes>
+    <language>en-US</language>
+    <projectUrl>https://github.com/dmitry-shechtman/AsyncInit/</projectUrl>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright © Dmitry Shechtman 2014-2015</copyright>
+    <tags>async await task constructor factory dependency injection DI IoC AsyncInit Unity Container RegisterAsyncType IsAsyncTypeRegistered ResolveAsync Ditto</tags>
+    <dependencies>
+      <group>
+        <dependency id="Ditto.AsyncInit.Services" version="1.1.0" />
+        <dependency id="Unity" version="3.5.1405-prerelease" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="AsyncInit.Unity\Portable\bin\Release\Ditto.AsyncInit.Unity.dll" target="lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
+    <file src="AsyncInit.Unity\Portable\bin\Release\Ditto.AsyncInit.Unity.xml" target="lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
+    <file src="AsyncInit.Unity\README.txt" />
+    <file src="LICENSE" />
+    <file src="NOTICE" />
+  </files>
+</package>
