@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Topics>
+  <Topic id="a920d297-289f-46ea-aa8b-338f484ad83c" visible="True" isDefault="true" apiParentMode="InsertAfter" title="Welcome to AsyncInit" tocTitle="Welcome">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="Welcome" />
+    </HelpKeywords>
+  </Topic>
+  <Topic id="c0f9e874-dd33-473b-a245-85fc69447a4b" visible="True" isExpanded="true" title="How To Use">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="howto" />
+    </HelpKeywords>
+    <Topic id="edeb370d-6d7e-4f82-adab-f2326d89c857" visible="True" title="Usage Basics" tocTitle="Basics" linkText="Usage Basics">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="howto" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="f175305f-89a6-498e-add6-e803be90433e" visible="True" title="Silverlight Usage" tocTitle="Silverlight" linkText="Silverlight Usage">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="howto" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="cef4f9eb-4ea8-42cd-8f95-bf65b5923a4c" visible="True" title="Unity IoC Usage" tocTitle="Unity IoC" linkText="Unity IoC Usage">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="howto" />
+      </HelpKeywords>
+    </Topic>
+  </Topic>
+  <Topic id="402b5184-91d1-4bc0-a959-97514187d9f4" visible="True" isExpanded="true" title="Version History">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="version, history" />
+    </HelpKeywords>
+    <Topic id="20e2825a-0524-4b57-a268-59dad12a2a48" visible="True" title="Version 1.3.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="bb413c18-0796-4d73-8267-642691771441" visible="True" title="Version 1.2.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="3f0f468c-771c-419e-ae7c-4bb4280e46ae" visible="True" title="Version 1.1.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="6c1ffc09-66bb-42ad-9e4c-200f610d7c58" visible="True" title="Version 1.0.4">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="b0b5e317-9d49-4971-b275-d3bf9daf91d3" visible="True" title="Version 1.0.3">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="7b59efcb-4079-48eb-b541-ab861315aabd" visible="True" title="Version 1.0.2">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="36cfab95-beaf-47fd-ac19-87eac09df6ef" visible="True" title="Version 1.0.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version" />
+      </HelpKeywords>
+    </Topic>
+  </Topic>
+  <Topic id="835cb0e6-3fac-4aac-ace3-db119c394b4b" visible="True" isSelected="true" title="Apache License Version 2.0" tocTitle="License" linkText="License" />
+</Topics>

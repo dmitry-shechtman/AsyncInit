@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="402b5184-91d1-4bc0-a959-97514187d9f4" revisionNumber="1">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>The topics in this section describe the various changes made to AsyncInit over the life of the project.</para>
+		</introduction>
+
+		<section>
+			<content>
+				<para>Select a version below to see a description of its changes.</para>
+
+				<list class="bullet">
+          <listItem>
+            <para>
+              <link xlink:href="bb413c18-0796-4d73-8267-642691771441" />
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <link xlink:href="3f0f468c-771c-419e-ae7c-4bb4280e46ae" />
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <link xlink:href="6c1ffc09-66bb-42ad-9e4c-200f610d7c58" />
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <link xlink:href="b0b5e317-9d49-4971-b275-d3bf9daf91d3" />
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <link xlink:href="7b59efcb-4079-48eb-b541-ab861315aabd" />
+            </para>
+          </listItem>
+          <listItem>
+            <para>
+              <link xlink:href="36cfab95-beaf-47fd-ac19-87eac09df6ef" />
+            </para>
+          </listItem>
+				</list>
+
+			</content>
+		</section>
+
+		<relatedTopics>
+			<link xlink:href="a920d297-289f-46ea-aa8b-338f484ad83c" />
+		</relatedTopics>
+
+	</developerConceptualDocument>
+</topic>

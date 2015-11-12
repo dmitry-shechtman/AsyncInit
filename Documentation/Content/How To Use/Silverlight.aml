@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="f175305f-89a6-498e-add6-e803be90433e" revisionNumber="1">
+  <developerHowToDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <summary>
+      <para>This topic explains how to create AsyncInit asynchronously initialized types with AsyncInit on Silverlight 4 and 5.</para>
+    </summary>
+
+    <introduction>
+      <para>Silverlight 4 and 5 won't allow anyone other than the declaring type access to private members, requiring a slightly different procedure.</para>
+    </introduction>
+
+    <procedure>
+      <steps class="ordered">
+        
+        <step>
+          <para>Declare an <codeInline>internal</codeInline> (rather than <codeInline>private</codeInline>) constructor:</para>
+          <code language="C#">
+              internal UniversalAnswerService()
+              : base(null)
+              {
+              }
+          </code>
+        </step>
+
+        <step>
+          <para>
+            Expose it to <codeInline>Ditto.AsyncInit</codeInline> by adding the following to <codeInline>Properties\AssemblyInfo.cs</codeInline>:
+          </para>
+          <code language="C#">
+            [assembly: InternalsVisibleTo("Ditto.AsyncInit")]
+          </code>
+        </step>
+        
+      </steps>
+    </procedure>
+
+    <conclusion>
+      <content>
+        <para>
+          <legacyBold>Done!</legacyBold> Consume it as you would on any other platform:
+        </para>
+        <code language="C#">
+          var service = await UniversalAnswerService.CreateAsync(progress, cancellationToken);
+          var answer = service.Answer;
+        </code>
+      </content>
+    </conclusion>
+    
+    <robustProgramming>Since all asynchronously initialized types must declare internal constructors (on Silverlight), it is advisable to keep them in an assembly of their own, in order to prevent others from inadvertently accessing uninitialized instances thereof.</robustProgramming>
+    
+    <relatedTopics>
+      <link xlink:href="c0f9e874-dd33-473b-a245-85fc69447a4b"/>
+      <link xlink:href="edeb370d-6d7e-4f82-adab-f2326d89c857"/>
+      <externalLink>
+        <linkUrl>https://shecht.wordpress.com/2014/12/13/asyncactivator-targeting-silverlight/</linkUrl>
+        <linkText>Blog post detailing the issue</linkText>
+      </externalLink>
+    </relatedTopics>
+  </developerHowToDocument>
+</topic>

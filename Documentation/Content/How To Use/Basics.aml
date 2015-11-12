@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="edeb370d-6d7e-4f82-adab-f2326d89c857" revisionNumber="1">
+  <developerHowToDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <summary>
+      <para>This topic details the basics of creating and consuming asynchronously initialized types with AsyncInit.</para>
+    </summary>
+
+    <procedure>
+      <steps class="ordered">
+
+        <step>
+          <content>
+						<para>
+              Install <externalLink>
+                <linkUri>https://nuget.org/packages/Ditto.AsyncInit</linkUri>
+                <linkText>Ditto.AsyncInit</linkText>
+              </externalLink>:
+            </para>
+            <code language="PowerShell">
+              Install-Package Ditto.AsyncInit
+            </code>
+          </content>
+				</step>
+        
+        <step>
+          <content>
+            <para>
+              Determine the types of the initialization arguments (if any), e.g. <codeInline>IProgress&lt;long&gt;</codeInline>.
+            </para>
+          </content>
+        </step>
+        
+        <step>
+          <content>
+            <para>
+              Derive from the corresponding <codeInline>AsyncInitBase</codeInline> or <codeInline>CancelableAsyncInitBase</codeInline> <legacyItalic>(recommended)</legacyItalic>, specifying your class as the first generic type argument:
+            </para>
+            <code language="C#">
+              using Ditto.AsyncInit;
+
+              class UniversalAnswerService : CancelableAsyncInitBase&lt;UniversalAnswerService, IProgress&lt;long&gt;&gt;
+              {
+                  public int Answer { get; private set; }
+              }
+            </code>
+          </content>
+        </step>
+        
+        <step>
+          <content>
+            <para>
+              Implement a private parameterless constructor, passing <codeInline>null</codeInline> as parameter to <codeInline>base</codeInline>:
+            </para>
+            <code language="C#">
+              private UniversalAnswerService()
+              : base(null)
+              {
+              }
+            </code>
+          </content>
+        </step>
+
+        <step>
+          <content>
+            <para>
+              Override <codeInline>InitAsync()</codeInline>:
+            </para>
+            <code language="C#">
+              protected override async Task InitAsync(IProgress&lt;long&gt; progress, CancellationToken cancellationToken)
+              {
+                  await Task.Delay(TimeSpan.FromDays(7500000 * 365.25), cancellationToken);
+                  Answer = 42;
+              }
+            </code>
+          </content>
+        </step>
+      </steps>
+      
+        <conclusion>
+          <content>
+            <para>
+              <legacyBold>Done!</legacyBold> Your class may now be consumed asynchronously:
+            </para>
+            <code language="C#">
+              var service = await UniversalAnswerService.CreateAsync(progress, cancellationToken);
+              var answer = service.Answer;
+            </code>
+          </content>
+        </conclusion>
+      
+    </procedure>
+
+    <!-- <codeExample>Optional code example</codeExample> -->
+
+    <!-- <buildInstructions>Optional instructions for building a
+         code example.</buildInstructions> -->
+
+    <!-- <robustProgramming>Optional discussion of error handling and other
+         issues related to writing solid code.</robustProgramming> -->
+
+    <!-- <security>Optional discussion of security issues.</security> -->
+
+    <relatedTopics>
+      <link xlink:href="c0f9e874-dd33-473b-a245-85fc69447a4b"/>
+      <link xlink:href="f175305f-89a6-498e-add6-e803be90433e"/>
+    </relatedTopics>
+  </developerHowToDocument>
+</topic>

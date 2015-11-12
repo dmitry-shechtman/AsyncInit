@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncInit", "AsyncInit\Portable\AsyncInit.csproj", "{5D05A77A-2FC8-4566-90F4-853D7E7B76E3}"
 EndProject
@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{677EE96F
 		AsyncInit\NuGet\Ditto.AsyncInit.nuspec = AsyncInit\NuGet\Ditto.AsyncInit.nuspec
 	EndProjectSection
 EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Documentation", "Documentation\Documentation.shfbproj", "{7F557114-05A8-4DF4-878A-EF8AD999A2D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{F38501B6-5961-468B-B98B-777FFF19A1EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F38501B6-5961-468B-B98B-777FFF19A1EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F38501B6-5961-468B-B98B-777FFF19A1EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F557114-05A8-4DF4-878A-EF8AD999A2D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F557114-05A8-4DF4-878A-EF8AD999A2D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F557114-05A8-4DF4-878A-EF8AD999A2D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F557114-05A8-4DF4-878A-EF8AD999A2D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
