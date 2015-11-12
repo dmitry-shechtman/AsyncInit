@@ -88,6 +88,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ICancelableAsyncInit.tt</DependentUpon>
     </Compile>
+    <Compile Include="..\Portable\Internal\NamespaceDoc.cs">
+      <Link>Internal\NamespaceDoc.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\NamespaceDoc.cs">
+      <Link>NamespaceDoc.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Internal\Utilities.cs" />
   </ItemGroup>
