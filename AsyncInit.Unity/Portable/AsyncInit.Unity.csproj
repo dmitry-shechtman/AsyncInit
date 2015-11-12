@@ -83,7 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Ditto.AsyncInit">
-      <HintPath>..\..\packages\Ditto.AsyncInit.1.2.0\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Ditto.AsyncInit.dll</HintPath>
+      <HintPath>..\..\packages\Ditto.AsyncInit.1.3.0\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Ditto.AsyncInit.dll</HintPath>
     </Reference>
     <Reference Include="Ditto.AsyncInit.Services">
       <HintPath>..\..\packages\Ditto.AsyncInit.Services.1.2.0\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Ditto.AsyncInit.Services.dll</HintPath>
