@@ -1,4 +1,4 @@
-AsyncInit
+﻿AsyncInit
 =========
 
 A generic implementation of the asynchronous factory pattern.
@@ -10,7 +10,7 @@ Supported Platforms
 * Silverlight 4 _(except Unity DI)_
 * Windows 8
 * Windows Phone Silverlight 7.1 _(8 for Unity DI)_
-* Windows Phone 8.1 _(prerelease for Unity DI)_
+* Windows Phone 8.1
 * Xamarin.Android
 * Xamarin.iOS
 * Portable Class Libraries
