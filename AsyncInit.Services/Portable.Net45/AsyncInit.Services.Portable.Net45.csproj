@@ -118,7 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Ditto.AsyncInit">
-      <HintPath>..\..\packages\Ditto.AsyncInit.1.1.0\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Ditto.AsyncInit.dll</HintPath>
+      <HintPath>..\..\packages\Ditto.AsyncInit.1.2.0\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Ditto.AsyncInit.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
