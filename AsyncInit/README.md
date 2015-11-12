@@ -3,43 +3,10 @@ AsyncInit
 
 A generic implementation of the asynchronous factory pattern.
 
-Usage
------
+Help File
+---------
 
-0. Install `Ditto.AsyncInit`:
-
-        Install-Package Ditto.AsyncInit
-
-1. Determine the types of the initialization arguments (if any), e.g. `IProgress<long>`.
-
-2. Derive from the corresponding `AsyncInitBase` or `CancelableAsyncInitBase` _(recommended)_, specifying your class as the first generic type argument:
-
-        using Ditto.AsyncInit;
-
-        class UniversalAnswerService : CancelableAsyncInitBase<UniversalAnswerService, IProgress<long>>
-        {
-            public int Answer { get; private set; }
-        }
-
-3. Implement a private parameterless constructor, passing `null` as parameter to `base`:
-
-        private UniversalAnswerService()
-            : base(null)
-        {
-        }
-
-4. Override `InitAsync()`:
-
-        protected override async Task InitAsync(IProgress<long> progress, CancellationToken cancellationToken)
-        {
-            await Task.Delay(TimeSpan.FromDays(7500000 * 365.25), cancellationToken);
-            Answer = 42;
-        }
-
-**Done!** Your class may now be consumed asynchronously:
-
-    var service = await UniversalAnswerService.CreateAsync(progress, cancellationToken);
-    var answer = service.Answer;
+packages/Ditto.AsyncInit.1.3.0/doc/AsyncInit.chm
 
 Notice
 ------
