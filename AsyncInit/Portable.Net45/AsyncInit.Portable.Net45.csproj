@@ -86,7 +86,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ICancelableAsyncInit.tt</DependentUpon>
     </Compile>
-    <Compile Include="Utilities\Utilities.cs" />
+    <Compile Include="Internal\Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Portable\AsyncActivator.tt">
