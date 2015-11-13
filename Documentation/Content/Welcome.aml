@@ -22,7 +22,7 @@
             <linkUri>https://dmitry-shechtman.github.io/AsyncInit.Unity</linkUri>
             <linkText>Ditto.AsyncInit.Unity</linkText>
           </externalLink>
-          for more interesting usage scenarios.
+          for more advanced usage scenarios.
         </para>
       </content>
     </section>
@@ -50,41 +50,37 @@
     <section>
       <title>Miscellanea</title>
       <content>
-        <list class="bullet">
-          <listItem>
-            <link xlink:href="ff3a9984-a817-400e-be0d-6231ad026f50"/>
-          </listItem>
-        </list>
+        <para>
+          You may find <link xlink:href="ff3a9984-a817-400e-be0d-6231ad026f50"/> of use.
+        </para>
       </content>
     </section>
-    
+
     <section>
       <title>Aknowledegments</title>
       <content>
-        <list class="bullet">
-          <listItem>
-            <externalLink>
-              <linkUri>http://stephencleary.com/</linkUri>
-              <linkText>Stephen Cleary</linkText>
-            </externalLink>
-            is the author of an excellent
-            <externalLink>
-              <linkUri>http://blog.stephencleary.com/2013/01/async-oop-2-constructors.html</linkUri>
-              <linkText>article</linkText>
-            </externalLink>
-            that inspired this project.
-          </listItem>
-          <listItem>
-            <externalLink>
-              <linkUri>https://github.com/EWSoftware/SHFB</linkUri>
-              <linkText>SHFB</linkText>
-            </externalLink>
-            is a tool for authoring great project documentation like this one.
-          </listItem>
-        </list>
+        <para>
+          <externalLink>
+            <linkUri>http://stephencleary.com/</linkUri>
+            <linkText>Stephen Cleary</linkText>
+          </externalLink>
+          is the author of an excellent
+          <externalLink>
+            <linkUri>http://blog.stephencleary.com/2013/01/async-oop-2-constructors.html</linkUri>
+            <linkText>article</linkText>
+          </externalLink>
+          that inspired this project.
+        </para>
+        <para>
+          <externalLink>
+            <linkUri>https://github.com/EWSoftware/SHFB</linkUri>
+            <linkText>SHFB</linkText>
+          </externalLink>
+          is a tool for authoring great project documentation like this one.
+        </para>
       </content>
     </section>
-    
+
     <section>
       <title>Notice</title>
       <content>
