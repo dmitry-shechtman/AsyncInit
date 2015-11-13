@@ -70,19 +70,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Content" />
-    <Folder Include="Content\How To Use" />
+    <Folder Include="Content\How Tos" />
     <Folder Include="Content\Miscellanea\" />
     <Folder Include="Content\VersionHistory" />
     <Folder Include="icons" />
     <Folder Include="media" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Content\How To Use\Basics.aml" />
-    <None Include="Content\How To Use\Installation.aml" />
-    <None Include="Content\How To Use\How To.aml" />
-    <None Include="Content\How To Use\Interfaces.aml" />
-    <None Include="Content\How To Use\Silverlight.aml" />
-    <None Include="Content\How To Use\Unity.aml" />
+    <None Include="Content\How Tos\Basics.aml" />
+    <None Include="Content\How Tos\How Tos.aml" />
+    <None Include="Content\How Tos\Installation.aml" />
+    <None Include="Content\How Tos\Interfaces.aml" />
+    <None Include="Content\How Tos\Silverlight.aml" />
+    <None Include="Content\How Tos\Unity.aml" />
     <None Include="Content\License.aml" />
     <None Include="Content\Miscellanea\Miscellanea.aml" />
     <None Include="Content\Miscellanea\NAG Constructor.aml" />

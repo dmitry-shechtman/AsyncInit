@@ -5,11 +5,11 @@
       <HelpKeyword index="K" term="Welcome" />
     </HelpKeywords>
   </Topic>
-  <Topic id="c0f9e874-dd33-473b-a245-85fc69447a4b" visible="True" isExpanded="true" title="How To Use">
+  <Topic id="c0f9e874-dd33-473b-a245-85fc69447a4b" visible="True" isExpanded="true" title="How Tos">
     <HelpKeywords>
       <HelpKeyword index="K" term="howto" />
     </HelpKeywords>
-    <Topic id="2ac5864f-d7ba-4ef7-a487-77ecfc2aab3a" visible="True" title="Installation Instructions" tocTitle="Installation">
+    <Topic id="2ac5864f-d7ba-4ef7-a487-77ecfc2aab3a" visible="True" isSelected="true" title="Installation Instructions" tocTitle="Installation" linkText="Installation Instructions">
       <HelpKeywords>
         <HelpKeyword index="K" term="howto,installation,instructions" />
       </HelpKeywords>
@@ -19,7 +19,7 @@
         <HelpKeyword index="K" term="howto" />
       </HelpKeywords>
     </Topic>
-    <Topic id="c731bb1a-010a-40c6-856b-421ebbd05a26" visible="True" isSelected="true" title="Implementing an AsyncInit Interface" tocTitle="Interfaces" linkText="Implementing an AsyncInit Interface">
+    <Topic id="c731bb1a-010a-40c6-856b-421ebbd05a26" visible="True" title="Implementing an AsyncInit Interface" tocTitle="Interfaces" linkText="Implementing an AsyncInit Interface">
       <HelpKeywords>
         <HelpKeyword index="K" term="howto" />
       </HelpKeywords>
