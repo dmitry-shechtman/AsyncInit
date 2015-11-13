@@ -7,32 +7,66 @@
 
     <section>
       <content>
-        <list class="bullet">
-          <listItem>
+        <para>Select a version below to see a detailed description of its changes.</para>
+        <definitionTable>
+          
+          <definedTerm>
             <link xlink:href="457723af-305d-4409-95d8-89b9f2e05040" />
-          </listItem>
-          <listItem>
+          </definedTerm>
+          <definition>
+            Reworked documentation
+          </definition>
+          
+          <definedTerm>
             <link xlink:href="20e2825a-0524-4b57-a268-59dad12a2a48" />
-          </listItem>
-          <listItem>
+          </definedTerm>
+          <definition>
+            Added HTML Help
+          </definition>
+          
+          <definedTerm>
             <link xlink:href="bb413c18-0796-4d73-8267-642691771441" />
-          </listItem>
-          <listItem>
+          </definedTerm>
+          <definition>
+            Fixed static constructor bug
+          </definition>
+          
+          <definedTerm>
             <link xlink:href="3f0f468c-771c-419e-ae7c-4bb4280e46ae" />
-          </listItem>
-          <listItem>
+          </definedTerm>
+          <definition>
+            Added Silverlight 4 and Windows Phone 7.1 support
+          </definition>
+          
+          <definedTerm>
             <link xlink:href="6c1ffc09-66bb-42ad-9e4c-200f610d7c58" />
-          </listItem>
-          <listItem>
+          </definedTerm>
+          <definition>
+            Clarified usage example
+          </definition>
+          
+          <definedTerm>
             <link xlink:href="b0b5e317-9d49-4971-b275-d3bf9daf91d3" />
-          </listItem>
-          <listItem>
+          </definedTerm>
+          <definition>
+            Clarified usage example
+          </definition>
+          
+          <definedTerm>
             <link xlink:href="7b59efcb-4079-48eb-b541-ab861315aabd" />
-          </listItem>
-          <listItem>
+          </definedTerm>
+          <definition>
+            Fixed dependencies
+          </definition>
+          
+          <definedTerm>
             <link xlink:href="36cfab95-beaf-47fd-ac19-87eac09df6ef" />
-          </listItem>
-        </list>
+          </definedTerm>
+          <definition>
+            Initial stable release
+          </definition>
+          
+        </definitionTable>
 
       </content>
     </section>
