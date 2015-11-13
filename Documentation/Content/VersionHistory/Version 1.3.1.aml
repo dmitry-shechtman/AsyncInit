@@ -14,14 +14,14 @@
 
         <list class="bullet">
           <listItem>
-            Reworked the Welcome topic
+            <link xlink:href="a920d297-289f-46ea-aa8b-338f484ad83c"/>
             <list class="bullet">
               <listItem>Merged the introduction and the Supported Versions section into an Introduction section</listItem>
               <listItem>Added an Aknowledgements section</listItem>
             </list>
           </listItem>
           <listItem>
-            Reworked the Version History
+            <link xlink:href="402b5184-91d1-4bc0-a959-97514187d9f4"/>
             <list class="bullet">
               <listItem>Added NuGet Gallery links to the orientation topic and to the version topics</listItem>
               <listItem>Added deprecated version notes</listItem>
