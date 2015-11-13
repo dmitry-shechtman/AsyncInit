@@ -16,7 +16,7 @@
           <listItem>
             Reworked the Welcome topic
             <list class="bullet">
-              <listItem>Added an Introduction section</listItem>
+              <listItem>Merged the introduction and the Supported Versions section into an Introduction section</listItem>
               <listItem>Added an Aknowledgements section</listItem>
             </list>
           </listItem>

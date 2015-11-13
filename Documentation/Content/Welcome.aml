@@ -5,13 +5,7 @@
     <section>
       <title>Introduction</title>
       <content>
-        <para>AsyncInit is a .NET portable generic implementation of the asynchronous factory pattern.</para>
-      </content>
-    </section>
-
-    <section>
-      <title>Supported Platforms</title>
-      <content>
+        <para>AsyncInit is a generic implementation of the Asynchronous Factory pattern. It supports the following platforms:</para>
         <list class="bullet">
           <listItem>.NET Framework 4</listItem>
           <listItem>Silverlight 4</listItem>
