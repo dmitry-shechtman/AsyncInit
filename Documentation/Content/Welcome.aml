@@ -32,11 +32,16 @@
       <content>
         <para>
           If you haven't already, <link xlink:href="2ac5864f-d7ba-4ef7-a487-77ecfc2aab3a">install the NuGet package</link>.
-          The latest version is <link xlink:href="457723af-305d-4409-95d8-89b9f2e05040"/>. Versions prior to <link xlink:href="bb413c18-0796-4d73-8267-642691771441"/> had a bug that rendered them effectively unusable on most platforms.
+          The current version is <link xlink:href="457723af-305d-4409-95d8-89b9f2e05040"/>. Versions prior to <link xlink:href="bb413c18-0796-4d73-8267-642691771441"/> had a bug that rendered them effectively unusable on most platforms.
           Their NuGet Gallery dwelling serves as a perpetual monument to the author's vanity.
         </para>
         <para>
-          Next, <link xlink:href="edeb370d-6d7e-4f82-adab-f2326d89c857">derive your class</link> from an appropriate <codeInline>AsyncInitBase</codeInline> or <codeInline>CancelableAsyncInitBase</codeInline> <legacyItalic>(recommended)</legacyItalic> generic class.
+          Next, <link xlink:href="edeb370d-6d7e-4f82-adab-f2326d89c857">derive</link> from an appropriate <codeInline>AsyncInitBase</codeInline> or <codeInline>CancelableAsyncInitBase</codeInline> <legacyItalic>(recommended)</legacyItalic> generic class.
+        </para>
+        <para>
+          If your class cannot be derived from an <codeInline>AsyncInitBase</codeInline> or from a <codeInline>CancelableAsyncInitBase</codeInline>, <link xlink:href="c731bb1a-010a-40c6-856b-421ebbd05a26">implement</link> an <codeInline>IAsyncInitBase</codeInline> and/or an <codeInline>ICancelableAsyncInitBase</codeInline>.
+        </para>
+        <para>
           If you are targeting Silvelight 4 or 5, you will have to slightly <link xlink:href="f175305f-89a6-498e-add6-e803be90433e">adjust your implementation</link>.
         </para>
       </content>
