@@ -5,7 +5,7 @@
     xmlns:xlink="http://www.w3.org/1999/xlink">
 
     <summary>
-      <para>This topic details the basics of creating and consuming asynchronously initialized types with AsyncInit.</para>
+      <para>This topic details the procedure of defining a type that derives from an AsyncInit base class.</para>
     </summary>
 
     <procedure>
