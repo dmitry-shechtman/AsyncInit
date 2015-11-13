@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="6ea422c5-1842-4076-9008-e01be3f076ea" revisionNumber="1">
+  <developerConceptualDocument 
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <introduction>
+      <para>
+        Version 1.0.0 was released on January 01 2015.
+      </para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+
+        <list class="bullet">
+          <listItem>
+            <para>Initial release</para>
+          </listItem>
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <externalLink>
+        <linkUri>https://www.nuget.org/packages/Ditto.AsyncInit.Services/1.0.0</linkUri>
+        <linkText>This version on NuGet Gallery</linkText>
+      </externalLink>
+      <link xlink:href="05284ed6-03e8-4665-8764-558ec49bc42e" />
+    </relatedTopics>
+
+  </developerConceptualDocument>
+</topic>

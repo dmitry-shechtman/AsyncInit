@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="05284ed6-03e8-4665-8764-558ec49bc42e" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>The topics in this section describe the various changes made to AsyncInit Dependency Injection Support over the life of the project.</para>
+    </introduction>
+
+    <section>
+      <title>Version History</title>
+      <content>
+        <para>Select a version below to see a detailed description of its changes.</para>
+
+        <definitionTable>
+
+          <definedTerm>
+            <link xlink:href="248bc614-e980-4f09-9923-92a037bbec7d"/>
+          </definedTerm>
+          <definition>Fixed static constructor bug</definition>
+
+          <definedTerm>
+            <link xlink:href="729a4d56-8377-4296-8c45-6a7e77417255"/>
+          </definedTerm>
+          <definition>Added Silverlight 4 and Windows Phone 7.1 support</definition>
+
+          <definedTerm>
+            <link xlink:href="6ea422c5-1842-4076-9008-e01be3f076ea"/>
+          </definedTerm>
+          <definition>Initial release</definition>
+
+        </definitionTable>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="65bb1336-f090-4770-b419-79bc13cde6dd" />
+    </relatedTopics>
+
+  </developerConceptualDocument>
+</topic>
