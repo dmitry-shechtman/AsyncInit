@@ -6,12 +6,13 @@
 
     <section>
       <content>
-        <markup>
-          <p>
-            January 2004<br/><br/>
-            <a href="http://www.apache.org/licenses/">http://www.apache.org/licenses/</a>
-          </p>
-        </markup>
+        <para>January 2004</para>
+        <para>
+          <externalLink>
+            <linkUri>http://www.apache.org/licenses/</linkUri>
+            <linkText>http://www.apache.org/licenses/</linkText>
+          </externalLink>
+        </para>
       </content>
     </section>
 

@@ -56,6 +56,12 @@
               <listItem>Restructured the version list as a definition table</listItem>
             </list>
           </listItem>
+          <listItem>
+            <link xlink:href="835cb0e6-3fac-4aac-ace3-db119c394b4b"/>
+            <list class="bullet">
+              <listItem>Fixed markup</listItem>
+            </list>
+          </listItem>
         </list>
 
       </content>
