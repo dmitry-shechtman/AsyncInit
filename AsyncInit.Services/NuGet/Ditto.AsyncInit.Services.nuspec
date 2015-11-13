@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Ditto.AsyncInit.Services</id>
-    <version>1.2.0</version>
+    <version>1.4.0</version>
     <title>AsyncInit Dependency Injection Support</title>
     <authors>Dmitry Shechtman</authors>
     <owners>Dmitry Shechtman</owners>
@@ -21,7 +21,7 @@ Supported Platforms:
 * Xamarin.iOS
 * Portable Class Libraries
     </description>
-    <releaseNotes>Fixed static constructor bug</releaseNotes>
+    <releaseNotes>Added Help File</releaseNotes>
     <language>en-US</language>
     <projectUrl>https://github.com/dmitry-shechtman/AsyncInit/</projectUrl>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
@@ -29,7 +29,7 @@ Supported Platforms:
     <copyright>Copyright © Dmitry Shechtman 2014-2015</copyright>
     <tags>async await task constructor factory dependency injection DI IoC AsyncInit AsyncInitializer ContainerAsyncInitializerBase Ditto</tags>
     <dependencies>
-      <dependency id="Ditto.AsyncInit" version="1.2.0" />
+      <dependency id="Ditto.AsyncInit" version="1.4.0" />
     </dependencies>
   </metadata>
   <files>
@@ -39,5 +39,6 @@ Supported Platforms:
     <file src="AsyncInit.Services\Portable.Net45\bin\Release\Ditto.AsyncInit.Services.xml" target="lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
     <file src="LICENSE" />
     <file src="NOTICE" />
+    <file src="AsyncInit.Services\Documentation\Help\AsyncInit.Services.chm" target="doc" />
   </files>
 </package>
