@@ -8,7 +8,7 @@
         <para>AsyncInit is a .NET portable generic implementation of the asynchronous factory pattern.</para>
       </content>
     </section>
-    
+
     <section>
       <title>Supported Platforms</title>
       <content>
@@ -21,6 +21,33 @@
           <listItem>Xamarin.Android</listItem>
           <listItem>Xamarin.iOS</listItem>
           <listItem>Portable Class Libraries</listItem>
+        </list>
+      </content>
+    </section>
+
+    <section>
+      <title>Aknowledegments</title>
+      <content>
+        <list class="bullet">
+          <listItem>
+            <externalLink>
+              <linkUri>http://stephencleary.com/</linkUri>
+              <linkText>Stephen Cleary</linkText>
+            </externalLink>
+            is the author of the excellent
+            <externalLink>
+              <linkUri>http://blog.stephencleary.com/2013/01/async-oop-2-constructors.html</linkUri>
+              <linkText>article</linkText>
+            </externalLink>
+            that inspired this project.
+          </listItem>
+          <listItem>
+            <externalLink>
+              <linkUri>https://github.com/EWSoftware/SHFB</linkUri>
+              <linkText>Sandcastle</linkText>
+            </externalLink>
+            is a tool for authoring great project documentation like this one.
+          </listItem>
         </list>
       </content>
     </section>
@@ -51,8 +78,9 @@
       <link xlink:href="402b5184-91d1-4bc0-a959-97514187d9f4" />
       <externalLink>
         <linkUri>https://shecht.wordpress.com/category/asyncactivator/</linkUri>
-        <linkText>Blog posts tagged <codeInline>AsyncActivator</codeInline>
-      </linkText>
+        <linkText>
+          Blog posts tagged <codeInline>AsyncActivator</codeInline>
+        </linkText>
       </externalLink>
     </relatedTopics>
 

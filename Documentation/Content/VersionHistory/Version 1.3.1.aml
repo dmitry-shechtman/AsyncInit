@@ -14,16 +14,19 @@
 
         <list class="bullet">
           <listItem>
-            Added an Introduction section
+            Reworked the Welcome topic
+            <list class="bullet">
+              <listItem>Added an Introduction section</listItem>
+              <listItem>Added an Aknowledgements section</listItem>
+            </list>
           </listItem>
           <listItem>
-            Restructured version list
-          </listItem>
-          <listItem>
-            Added NuGet Gallery links
-          </listItem>
-          <listItem>
-            Added deprecated version notes
+            Reworked the Version History
+            <list class="bullet">
+              <listItem>Added NuGet Gallery links to the orientation topic and to the version topics</listItem>
+              <listItem>Added deprecated version notes</listItem>
+              <listItem>Restructured the version list as a definition table</listItem>
+            </list>
           </listItem>
         </list>
 
