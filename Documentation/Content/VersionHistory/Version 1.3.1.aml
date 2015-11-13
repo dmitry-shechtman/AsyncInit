@@ -39,14 +39,6 @@
             </list>
           </listItem>
           <listItem>
-            <link xlink:href="402b5184-91d1-4bc0-a959-97514187d9f4"/>
-            <list class="bullet">
-              <listItem>Added NuGet Gallery links to the orientation topic and to the version topics</listItem>
-              <listItem>Added deprecated version notes</listItem>
-              <listItem>Restructured the version list as a definition table</listItem>
-            </list>
-          </listItem>
-          <listItem>
             <link xlink:href="e4e8dc54-685e-481b-bdec-c19ffb971294"/>
             <list class="bullet">
               <listItem>Added section</listItem>
@@ -54,6 +46,14 @@
                 Added
                 <link xlink:href="ff3a9984-a817-400e-be0d-6231ad026f50"/>
               </listItem>
+            </list>
+          </listItem>
+          <listItem>
+            <link xlink:href="402b5184-91d1-4bc0-a959-97514187d9f4"/>
+            <list class="bullet">
+              <listItem>Added NuGet Gallery links to the orientation topic and to the version topics</listItem>
+              <listItem>Added deprecated version notes</listItem>
+              <listItem>Restructured the version list as a definition table</listItem>
             </list>
           </listItem>
         </list>
