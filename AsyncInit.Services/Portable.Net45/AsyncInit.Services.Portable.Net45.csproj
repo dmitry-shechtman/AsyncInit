@@ -112,6 +112,9 @@
     <Compile Include="..\Portable\Internal\TypeUtilities.cs">
       <Link>Internal\TypeUtilities.cs</Link>
     </Compile>
+    <Compile Include="..\Portable\NamespaceDoc.cs">
+      <Link>NamespaceDoc.cs</Link>
+    </Compile>
     <Compile Include="Internal\TaskEx.cs" />
     <Compile Include="Internal\TypeExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -120,6 +123,9 @@
     <Reference Include="Ditto.AsyncInit">
       <HintPath>..\..\packages\Ditto.AsyncInit.1.3.0\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Ditto.AsyncInit.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

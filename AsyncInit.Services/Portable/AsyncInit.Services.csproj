@@ -75,6 +75,7 @@
     <Compile Include="Internal\TypeArrayEqualityComparer.cs" />
     <Compile Include="Internal\TypeExtensions.cs" />
     <Compile Include="Internal\TypeUtilities.cs" />
+    <Compile Include="NamespaceDoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
