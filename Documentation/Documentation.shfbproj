@@ -77,7 +77,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\How To Use\Basics.aml" />
-    <None Include="Content\How To Use\Orientation.aml" />
+    <None Include="Content\How To Use\Installation.aml" />
+    <None Include="Content\How To Use\How To.aml" />
     <None Include="Content\How To Use\Silverlight.aml" />
     <None Include="Content\How To Use\Unity.aml" />
     <None Include="Content\License.aml" />

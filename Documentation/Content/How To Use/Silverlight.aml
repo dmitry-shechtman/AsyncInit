@@ -39,15 +39,16 @@
 
     <conclusion>
       <content>
-        <para>
-          <legacyBold>Done!</legacyBold> Consume it as you would on any other platform:
-        </para>
-        <code language="C#">
-          var service = await UniversalAnswerService.CreateAsync(progress, cancellationToken);
-          var answer = service.Answer;
-        </code>
+        <legacyBold>Done!</legacyBold> Your class may now be consumed asynchronously:
       </content>
     </conclusion>
+
+    <codeExample>
+      <code language="C#">
+        var service = await UniversalAnswerService.CreateAsync(progress, cancellationToken);
+        var answer = service.Answer;
+      </code>
+    </codeExample>
     
     <robustProgramming>Since all asynchronously initialized types must declare internal constructors (on Silverlight), it is advisable to keep them in an assembly of their own, in order to prevent others from inadvertently accessing uninitialized instances thereof.</robustProgramming>
     

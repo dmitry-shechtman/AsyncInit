@@ -9,6 +9,11 @@
     <HelpKeywords>
       <HelpKeyword index="K" term="howto" />
     </HelpKeywords>
+    <Topic id="2ac5864f-d7ba-4ef7-a487-77ecfc2aab3a" visible="True" isSelected="true" title="Installation Instructions" tocTitle="Installation">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="howto,installation,instructions" />
+      </HelpKeywords>
+    </Topic>
     <Topic id="edeb370d-6d7e-4f82-adab-f2326d89c857" visible="True" title="Usage Basics" tocTitle="Basics" linkText="Usage Basics">
       <HelpKeywords>
         <HelpKeyword index="K" term="howto" />
@@ -25,11 +30,11 @@
       </HelpKeywords>
     </Topic>
   </Topic>
-  <Topic id="402b5184-91d1-4bc0-a959-97514187d9f4" visible="True" isExpanded="true" title="Version History">
+  <Topic id="402b5184-91d1-4bc0-a959-97514187d9f4" visible="True" title="Version History">
     <HelpKeywords>
       <HelpKeyword index="K" term="version, history" />
     </HelpKeywords>
-    <Topic id="457723af-305d-4409-95d8-89b9f2e05040" visible="True" isSelected="true">
+    <Topic id="457723af-305d-4409-95d8-89b9f2e05040" visible="True">
       <HelpKeywords>
         <HelpKeyword index="K" term="version" />
       </HelpKeywords>

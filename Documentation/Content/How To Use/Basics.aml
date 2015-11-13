@@ -13,20 +13,6 @@
 
         <step>
           <content>
-						<para>
-              Install <externalLink>
-                <linkUri>https://nuget.org/packages/Ditto.AsyncInit</linkUri>
-                <linkText>Ditto.AsyncInit</linkText>
-              </externalLink>:
-            </para>
-            <code language="PowerShell">
-              Install-Package Ditto.AsyncInit
-            </code>
-          </content>
-				</step>
-        
-        <step>
-          <content>
             <para>
               Determine the types of the initialization arguments (if any), e.g. <codeInline>IProgress&lt;long&gt;</codeInline>.
             </para>
@@ -79,21 +65,20 @@
         </step>
       </steps>
       
-        <conclusion>
-          <content>
-            <para>
-              <legacyBold>Done!</legacyBold> Your class may now be consumed asynchronously:
-            </para>
-            <code language="C#">
-              var service = await UniversalAnswerService.CreateAsync(progress, cancellationToken);
-              var answer = service.Answer;
-            </code>
-          </content>
-        </conclusion>
-      
     </procedure>
 
-    <!-- <codeExample>Optional code example</codeExample> -->
+    <conclusion>
+      <content>
+        <legacyBold>Done!</legacyBold> Your class may now be consumed asynchronously:
+      </content>
+    </conclusion>
+
+    <codeExample>
+      <code language="C#">
+        var service = await UniversalAnswerService.CreateAsync(progress, cancellationToken);
+        var answer = service.Answer;
+      </code>
+    </codeExample>
 
     <!-- <buildInstructions>Optional instructions for building a
          code example.</buildInstructions> -->
@@ -105,6 +90,7 @@
 
     <relatedTopics>
       <link xlink:href="c0f9e874-dd33-473b-a245-85fc69447a4b"/>
+      <link xlink:href="2ac5864f-d7ba-4ef7-a487-77ecfc2aab3a"/>
       <link xlink:href="f175305f-89a6-498e-add6-e803be90433e"/>
     </relatedTopics>
   </developerHowToDocument>

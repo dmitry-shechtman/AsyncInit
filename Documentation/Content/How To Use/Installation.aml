@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="2ac5864f-d7ba-4ef7-a487-77ecfc2aab3a" revisionNumber="1">
+  <developerHowToDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <summary>
+      <para>This topic explains how AsyncInit is added to a project.</para>
+    </summary>
+
+    <procedure>
+      <steps class="ordered">
+        <step>
+          <content>
+            <para>
+              Enter the following command into the Package Manager Console window:
+            </para>
+            <code language="PowerShell">
+              Install-Package Ditto.AsyncInit
+            </code>
+            <para>
+              If the solution contains multiple projects, the command above should be followed by the project name.
+            </para>
+          </content>
+        </step>
+      </steps>
+    </procedure>
+
+    <relatedTopics>
+      <link xlink:href="c0f9e874-dd33-473b-a245-85fc69447a4b"/>
+    </relatedTopics>
+  
+  </developerHowToDocument>
+</topic>
