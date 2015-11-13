@@ -81,14 +81,14 @@
     <None Include="Content\How To Use\Silverlight.aml" />
     <None Include="Content\How To Use\Unity.aml" />
     <None Include="Content\License.aml" />
-    <None Include="Content\VersionHistory\v1.0.0.aml" />
-    <None Include="Content\VersionHistory\v1.0.2.aml" />
-    <None Include="Content\VersionHistory\v1.0.3.aml" />
-    <None Include="Content\VersionHistory\v1.0.4.aml" />
-    <None Include="Content\VersionHistory\v1.1.0.aml" />
-    <None Include="Content\VersionHistory\v1.2.0.aml" />
-    <None Include="Content\VersionHistory\Orientation.aml" />
-    <None Include="Content\VersionHistory\v1.3.0.aml" />
+    <None Include="Content\VersionHistory\Version 1.0.0.aml" />
+    <None Include="Content\VersionHistory\Version 1.0.2.aml" />
+    <None Include="Content\VersionHistory\Version 1.0.3.aml" />
+    <None Include="Content\VersionHistory\Version 1.0.4.aml" />
+    <None Include="Content\VersionHistory\Version 1.1.0.aml" />
+    <None Include="Content\VersionHistory\Version 1.2.0.aml" />
+    <None Include="Content\VersionHistory\Version History.aml" />
+    <None Include="Content\VersionHistory\Version 1.3.0.aml" />
     <None Include="Content\Welcome.aml" />
   </ItemGroup>
   <ItemGroup>
