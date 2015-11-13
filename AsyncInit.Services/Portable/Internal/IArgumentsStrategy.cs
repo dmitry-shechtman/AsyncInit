@@ -24,7 +24,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// <summary>
         /// Asynchronously gets the arguments.
         /// </summary>
-        /// <param name="container">Container strategy (or <value>null</value> if none is available).</param>
+        /// <param name="container">Container strategy (or <c>null</c> if none is available).</param>
         /// <param name="types">The types of the arguments.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         Task<object[]> GetAsync(IContainerStrategy container, Type[] types, CancellationToken cancellationToken);

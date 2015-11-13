@@ -10,7 +10,7 @@ namespace Ditto.AsyncInit.Services
     {
 <#@ include file="AsyncInit.Services.t4" #>
         /// <summary>
-        /// Creates a new initializer with untyped initialization arguments.
+        /// Initializes a new instance of the <see cref="ContainerAsyncInitializerBase{TFrom,TTo,TContainer}"/> class with untyped initialization arguments.
         /// </summary>
 <#
 	for (int j = 0; j < i; ++j)

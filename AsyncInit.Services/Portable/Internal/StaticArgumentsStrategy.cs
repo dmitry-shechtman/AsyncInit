@@ -17,7 +17,7 @@ namespace Ditto.AsyncInit.Services.Internal
         private readonly AsyncInitArgs _args;
 
         /// <summary>
-        /// Creates a new static strategy.
+        /// Initializes a new instance of the <see cref="StaticArgumentsStrategy"/> class.
         /// </summary>
         /// <param name="args">Arguments.</param>
         public StaticArgumentsStrategy(AsyncInitArgs args)
@@ -29,6 +29,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// Validates argument types.
         /// </summary>
         /// <param name="types">The types of the arguments.</param>
+        /// <returns><c>true</c> if the argument types match.</returns>
         public bool IsMatch(Type[] types)
         {
             return TypeArrayEqualityComparer.Instance.Equals(types, _args.Types);
@@ -38,6 +39,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// Gets an adjusted argument count.
         /// </summary>
         /// <param name="types">The types of the arguments.</param>
+        /// <returns>Adjusted argument count.</returns>
         public int GetCount(Type[] types)
         {
             return _args.Count;
@@ -49,6 +51,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// <param name="container">Container strategy (ignored).</param>
         /// <param name="types">The types of the arguments.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Task with the arguments as its result.</returns>
         public Task<object[]> GetAsync(IContainerStrategy container, Type[] types, CancellationToken cancellationToken)
         {
             return TaskEx.FromResult(_args.Arguments);

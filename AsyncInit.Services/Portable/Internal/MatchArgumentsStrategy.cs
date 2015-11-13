@@ -13,7 +13,7 @@ namespace Ditto.AsyncInit.Services.Internal
         private readonly object[] _args;
 
         /// <summary>
-        /// Creates a new matching strategy.
+        /// Initializes a new instance of the <see cref="MatchArgumentsStrategy"/> class.
         /// </summary>
         /// <param name="args">Arguments.</param>
         public MatchArgumentsStrategy(object[] args)
@@ -25,6 +25,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// Validates argument types.
         /// </summary>
         /// <param name="types">The types of the arguments.</param>
+        /// <returns><c>true</c> if the argument types match.</returns>
         public bool IsMatch(Type[] types)
         {
             return types.Length == _args.Length
@@ -35,6 +36,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// Gets an adjusted argument count.
         /// </summary>
         /// <param name="types">The types of the arguments.</param>
+        /// <returns>Adjusted argument count.</returns>
         public int GetCount(Type[] types)
         {
             return types.Length;
@@ -46,6 +48,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// <param name="container">Container strategy (ignored).</param>
         /// <param name="types">The types of the arguments.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Task with the arguments as its result.</returns>
         public Task<object[]> GetAsync(IContainerStrategy container, Type[] types, CancellationToken cancellationToken)
         {
             return TaskEx.FromResult(_args);
@@ -56,6 +59,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// </summary>
         /// <param name="type">Argument type.</param>
         /// <param name="index">Argument index.</param>
+        /// <returns><c>true</c> if the argument type matches.</returns>
         private bool IsMatch(Type type, int index)
         {
             var arg = _args[index];

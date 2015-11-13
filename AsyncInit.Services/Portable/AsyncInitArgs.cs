@@ -23,24 +23,27 @@ namespace Ditto.AsyncInit.Services
         }
 
         /// <summary>
-        /// The types of the arguments.
+        /// Gets the types of the arguments.
         /// </summary>
+        /// <value>Types of the arguments.</value>
         public Type[] Types
         {
             get { return _types; }
         }
 
         /// <summary>
-        /// The arguments.
+        /// Gets the arguments.
         /// </summary>
+        /// <value>Arguments.</value>
         public object[] Arguments
         {
             get { return _args; }
         }
 
         /// <summary>
-        /// Argument count.
+        /// Gets the argument count.
         /// </summary>
+        /// <value>Argument count.</value>
         public int Count
         {
             get { return _args.Length; }

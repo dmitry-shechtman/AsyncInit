@@ -18,8 +18,8 @@ namespace Ditto.AsyncInit.Services
         /// Attempts to resolve an instance of the specified type.
         /// </summary>
         /// <param name="type">The type of object to resolve.</param>
-        /// <param name="value">Resolved value (or <value>null</value> if unsuccessful).</param>
-        /// <returns><value>true</value> if successful or <value>false</value> otherwise.</returns>
+        /// <param name="value">Resolved value (or <c>null</c> if unsuccessful).</param>
+        /// <returns><c>true</c> if successful or <c>false</c> otherwise.</returns>
         bool TryResolve(Type type, out object value);
     }
 }

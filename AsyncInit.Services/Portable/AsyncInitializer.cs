@@ -24,7 +24,7 @@ namespace Ditto.AsyncInit.Services
         private readonly IArgumentsStrategy _arguments;
 
         /// <summary>
-        /// Creates a new initializer with typed initialization arguments.
+        /// Initializes a new instance of the <see cref="AsyncInitializer{TFrom,TTo}"/> class with typed initialization arguments.
         /// </summary>
         /// <param name="args">Arguments.</param>
         public AsyncInitializer(AsyncInitArgs args)
@@ -33,7 +33,7 @@ namespace Ditto.AsyncInit.Services
         }
 
         /// <summary>
-        /// Creates a new initializer with the specified arguments strategy.
+        /// Initializes a new instance of the <see cref="AsyncInitializer{TFrom,TTo}"/> class with the specified arguments strategy.
         /// </summary>
         /// <param name="arguments">Arguments strategy.</param>
         internal AsyncInitializer(IArgumentsStrategy arguments)
@@ -44,6 +44,7 @@ namespace Ditto.AsyncInit.Services
         /// <summary>
         /// Gets a task capturing the initialization.
         /// </summary>
+        /// <returns>Task capturing the initialization.</returns>
         public Task<TFrom> AsTask()
         {
             return AsTask(CancellationToken.None);
@@ -53,6 +54,7 @@ namespace Ditto.AsyncInit.Services
         /// Gets a cancelable task capturing the initialization.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Cancelable task capturing the initialization.</returns>
         public virtual Task<TFrom> AsTask(CancellationToken cancellationToken)
         {
             return CreateAsync(cancellationToken);
@@ -62,6 +64,7 @@ namespace Ditto.AsyncInit.Services
         /// Asynchronously creates and initializes an instance of <typeparamref name="TTo"/>.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Task capturing the initialization.</returns>
         private async Task<TFrom> CreateAsync(CancellationToken cancellationToken)
         {
             var initTypes = GetInitTypes();
@@ -91,6 +94,7 @@ namespace Ditto.AsyncInit.Services
         /// </summary>
         /// <param name="initTypes">Initialization interface types.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Task capturing the initialization.</returns>
         protected virtual Task<TFrom> CreateAsync(IEnumerable<Type> initTypes, CancellationToken cancellationToken)
         {
             var initType = initTypes.First();
@@ -103,6 +107,7 @@ namespace Ditto.AsyncInit.Services
         /// </summary>
         /// <param name="initType">Initialization interface type.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Task capturing the initialization.</returns>
         protected async Task<TFrom> CreateAsync(Type initType, CancellationToken cancellationToken)
         {
             var argTypes = initType.GetGenericArguments();
@@ -117,6 +122,7 @@ namespace Ditto.AsyncInit.Services
         /// <param name="initType">Initialization interface type.</param>
         /// <param name="args">Initialization arguments</param>
         /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Task capturing the initialization.</returns>
         private async Task<TFrom> CreateAsync(Type initType, IEnumerable<object> args, CancellationToken cancellationToken)
         {
             var value = CreateInstance();
@@ -155,6 +161,7 @@ namespace Ditto.AsyncInit.Services
         /// <summary>
         /// Creates an instance of <typeparamref name="TTo"/>.
         /// </summary>
+        /// <returns>Instance of <typeparamref name="TTo"/>.</returns>
         protected virtual TTo CreateInstance()
         {
             return Utilities.CreateInstance<TTo>();
@@ -174,7 +181,7 @@ namespace Ditto.AsyncInit.Services
         /// <summary>
         /// Gets the container strategy.
         /// </summary>
-        /// <returns>Container strategy (or <value>null</value> if none is available).</returns>
+        /// <returns>Container strategy (or <c>null</c> if none is available).</returns>
         protected virtual IContainerStrategy GetContainerStrategy()
         {
             return null;
@@ -184,7 +191,7 @@ namespace Ditto.AsyncInit.Services
         /// Validates the argument types.
         /// </summary>
         /// <param name="type">The types of the arguments.</param>
-        /// <returns><value>true</value> if the argument types match.</returns>
+        /// <returns><c>true</c> if the argument types match.</returns>
         private bool IsArgumentsMatch(Type type)
         {
             var argTypes = type.GetGenericArguments();
@@ -195,6 +202,7 @@ namespace Ditto.AsyncInit.Services
         /// Gets the rank for the specified initialization interface type.
         /// </summary>
         /// <param name="type">Initialization type.</param>
+        /// <returns>Type rank.</returns>
         private int GetInitTypeRank(Type type)
         {
             var argTypes = type.GetGenericArguments();

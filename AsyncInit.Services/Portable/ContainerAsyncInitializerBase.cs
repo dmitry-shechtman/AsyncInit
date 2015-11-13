@@ -19,7 +19,7 @@ namespace Ditto.AsyncInit.Services
         private Task<TFrom> _task;
 
         /// <summary>
-        /// Creates a new initializer with resolved initialization arguments.
+        /// Initializes a new instance of the <see cref="ContainerAsyncInitializerBase{TFrom,TTo,TContainer}"/> class with resolved initialization arguments.
         /// </summary>
         protected ContainerAsyncInitializerBase()
             : base(ResolveArgumentsStrategy.Instance)
@@ -27,7 +27,7 @@ namespace Ditto.AsyncInit.Services
         }
 
         /// <summary>
-        /// Creates a new initializer with typed initialization arguments.
+        /// Initializes a new instance of the <see cref="ContainerAsyncInitializerBase{TFrom,TTo,TContainer}"/> class with typed initialization arguments.
         /// </summary>
         /// <param name="args">Arguments.</param>
         protected ContainerAsyncInitializerBase(AsyncInitArgs args)
@@ -36,8 +36,9 @@ namespace Ditto.AsyncInit.Services
         }
 
         /// <summary>
-        /// Dependency injection container strategy.
+        /// Gets or sets the dependency injection container strategy.
         /// </summary>
+        /// <value>Container strategy.</value>
         public abstract TContainer ContainerStrategy
         {
             get;
@@ -48,6 +49,7 @@ namespace Ditto.AsyncInit.Services
         /// Gets a cancelable task capturing the initialization.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Cancelable task capturing the initialization.</returns>
         public override Task<TFrom> AsTask(CancellationToken cancellationToken)
         {
             if (_task == null)
@@ -66,6 +68,7 @@ namespace Ditto.AsyncInit.Services
         /// </summary>
         /// <param name="initTypes">Initialization types.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Task capturing the initialization.</returns>
         protected override async Task<TFrom> CreateAsync(IEnumerable<Type> initTypes, CancellationToken cancellationToken)
         {
             List<Exception> exceptions = new List<Exception>();
@@ -90,6 +93,7 @@ namespace Ditto.AsyncInit.Services
         /// <summary>
         /// Creates and builds up an instance of <typeparamref name="TTo"/>.
         /// </summary>
+        /// <returns>Instance of <typeparamref name="TTo"/>.</returns>
         protected override TTo CreateInstance()
         {
             var value = base.CreateInstance();
@@ -100,6 +104,7 @@ namespace Ditto.AsyncInit.Services
         /// <summary>
         /// Gets the container strategy.
         /// </summary>
+        /// <returns>Container strategy.</returns>
         protected override IContainerStrategy GetContainerStrategy()
         {
             return ContainerStrategy;

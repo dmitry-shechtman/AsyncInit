@@ -13,7 +13,7 @@ namespace Ditto.AsyncInit.Services
 	var typeList = string.Join(", ", range.Select(j => "typeof(" + baseTArgs[j] + ")"));
 #>
         /// <summary>
-        /// Creates a new instance of asynchronous initialization arguments.
+        /// Initializes a new instance of the <see cref="AsyncInitArgs"/> class.
         /// </summary>
 <#
 	for (int j = 0; j < i; ++j)
@@ -29,6 +29,7 @@ namespace Ditto.AsyncInit.Services
 <#
 	}
 #>
+        /// <returns>An instance of <see cref="AsyncInitArgs"/>.</returns>
         public static AsyncInitArgs Create<#= baseTArgList #>(<#= baseParamList #>)
         {
             return new AsyncInitArgs(

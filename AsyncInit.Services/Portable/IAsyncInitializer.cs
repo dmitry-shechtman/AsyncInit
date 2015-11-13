@@ -13,12 +13,14 @@ namespace Ditto.AsyncInit.Services
         /// <summary>
         /// Gets a task capturing the initialization.
         /// </summary>
+        /// <returns>Task capturing the initialization.</returns>
         Task<T> AsTask();
 
         /// <summary>
         /// Gets a cancelable task capturing the initialization.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Cancelable task capturing the initialization.</returns>
         Task<T> AsTask(CancellationToken cancellationToken);
     }
 }

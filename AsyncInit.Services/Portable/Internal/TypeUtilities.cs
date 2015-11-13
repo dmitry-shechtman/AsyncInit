@@ -13,7 +13,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// Checks whether the specified type is a <see cref="Nullable"/>.
         /// </summary>
         /// <param name="type">Type to check.</param>
-        /// <returns><value>true</value> if the type is a constructed <see cref="System.Nullable{T}"/> type.</returns>
+        /// <returns><c>true</c> if the type is a constructed <see cref="System.Nullable{T}"/> type.</returns>
         public static bool IsNullable(Type type)
         {
             var name = GetPartialName(type);
@@ -24,7 +24,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// Checks whether the specified type is a <see cref="Tuple"/>.
         /// </summary>
         /// <param name="type">Type to check.</param>
-        /// <returns><value>true</value> if the type is a constructed <see cref="Tuple"/> type.</returns>
+        /// <returns><c>true</c> if the type is a constructed <see cref="Tuple"/> type.</returns>
         public static bool IsTuple(Type type)
         {
             var name = GetPartialName(type);
@@ -36,7 +36,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// </summary>
         /// <param name="type">Type to check.</param>
         /// <returns>
-        /// <value>true</value> if the type is <see cref="IAsyncInit"/>, <see cref="ICancelableAsyncInit"/>,
+        /// <c>true</c> if the type is <see cref="IAsyncInit"/>, <see cref="ICancelableAsyncInit"/>,
         /// or a constructed <see cref="IAsyncInit"/> or <see cref="ICancelableAsyncInit"/> type.
         /// </returns>
         public static bool IsAsyncInit(Type type)
@@ -50,7 +50,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// </summary>
         /// <param name="type">Type to check.</param>
         /// <returns>
-        /// <value>true</value> if the type is <see cref="ICancelableAsyncInit"/> or a constructed
+        /// <c>true</c> if the type is <see cref="ICancelableAsyncInit"/> or a constructed
         /// <see cref="ICancelableAsyncInit"/> type.
         /// </returns>
         public static bool IsCancelable(Type type)

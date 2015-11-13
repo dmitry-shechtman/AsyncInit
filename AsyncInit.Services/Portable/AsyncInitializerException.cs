@@ -12,7 +12,7 @@ namespace Ditto.AsyncInit.Services
         private readonly Type _type;
 
         /// <summary>
-        /// Creates a new instance of <see cref="AsyncInitializerException"/>.
+        /// Initializes a new instance of the <see cref="AsyncInitializerException"/> class.
         /// </summary>
         /// <param name="type">The type of object to initialize.</param>
         /// <param name="innerException">The exception that is the cause of the current exception.</param>
@@ -23,7 +23,7 @@ namespace Ditto.AsyncInit.Services
         }
 
         /// <summary>
-        /// Creates a new instance of <see cref="AsyncInitializerException"/>.
+        /// Initializes a new instance of the <see cref="AsyncInitializerException"/> class.
         /// </summary>
         /// <param name="type">The type of object to initialize.</param>
         /// <param name="innerExceptions">The exceptions that are the cause of the current exception.</param>
@@ -34,7 +34,7 @@ namespace Ditto.AsyncInit.Services
         }
 
         /// <summary>
-        /// Creates a new instance of <see cref="AsyncInitializerException"/>.
+        /// Initializes a new instance of the <see cref="AsyncInitializerException"/> class.
         /// </summary>
         /// <param name="type">The type of object to initialize.</param>
         /// <param name="innerMessage">The error message that explains the reason for the exception.</param>

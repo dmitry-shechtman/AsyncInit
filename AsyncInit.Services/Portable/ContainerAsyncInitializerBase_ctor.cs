@@ -5,7 +5,7 @@ namespace Ditto.AsyncInit.Services
     partial class ContainerAsyncInitializerBase<TFrom, TTo, TContainer>
     {
         /// <summary>
-        /// Creates a new initializer with untyped initialization arguments.
+        /// Initializes a new instance of the <see cref="ContainerAsyncInitializerBase{TFrom,TTo,TContainer}"/> class with untyped initialization arguments.
         /// </summary>
         /// <param name="arg">The argument.</param>
         protected ContainerAsyncInitializerBase(object arg)
@@ -14,7 +14,7 @@ namespace Ditto.AsyncInit.Services
         }
 
         /// <summary>
-        /// Creates a new initializer with untyped initialization arguments.
+        /// Initializes a new instance of the <see cref="ContainerAsyncInitializerBase{TFrom,TTo,TContainer}"/> class with untyped initialization arguments.
         /// </summary>
         /// <param name="arg1">The first argument.</param>
         /// <param name="arg2">The second argument.</param>
@@ -24,7 +24,7 @@ namespace Ditto.AsyncInit.Services
         }
 
         /// <summary>
-        /// Creates a new initializer with untyped initialization arguments.
+        /// Initializes a new instance of the <see cref="ContainerAsyncInitializerBase{TFrom,TTo,TContainer}"/> class with untyped initialization arguments.
         /// </summary>
         /// <param name="arg1">The first argument.</param>
         /// <param name="arg2">The second argument.</param>
@@ -35,7 +35,7 @@ namespace Ditto.AsyncInit.Services
         }
 
         /// <summary>
-        /// Creates a new initializer with untyped initialization arguments.
+        /// Initializes a new instance of the <see cref="ContainerAsyncInitializerBase{TFrom,TTo,TContainer}"/> class with untyped initialization arguments.
         /// </summary>
         /// <param name="arg1">The first argument.</param>
         /// <param name="arg2">The second argument.</param>
@@ -47,7 +47,7 @@ namespace Ditto.AsyncInit.Services
         }
 
         /// <summary>
-        /// Creates a new initializer with untyped initialization arguments.
+        /// Initializes a new instance of the <see cref="ContainerAsyncInitializerBase{TFrom,TTo,TContainer}"/> class with untyped initialization arguments.
         /// </summary>
         /// <param name="arg1">The first argument.</param>
         /// <param name="arg2">The second argument.</param>
@@ -60,7 +60,7 @@ namespace Ditto.AsyncInit.Services
         }
 
         /// <summary>
-        /// Creates a new initializer with untyped initialization arguments.
+        /// Initializes a new instance of the <see cref="ContainerAsyncInitializerBase{TFrom,TTo,TContainer}"/> class with untyped initialization arguments.
         /// </summary>
         /// <param name="arg1">The first argument.</param>
         /// <param name="arg2">The second argument.</param>
@@ -74,7 +74,7 @@ namespace Ditto.AsyncInit.Services
         }
 
         /// <summary>
-        /// Creates a new initializer with untyped initialization arguments.
+        /// Initializes a new instance of the <see cref="ContainerAsyncInitializerBase{TFrom,TTo,TContainer}"/> class with untyped initialization arguments.
         /// </summary>
         /// <param name="arg1">The first argument.</param>
         /// <param name="arg2">The second argument.</param>

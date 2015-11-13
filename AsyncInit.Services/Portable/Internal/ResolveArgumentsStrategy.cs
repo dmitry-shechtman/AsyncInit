@@ -26,6 +26,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// Validates argument types.
         /// </summary>
         /// <param name="types">The types of the arguments.</param>
+        /// <returns><c>true</c> if the argument types match.</returns>
         public bool IsMatch(Type[] types)
         {
             return true;
@@ -35,6 +36,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// Gets an adjusted argument count.
         /// </summary>
         /// <param name="types">The types of the arguments.</param>
+        /// <returns>Adjusted argument count.</returns>
         public int GetCount(Type[] types)
         {
             return types.Sum(t => DoGetCount(t));
@@ -46,6 +48,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// <param name="container">Container strategy.</param>
         /// <param name="types">The types of the arguments.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Task with the arguments as its result.</returns>
         public Task<object[]> GetAsync(IContainerStrategy container, Type[] types, CancellationToken cancellationToken)
         {
             return TaskEx.WhenAll(types.Select(type =>
@@ -56,6 +59,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// Gets an adjusted type argument count for the specified type.
         /// </summary>
         /// <param name="type">Argument type.</param>
+        /// <returns>Adjusted argument count.</returns>
         private int DoGetCount(Type type)
         {
             var tupleType = GetTupleType(type);
@@ -69,7 +73,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// Gets a base tuple type for the specified type.
         /// </summary>
         /// <param name="type">Argument type.</param>
-        /// <returns>The constructed <see cref="Tuple"/> type from which the specified type inherits, or <value>null</value>.</returns>
+        /// <returns>The constructed <see cref="Tuple"/> type from which the specified type inherits, or <c>null</c>.</returns>
         private static Type GetTupleType(Type type)
         {
             if (type == null || TypeUtilities.IsTuple(type))
@@ -84,6 +88,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// <param name="container">Container strategy.</param>
         /// <param name="type">The type of object to resolve.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Task with the object as its result.</returns>
         private async Task<object> ResolveAsync(IContainerStrategy container, Type type, CancellationToken cancellationToken)
         {
             object value;
@@ -98,6 +103,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// <param name="container">Container strategy.</param>
         /// <param name="type">The type of object to resolve.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Task with the initializer as its result.</returns>
         private static Task<object> ResolveInitializerAsync(IContainerStrategy container, Type type, CancellationToken cancellationToken)
         {
             var initializerType = typeof(IAsyncInitializer<>).MakeGenericType(type);
@@ -114,6 +120,7 @@ namespace Ditto.AsyncInit.Services.Internal
         /// Gets the result of an asynchronous task whith cancellation exception unwrapped.
         /// </summary>
         /// <param name="task">The task.</param>
+        /// <returns>The task.</returns>
         private static Task<object> GetResultAsync(object task)
         {
             var getAwaiter = task.GetType().GetMethod("GetAwaiter");
