@@ -17,6 +17,9 @@
             Fixed wrong &lt;value&gt;s
           </listItem>
           <listItem>
+            Rewrote README.txt
+          </listItem>
+          <listItem>
             <link xlink:href="a920d297-289f-46ea-aa8b-338f484ad83c"/>
             <list class="bullet">
               <listItem>Merged the introduction and Supported Versions into Introduction</listItem>

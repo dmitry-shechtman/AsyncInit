@@ -3,10 +3,12 @@ AsyncInit
 
 A generic implementation of the asynchronous factory pattern.
 
-Help File
----------
+Getting Started
+---------------
 
-packages/Ditto.AsyncInit.1.3.0/doc/AsyncInit.chm
+The latest documentation is available at https://dmitry-shechtman.github.io/AsyncInit/
+
+A version-specific offline copy is located in packages/Ditto.AsyncInit.X.Y.Z/doc/ (replace X.Y.Z with your version number).
 
 Notice
 ------
@@ -23,11 +25,3 @@ Notice
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-
-Links
------
-
-* [Code](https://github.com/dmitry-shechtman/AsyncInit)
-* [Wiki](https://github.com/dmitry-shechtman/AsyncInit/wiki)
-* [Blog](https://shecht.wordpress.com/category/asyncactivator/)
-* [NuGet](https://nuget.org/packages/Ditto.AsyncInit)
