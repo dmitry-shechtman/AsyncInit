@@ -33,11 +33,20 @@
   <Topic id="e4e8dc54-685e-481b-bdec-c19ffb971294" visible="True" isExpanded="true">
     <Topic id="ff3a9984-a817-400e-be0d-6231ad026f50" visible="True" title="The NAG Constructor Pattern" tocTitle="NAG Constructor" linkText="The NAG Constructor Pattern" />
   </Topic>
-  <Topic id="402b5184-91d1-4bc0-a959-97514187d9f4" visible="True" isExpanded="true" title="Version History">
+  <Topic id="402b5184-91d1-4bc0-a959-97514187d9f4" visible="True" isSelected="true" title="Version History">
     <HelpKeywords>
       <HelpKeyword index="K" term="version, history" />
     </HelpKeywords>
-    <Topic id="4b1aeb26-3c84-4311-97d4-debfa1862a10" visible="True" />
+    <Topic id="3899d6a1-b947-42bb-8730-47ee00d66654" visible="True">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="4b1aeb26-3c84-4311-97d4-debfa1862a10" visible="True">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version" />
+      </HelpKeywords>
+    </Topic>
     <Topic id="457723af-305d-4409-95d8-89b9f2e05040" visible="True">
       <HelpKeywords>
         <HelpKeyword index="K" term="version" />
@@ -79,7 +88,7 @@
       </HelpKeywords>
     </Topic>
   </Topic>
-  <Topic id="835cb0e6-3fac-4aac-ace3-db119c394b4b" visible="True" isSelected="true" title="Apache License Version 2.0" tocTitle="License" linkText="License">
+  <Topic id="835cb0e6-3fac-4aac-ace3-db119c394b4b" visible="True" title="Apache License Version 2.0" tocTitle="License" linkText="License">
     <HelpKeywords>
       <HelpKeyword index="K" term="license" />
     </HelpKeywords>

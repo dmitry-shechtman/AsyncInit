@@ -11,6 +11,13 @@
         <definitionTable>
 
           <definedTerm>
+            <link xlink:href="3899d6a1-b947-42bb-8730-47ee00d66654" />
+          </definedTerm>
+          <definition>
+            Updated Project Site in NuGet package
+          </definition>
+          
+          <definedTerm>
             <link xlink:href="4b1aeb26-3c84-4311-97d4-debfa1862a10" />
           </definedTerm>
           <definition>
