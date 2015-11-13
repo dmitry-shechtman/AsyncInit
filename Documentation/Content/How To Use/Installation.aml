@@ -5,7 +5,7 @@
     xmlns:xlink="http://www.w3.org/1999/xlink">
 
     <summary>
-      <para>This topic explains how AsyncInit is added to a project.</para>
+      <para>This topic details the procedure of adding an AsyncInit reference to a project.</para>
     </summary>
 
     <procedure>
@@ -13,7 +13,7 @@
         <step>
           <content>
             <para>
-              Enter the following command into the Package Manager Console window:
+              Enter the following command into the Package Manager Console:
             </para>
             <code language="PowerShell">
               Install-Package Ditto.AsyncInit
@@ -21,12 +21,19 @@
             <para>
               If the solution contains multiple projects, the command above should be followed by the project name.
             </para>
+            <para>
+              Alternatively, you may use the Manage NuGet Packages window. Make sure the package name is <codeInline>Ditto.AsyncInit</codeInline>.
+            </para>
           </content>
         </step>
       </steps>
     </procedure>
 
     <relatedTopics>
+      <externalLink>
+        <linkUri>https://www.nuget.org/packages/Ditto.AsyncInit/</linkUri>
+        <linkText>Ditto.AsyncInit on NuGet Gallery</linkText>
+      </externalLink>
       <link xlink:href="c0f9e874-dd33-473b-a245-85fc69447a4b"/>
     </relatedTopics>
   
