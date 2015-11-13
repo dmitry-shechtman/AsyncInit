@@ -1,7 +1,12 @@
-AsyncInit Dependency Injection Support
+﻿AsyncInit Dependency Injection Support
 ======================================
 
 Adds support for dependency injection to AsyncInit.
+
+Getting Started
+---------------
+
+The latest documentation is available at https://dmitry-shechtman.github.io/AsyncInit.Services/
 
 Notice
 ------
@@ -22,7 +27,5 @@ Notice
 Links
 -----
 
-* [Code](https://github.com/dmitry-shechtman/AsyncInit)
-* [Wiki](https://github.com/dmitry-shechtman/AsyncInit/wiki)
 * [Blog](https://shecht.wordpress.com/category/asyncactivator/)
 * [NuGet](https://nuget.org/packages/Ditto.AsyncInit.Services)
