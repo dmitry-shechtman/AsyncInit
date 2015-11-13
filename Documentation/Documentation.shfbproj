@@ -77,10 +77,10 @@
     <Folder Include="media" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Content\How Tos\Basics.aml" />
+    <None Include="Content\How Tos\Deriving.aml" />
     <None Include="Content\How Tos\How Tos.aml" />
     <None Include="Content\How Tos\Installation.aml" />
-    <None Include="Content\How Tos\Interfaces.aml" />
+    <None Include="Content\How Tos\Implementing.aml" />
     <None Include="Content\How Tos\Silverlight.aml" />
     <None Include="Content\How Tos\Unity.aml" />
     <None Include="Content\License.aml" />
