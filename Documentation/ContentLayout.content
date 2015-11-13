@@ -19,6 +19,11 @@
         <HelpKeyword index="K" term="howto" />
       </HelpKeywords>
     </Topic>
+    <Topic id="c731bb1a-010a-40c6-856b-421ebbd05a26" visible="True" isSelected="true" title="Implementing an AsyncInit Interface" tocTitle="Interfaces" linkText="Implementing an AsyncInit Interface">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="howto" />
+      </HelpKeywords>
+    </Topic>
     <Topic id="f175305f-89a6-498e-add6-e803be90433e" visible="True" title="Silverlight Usage" tocTitle="Silverlight" linkText="Silverlight Usage">
       <HelpKeywords>
         <HelpKeyword index="K" term="howto" />
@@ -31,7 +36,7 @@
     </Topic>
   </Topic>
   <Topic id="e4e8dc54-685e-481b-bdec-c19ffb971294" visible="True" isExpanded="true">
-    <Topic id="ff3a9984-a817-400e-be0d-6231ad026f50" visible="True" isSelected="true" title="The NAG Constructor Pattern" tocTitle="NAG Constructor" />
+    <Topic id="ff3a9984-a817-400e-be0d-6231ad026f50" visible="True" title="The NAG Constructor Pattern" tocTitle="NAG Constructor" />
   </Topic>
   <Topic id="402b5184-91d1-4bc0-a959-97514187d9f4" visible="True" title="Version History">
     <HelpKeywords>

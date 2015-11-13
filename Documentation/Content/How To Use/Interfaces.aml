@@ -1,16 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<topic id="edeb370d-6d7e-4f82-adab-f2326d89c857" revisionNumber="1">
+<topic id="c731bb1a-010a-40c6-856b-421ebbd05a26" revisionNumber="1">
   <developerHowToDocument
     xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
     xmlns:xlink="http://www.w3.org/1999/xlink">
 
     <summary>
-      <para>This topic details the basics of creating and consuming asynchronously initialized types with AsyncInit.</para>
+      <para>This topic details the procedure of defining a type that implements an AsyncInit interface.</para>
     </summary>
+
+    <introduction>
+      <para>
+        In some cases, a type cannot be derived from a particular <codeInline>AsyncInitBase</codeInline> or <codeInline>CancelableAsyncInitBase</codeInline>, e.g. when it must derive from a predefined base class.
+        In such scenarios <codeInline>IAsyncInit</codeInline> and <codeInline>ICancelableAsyncInit</codeInline> should be used instead.
+      </para>
+    </introduction>
 
     <procedure>
       <steps class="ordered">
-
+        
         <step>
           <content>
             <para>
@@ -18,18 +25,24 @@
             </para>
           </content>
         </step>
-        
+
         <step>
           <content>
             <para>
-              Derive from the corresponding <codeInline>AsyncInitBase</codeInline> or <codeInline>CancelableAsyncInitBase</codeInline> <legacyItalic>(recommended)</legacyItalic>, specifying your class as the first generic type argument:
+              Implement the corresponding <codeInline>IAsyncInit</codeInline> or <codeInline>ICancelableAsyncInit</codeInline> <legacyItalic>(recommended)</legacyItalic>:
             </para>
             <code language="C#">
               using Ditto.AsyncInit;
 
-              class UniversalAnswerService : CancelableAsyncInitBase&lt;UniversalAnswerService, IProgress&lt;long&gt;&gt;
+              class UniversalAnswerService : ICancelableAsyncInit&lt;IProgress&lt;long&gt;&gt;
               {
                   public int Answer { get; private set; }
+                  
+                  async Task ICancelableAsyncInit&lt;IProgress&lt;long&gt;&gt;.InitAsync(IProgress&lt;long&gt; progress, CancellationToken cancellationToken)
+                  {
+                      await Task.Delay(TimeSpan.FromDays(7500000 * 365.25), cancellationToken);
+                      Answer = 42;
+                  }
               }
             </code>
           </content>
@@ -38,33 +51,30 @@
         <step>
           <content>
             <para>
-              Implement a private parameterless constructor, passing <codeInline>null</codeInline> as parameter to <codeInline>base</codeInline>:
+              Implement a private parameterless constructor:
             </para>
             <code language="C#">
               private UniversalAnswerService()
-              : base(null)
               {
               }
             </code>
           </content>
         </step>
-
+        
         <step>
           <content>
             <para>
-              Override <codeInline>InitAsync()</codeInline>:
+              Implement a <codeInline>CreateAsync()</codeInline> method:
             </para>
             <code language="C#">
-              protected override async Task InitAsync(IProgress&lt;long&gt; progress, CancellationToken cancellationToken)
+              public async Task&lt;UniversalAnswerService&gt; CreateAsync(IProgress&lt;long&gt; progress, CancellationToken cancellationToken)
               {
-                  await Task.Delay(TimeSpan.FromDays(7500000 * 365.25), cancellationToken);
-                  Answer = 42;
+                  return AsyncActivator.CreateAsync&lt;UniversalAnswerService, IProgress&lt;long&gt;&gt;(progress, cancellationToken);
               }
             </code>
           </content>
         </step>
       </steps>
-      
     </procedure>
 
     <conclusion>
@@ -80,6 +90,8 @@
       </code>
     </codeExample>
 
+    <!-- <codeExample>Optional code example</codeExample> -->
+
     <!-- <buildInstructions>Optional instructions for building a
          code example.</buildInstructions> -->
 
@@ -90,9 +102,7 @@
 
     <relatedTopics>
       <link xlink:href="c0f9e874-dd33-473b-a245-85fc69447a4b"/>
-      <link xlink:href="2ac5864f-d7ba-4ef7-a487-77ecfc2aab3a"/>
-      <link xlink:href="c731bb1a-010a-40c6-856b-421ebbd05a26"/>
-      <link xlink:href="f175305f-89a6-498e-add6-e803be90433e"/>
+      <link xlink:href="edeb370d-6d7e-4f82-adab-f2326d89c857"/>
     </relatedTopics>
   </developerHowToDocument>
 </topic>
