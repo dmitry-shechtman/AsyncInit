@@ -6,6 +6,9 @@
 
     <introduction>
       <para>Version 1.0.4 was released on January 01 2015.</para>
+      <para>
+        <legacyBold>Note:</legacyBold> This version is deprecated and should not be used.
+      </para>
     </introduction>
 
     <section>

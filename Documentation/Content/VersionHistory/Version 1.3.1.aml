@@ -14,10 +14,13 @@
 
         <list class="bullet">
           <listItem>
-            Restructured Version History
+            Restructured version list
           </listItem>
           <listItem>
             Added NuGet Gallery links
+          </listItem>
+          <listItem>
+            Added deprecated version notes
           </listItem>
         </list>
 
