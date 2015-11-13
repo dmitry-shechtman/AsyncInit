@@ -16,8 +16,9 @@
           <listItem>
             <link xlink:href="a920d297-289f-46ea-aa8b-338f484ad83c"/>
             <list class="bullet">
-              <listItem>Merged the introduction and the Supported Versions section into an Introduction section</listItem>
-              <listItem>Added an Aknowledgements section</listItem>
+              <listItem>Merged the introduction and Supported Versions into Introduction</listItem>
+              <listItem>Added Getting Started</listItem>
+              <listItem>Added Aknowledgements</listItem>
             </list>
           </listItem>
           <listItem>
