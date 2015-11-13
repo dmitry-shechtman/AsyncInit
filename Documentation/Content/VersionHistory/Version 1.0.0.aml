@@ -22,7 +22,11 @@
 		</section>
 
 		<relatedTopics>
-			<link xlink:href="402b5184-91d1-4bc0-a959-97514187d9f4" />
+      <externalLink>
+        <linkUri>https://www.nuget.org/packages/Ditto.AsyncInit/1.0.0</linkUri>
+        <linkText>This version on NuGet Gallery</linkText>
+      </externalLink>
+      <link xlink:href="402b5184-91d1-4bc0-a959-97514187d9f4" />
 		</relatedTopics>
 
 	</developerConceptualDocument>

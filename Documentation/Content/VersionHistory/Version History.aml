@@ -72,6 +72,10 @@
     </section>
 
     <relatedTopics>
+      <externalLink>
+        <linkUri>https://www.nuget.org/packages/Ditto.AsyncInit/</linkUri>
+        <linkText>Ditto.AsyncInit on NuGet Gallery</linkText>
+      </externalLink>
       <link xlink:href="a920d297-289f-46ea-aa8b-338f484ad83c" />
     </relatedTopics>
 
