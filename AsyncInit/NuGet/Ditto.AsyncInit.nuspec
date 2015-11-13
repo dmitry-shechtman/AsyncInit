@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Ditto.AsyncInit</id>
-    <version>1.4.0</version>
+    <version>1.4.1</version>
     <title>AsyncInit</title>
     <authors>Dmitry Shechtman</authors>
     <owners>Dmitry Shechtman</owners>
@@ -21,7 +21,7 @@ Supported Platforms:
 * Xamarin.iOS
 * Portable Class Libraries
     </description>
-    <releaseNotes>Reworked documentation</releaseNotes>
+    <releaseNotes>Fixed broken link</releaseNotes>
     <language>en-US</language>
     <projectUrl>https://github.com/dmitry-shechtman/AsyncInit/</projectUrl>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
