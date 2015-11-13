@@ -5,7 +5,7 @@
     <section>
       <title>Introduction</title>
       <content>
-        <para>This library provides a dependency injection layer on top of <externalLink>
+        <para>This library adds a dependency injection layer on top of <externalLink>
           <linkUri>https://dmitry-shechtman.github.io/AsyncInit.Unity</linkUri>
           <linkText>AsyncInit</linkText>
         </externalLink>. It supports the following platforms:</para>
@@ -20,11 +20,11 @@
           <listItem>Portable Class Libraries</listItem>
         </list>
         <para>
-          This library is not meant to be used on its own. Its only client is
+          This library is meant to serve a dependency for other libraries. One (and currently only) such library is
           <externalLink>
             <linkUri>https://dmitry-shechtman.github.io/AsyncInit.Unity</linkUri>
             <linkText>Ditto.AsyncInit.Unity</linkText>
-          </externalLink>, but others may be added in the future.
+          </externalLink>.
         </para>
       </content>
     </section>
