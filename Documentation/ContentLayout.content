@@ -37,7 +37,7 @@
     <HelpKeywords>
       <HelpKeyword index="K" term="version, history" />
     </HelpKeywords>
-    <Topic id="4b1aeb26-3c84-4311-97d4-debfa1862a10" visible="True" isSelected="true" />
+    <Topic id="4b1aeb26-3c84-4311-97d4-debfa1862a10" visible="True" />
     <Topic id="457723af-305d-4409-95d8-89b9f2e05040" visible="True">
       <HelpKeywords>
         <HelpKeyword index="K" term="version" />
@@ -79,5 +79,9 @@
       </HelpKeywords>
     </Topic>
   </Topic>
-  <Topic id="835cb0e6-3fac-4aac-ace3-db119c394b4b" visible="True" title="Apache License Version 2.0" tocTitle="License" linkText="License" />
+  <Topic id="835cb0e6-3fac-4aac-ace3-db119c394b4b" visible="True" isSelected="true" title="Apache License Version 2.0" tocTitle="License" linkText="License">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="license" />
+    </HelpKeywords>
+  </Topic>
 </Topics>
