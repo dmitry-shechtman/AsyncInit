@@ -14,7 +14,7 @@ namespace Ditto.AsyncInit
         /// <summary>
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
-        /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        /// <param name="dummy">Dummy parameter (safe to pass <c>null</c>).</param>
         protected CancelableAsyncInitBase(object dummy)
             : base(dummy)
         {
@@ -65,7 +65,7 @@ namespace Ditto.AsyncInit
         /// <summary>
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
-        /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        /// <param name="dummy">Dummy parameter (safe to pass <c>null</c>).</param>
         protected CancelableAsyncInitBase(object dummy)
             : base(dummy)
         {
@@ -120,7 +120,7 @@ namespace Ditto.AsyncInit
         /// <summary>
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
-        /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        /// <param name="dummy">Dummy parameter (safe to pass <c>null</c>).</param>
         protected CancelableAsyncInitBase(object dummy)
             : base(dummy)
         {
@@ -179,7 +179,7 @@ namespace Ditto.AsyncInit
         /// <summary>
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
-        /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        /// <param name="dummy">Dummy parameter (safe to pass <c>null</c>).</param>
         protected CancelableAsyncInitBase(object dummy)
             : base(dummy)
         {
@@ -242,7 +242,7 @@ namespace Ditto.AsyncInit
         /// <summary>
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
-        /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        /// <param name="dummy">Dummy parameter (safe to pass <c>null</c>).</param>
         protected CancelableAsyncInitBase(object dummy)
             : base(dummy)
         {
@@ -309,7 +309,7 @@ namespace Ditto.AsyncInit
         /// <summary>
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
-        /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        /// <param name="dummy">Dummy parameter (safe to pass <c>null</c>).</param>
         protected CancelableAsyncInitBase(object dummy)
             : base(dummy)
         {
@@ -380,7 +380,7 @@ namespace Ditto.AsyncInit
         /// <summary>
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
-        /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        /// <param name="dummy">Dummy parameter (safe to pass <c>null</c>).</param>
         protected CancelableAsyncInitBase(object dummy)
             : base(dummy)
         {
@@ -455,7 +455,7 @@ namespace Ditto.AsyncInit
         /// <summary>
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
-        /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        /// <param name="dummy">Dummy parameter (safe to pass <c>null</c>).</param>
         protected CancelableAsyncInitBase(object dummy)
             : base(dummy)
         {

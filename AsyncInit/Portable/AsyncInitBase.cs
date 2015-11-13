@@ -13,7 +13,7 @@ namespace Ditto.AsyncInit
         /// <summary>
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
-        /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        /// <param name="dummy">Dummy parameter (safe to pass <c>null</c>).</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "dummy")]
         protected AsyncInitBase(object dummy)
         {
@@ -53,7 +53,7 @@ namespace Ditto.AsyncInit
         /// <summary>
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
-        /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        /// <param name="dummy">Dummy parameter (safe to pass <c>null</c>).</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "dummy")]
         protected AsyncInitBase(object dummy)
         {
@@ -96,7 +96,7 @@ namespace Ditto.AsyncInit
         /// <summary>
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
-        /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        /// <param name="dummy">Dummy parameter (safe to pass <c>null</c>).</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "dummy")]
         protected AsyncInitBase(object dummy)
         {
@@ -142,7 +142,7 @@ namespace Ditto.AsyncInit
         /// <summary>
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
-        /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        /// <param name="dummy">Dummy parameter (safe to pass <c>null</c>).</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "dummy")]
         protected AsyncInitBase(object dummy)
         {
@@ -191,7 +191,7 @@ namespace Ditto.AsyncInit
         /// <summary>
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
-        /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        /// <param name="dummy">Dummy parameter (safe to pass <c>null</c>).</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "dummy")]
         protected AsyncInitBase(object dummy)
         {
@@ -243,7 +243,7 @@ namespace Ditto.AsyncInit
         /// <summary>
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
-        /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        /// <param name="dummy">Dummy parameter (safe to pass <c>null</c>).</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "dummy")]
         protected AsyncInitBase(object dummy)
         {
@@ -298,7 +298,7 @@ namespace Ditto.AsyncInit
         /// <summary>
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
-        /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        /// <param name="dummy">Dummy parameter (safe to pass <c>null</c>).</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "dummy")]
         protected AsyncInitBase(object dummy)
         {
@@ -356,7 +356,7 @@ namespace Ditto.AsyncInit
         /// <summary>
         /// Deriving types should define a private parameterless constructor.
         /// </summary>
-        /// <param name="dummy">Dummy parameter (safe to pass <value>null</value>).</param>
+        /// <param name="dummy">Dummy parameter (safe to pass <c>null</c>).</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "dummy")]
         protected AsyncInitBase(object dummy)
         {
