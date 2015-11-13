@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <topic id="a920d297-289f-46ea-aa8b-338f484ad83c" revisionNumber="1">
   <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <introduction>
-      <para>A generic implementation of the asynchronous factory pattern.</para>
-    </introduction>
 
+    <section>
+      <title>Introduction</title>
+      <content>
+        <para>AsyncInit is a .NET portable generic implementation of the asynchronous factory pattern.</para>
+      </content>
+    </section>
+    
     <section>
       <title>Supported Platforms</title>
       <content>
