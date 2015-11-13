@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="457723af-305d-4409-95d8-89b9f2e05040" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <introduction>
+      <para>Version 1.4.0 was released on November 13 2015.</para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+
+        <list class="bullet">
+          <listItem>
+            Fixed wrong &lt;value&gt;s
+          </listItem>
+          <listItem>
+            <link xlink:href="a920d297-289f-46ea-aa8b-338f484ad83c"/>
+            <list class="bullet">
+              <listItem>Merged the introduction and Supported Versions into Introduction</listItem>
+              <listItem>Added Getting Started</listItem>
+              <listItem>Added Miscellanea</listItem>
+              <listItem>Added Aknowledgements</listItem>
+            </list>
+          </listItem>
+          <listItem>
+            <link xlink:href="c0f9e874-dd33-473b-a245-85fc69447a4b"/>
+            <list class="bullet">
+              <listItem>
+                Separated
+                <link xlink:href="2ac5864f-d7ba-4ef7-a487-77ecfc2aab3a"/>
+                from
+                <link xlink:href="edeb370d-6d7e-4f82-adab-f2326d89c857"/>
+              </listItem>
+              <listItem>
+                Added
+                <link xlink:href="c731bb1a-010a-40c6-856b-421ebbd05a26"/>
+              </listItem>
+              <listItem>Separated examples from procedures</listItem>
+              <listItem>Renamed from How To Use</listItem>
+            </list>
+          </listItem>
+          <listItem>
+            <link xlink:href="e4e8dc54-685e-481b-bdec-c19ffb971294"/>
+            <list class="bullet">
+              <listItem>Added section</listItem>
+              <listItem>
+                Added
+                <link xlink:href="ff3a9984-a817-400e-be0d-6231ad026f50"/>
+              </listItem>
+            </list>
+          </listItem>
+          <listItem>
+            <link xlink:href="402b5184-91d1-4bc0-a959-97514187d9f4"/>
+            <list class="bullet">
+              <listItem>Added NuGet Gallery links to the orientation topic and to the version topics</listItem>
+              <listItem>Added deprecated version notes</listItem>
+              <listItem>Restructured the version list as a definition table</listItem>
+            </list>
+          </listItem>
+          <listItem>
+            <link xlink:href="835cb0e6-3fac-4aac-ace3-db119c394b4b"/>
+            <list class="bullet">
+              <listItem>Fixed markup</listItem>
+            </list>
+          </listItem>
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <externalLink>
+        <linkUri>https://www.nuget.org/packages/Ditto.AsyncInit/1.3.1</linkUri>
+        <linkText>This version on NuGet Gallery</linkText>
+      </externalLink>
+      <link xlink:href="402b5184-91d1-4bc0-a959-97514187d9f4" />
+    </relatedTopics>
+
+  </developerConceptualDocument>
+</topic>
