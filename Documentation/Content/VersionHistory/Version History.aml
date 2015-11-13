@@ -9,6 +9,13 @@
       <content>
         <para>Select a version below to see a detailed description of its changes.</para>
         <definitionTable>
+
+          <definedTerm>
+            <link xlink:href="4b1aeb26-3c84-4311-97d4-debfa1862a10" />
+          </definedTerm>
+          <definition>
+            Fixed broken link
+          </definition>
           
           <definedTerm>
             <link xlink:href="457723af-305d-4409-95d8-89b9f2e05040" />

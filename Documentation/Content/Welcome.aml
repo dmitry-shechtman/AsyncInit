@@ -32,7 +32,7 @@
       <content>
         <para>
           If you haven't already, <link xlink:href="2ac5864f-d7ba-4ef7-a487-77ecfc2aab3a">install the NuGet package</link>.
-          The current version is <link xlink:href="457723af-305d-4409-95d8-89b9f2e05040"/>. Versions prior to <link xlink:href="bb413c18-0796-4d73-8267-642691771441"/> had a bug that rendered them effectively unusable on most platforms.
+          The current version is <link xlink:href="4b1aeb26-3c84-4311-97d4-debfa1862a10"/>. Versions prior to <link xlink:href="bb413c18-0796-4d73-8267-642691771441"/> had a bug that rendered them effectively unusable on most platforms.
           Their NuGet Gallery dwelling serves as a perpetual monument to the author's vanity.
         </para>
         <para>

@@ -5,7 +5,7 @@
       <HelpKeyword index="K" term="Welcome" />
     </HelpKeywords>
   </Topic>
-  <Topic id="c0f9e874-dd33-473b-a245-85fc69447a4b" visible="True" isExpanded="true" isSelected="true" title="How Tos">
+  <Topic id="c0f9e874-dd33-473b-a245-85fc69447a4b" visible="True" isExpanded="true" title="How Tos">
     <HelpKeywords>
       <HelpKeyword index="K" term="howto" />
     </HelpKeywords>
@@ -37,6 +37,7 @@
     <HelpKeywords>
       <HelpKeyword index="K" term="version, history" />
     </HelpKeywords>
+    <Topic id="4b1aeb26-3c84-4311-97d4-debfa1862a10" visible="True" isSelected="true" />
     <Topic id="457723af-305d-4409-95d8-89b9f2e05040" visible="True">
       <HelpKeywords>
         <HelpKeyword index="K" term="version" />
