@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="ff3a9984-a817-400e-be0d-6231ad026f50" revisionNumber="1">
+  <developerSDKTechnologyOverviewArchitectureDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <summary>
+      <para>This topic contains an article describing a design pattern first introduced in AsyncInit.</para>
+    </summary>
+
+    <introduction>
+      <autoOutline />
+    </introduction>
+
+    <section address="Problem">
+      <title>The Problem</title>
+      <content>
+    <para>A base class may occasionally require subclasses to limit the visibility of their constructor(s). Common example:</para>
+      <code language="C#">
+        abstract class Singleton&lt;T&gt;
+            where T : Singleton&lt;T&gt;
+        {
+            public static readonly T Instance;
+            
+            static Singleton()
+            {
+                Instance = new System.Lazy&lt;T&gt;(CreateInstance).Value;
+            }
+            
+            private static T CreateInstance()
+            {
+                return (T)System.Activator.CreateInstance(typeof(T), true);
+            }
+        }
+      </code>
+      <para>
+        The <codeInline>true</codeInline> bit instructs <codeInline>Activator</codeInline> to
+        <codeEntityReference linkText="look for a non-public constructor, but not to require it">M:System.Activator.CreateInstance(System.Type,System.Boolean)</codeEntityReference>.
+        This means that a subclass could easily forgo the private constructor (by e.g. declaring no constructor at all), which would defeat the whole purpose of it trying to be a singleton.
+      </para>
+        <para>Ideally, we would like to enforce this at compilation time. C# affords us the <codeInline>new</codeInline> constraint:
+        <code language="C#">
+          abstract class NotSingleton&lt;T&gt;
+              where T : NotSingleton&lt;T&gt;, new()
+          {
+              //...
+          }
+        </code>
+        but not its opposite. Something along the lines of
+        <code language="C#">
+          abstract class Singleton&lt;T&gt;
+              where T : Singleton&lt;T&gt;, ~new()
+          {
+              //...
+          }
+        </code>
+        would be great, but currently results in a compilation error for the wrong class.</para>
+      </content>
+    </section>
+
+    <section address="Solution">
+      <title>The Solution</title>
+      <content>
+        <para>
+          <codeInline>AsyncInitBase&lt;T&gt;</codeInline>, a class not too dissimilar from the above <codeInline>Singleton&lt;T&gt;</codeInline>, contains the following code:
+          <code language="C#">
+            /// &lt;summary&gt;
+            /// Deriving types should define a private parameterless constructor.
+            /// &lt;/summary&gt;
+            /// &lt;param name="dummy"&gt;Dummy parameter (safe to pass &lt;c&gt;null&lt;/c&gt;).&lt;/param&gt;
+            protected AsyncInitBase(object dummy)
+            {
+            }
+          </code>
+        </para>
+        <para>Its goal is to enforce implementors to define a constructor of their own, with the hope that it indeed be a private one.</para>
+      </content>
+    </section>
+
+    <section address="Name">
+      <title>The Name</title>
+      <content>
+        <legacyItalic>Null Argument Guidance Constructor</legacyItalic>, or <legacyItalic>NAG Constructor</legacyItalic>, was the name originally coined for this concept.
+        We believe it best encompasses both the means and (in its acronym form) the end.
+      </content>
+    </section>
+    
+    <relatedTopics>
+      <externalLink>
+        <linkUri>https://shecht.wordpress.com/2014/11/30/asyncactivator-targeting-multiple-platforms/</linkUri>
+        <linkText>The original blog post</linkText>
+      </externalLink>
+    </relatedTopics>
+    
+  </developerSDKTechnologyOverviewArchitectureDocument>
+</topic>

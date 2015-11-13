@@ -26,7 +26,7 @@
             <list class="bullet">
               <listItem>
                 Separated
-              <link xlink:href="2ac5864f-d7ba-4ef7-a487-77ecfc2aab3a"/>
+                <link xlink:href="2ac5864f-d7ba-4ef7-a487-77ecfc2aab3a"/>
                 from
                 <link xlink:href="edeb370d-6d7e-4f82-adab-f2326d89c857"/>
               </listItem>
@@ -41,6 +41,16 @@
               <listItem>Restructured the version list as a definition table</listItem>
             </list>
           </listItem>
+          <listItem>
+            <link xlink:href="e4e8dc54-685e-481b-bdec-c19ffb971294"/>
+            <list class="bullet">
+              <listItem>Added section</listItem>
+              <listItem>
+                Added
+                <link xlink:href="ff3a9984-a817-400e-be0d-6231ad026f50"/>
+              </listItem>
+            </list>
+          </listItem>
         </list>
 
       </content>
@@ -53,6 +63,6 @@
       </externalLink>
       <link xlink:href="402b5184-91d1-4bc0-a959-97514187d9f4" />
     </relatedTopics>
-    
+
   </developerConceptualDocument>
 </topic>

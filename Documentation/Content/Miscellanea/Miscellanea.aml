@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="e4e8dc54-685e-481b-bdec-c19ffb971294" revisionNumber="1">
+  <developerOrientationDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <summary>
+      <para>The topics in this section contain articles on miscellaneous aspects of AsyncInit design and implementation.</para>
+    </summary>
+
+    <list>
+      <listItem>
+        <link xlink:href="ff3a9984-a817-400e-be0d-6231ad026f50"/>
+      </listItem>
+    </list>
+    
+    <relatedTopics>
+    </relatedTopics>
+  </developerOrientationDocument>
+</topic>
