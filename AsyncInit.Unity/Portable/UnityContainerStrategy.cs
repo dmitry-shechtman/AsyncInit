@@ -7,7 +7,7 @@ namespace Ditto.AsyncInit.Unity
     /// <summary>
     /// Unity dependency injection container strategy.
     /// </summary>
-    public class UnityContainerStrategy : IContainerStrategy
+    internal class UnityContainerStrategy : IContainerStrategy
     {
         private readonly IUnityContainer _container;
         private readonly DependencyOverride _override;

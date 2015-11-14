@@ -8,7 +8,7 @@ namespace Ditto.AsyncInit.Unity
     /// </summary>
     /// <typeparam name="TFrom">The requested type.</typeparam>
     /// <typeparam name="TTo">The actual type.</typeparam>
-    public sealed partial class UnityAsyncInitializer<TFrom, TTo> : ContainerAsyncInitializerBase<TFrom, TTo, UnityContainerStrategy>
+    internal sealed partial class UnityAsyncInitializer<TFrom, TTo> : ContainerAsyncInitializerBase<TFrom, TTo, UnityContainerStrategy>
         where TTo : TFrom
     {
         /// <summary>
