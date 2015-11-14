@@ -22,7 +22,7 @@ Supported Platforms:
     </description>
     <releaseNotes>Renamed package</releaseNotes>
     <language>en-US</language>
-    <projectUrl>https://github.com/dmitry-shechtman/AsyncInit/</projectUrl>
+    <projectUrl>https://AsyncInit.github.io/AsyncInit.Unity/</projectUrl>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright © Dmitry Shechtman 2014-2015</copyright>
