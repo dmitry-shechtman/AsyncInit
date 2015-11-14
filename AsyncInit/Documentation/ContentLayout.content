@@ -33,11 +33,16 @@
   <Topic id="e4e8dc54-685e-481b-bdec-c19ffb971294" visible="True" isExpanded="true">
     <Topic id="ff3a9984-a817-400e-be0d-6231ad026f50" visible="True" title="The NAG Constructor Pattern" tocTitle="NAG Constructor" linkText="The NAG Constructor Pattern" />
   </Topic>
-  <Topic id="402b5184-91d1-4bc0-a959-97514187d9f4" visible="True" isExpanded="true" title="Version History">
+  <Topic id="402b5184-91d1-4bc0-a959-97514187d9f4" visible="True" isSelected="true" title="Version History">
     <HelpKeywords>
       <HelpKeyword index="K" term="version, history" />
     </HelpKeywords>
-    <Topic id="b73c7145-e794-4e09-aba6-e0377c945b69" visible="True" isSelected="true">
+    <Topic id="bf3dc688-cecf-4172-bc73-72680a9e64ce" visible="True">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="b73c7145-e794-4e09-aba6-e0377c945b69" visible="True">
       <HelpKeywords>
         <HelpKeyword index="K" term="version" />
       </HelpKeywords>

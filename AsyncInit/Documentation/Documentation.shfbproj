@@ -86,18 +86,19 @@
     <None Include="Content\License.aml" />
     <None Include="Content\Miscellanea\Miscellanea.aml" />
     <None Include="Content\Miscellanea\NAG Constructor.aml" />
-    <None Include="Content\VersionHistory\Version 1.4.3.aml" />
     <None Include="Content\VersionHistory\Version 1.0.0.aml" />
     <None Include="Content\VersionHistory\Version 1.0.2.aml" />
     <None Include="Content\VersionHistory\Version 1.0.3.aml" />
     <None Include="Content\VersionHistory\Version 1.0.4.aml" />
     <None Include="Content\VersionHistory\Version 1.1.0.aml" />
     <None Include="Content\VersionHistory\Version 1.2.0.aml" />
+    <None Include="Content\VersionHistory\Version 1.3.0.aml" />
     <None Include="Content\VersionHistory\Version 1.4.0.aml" />
     <None Include="Content\VersionHistory\Version 1.4.1.aml" />
     <None Include="Content\VersionHistory\Version 1.4.2.aml" />
+    <None Include="Content\VersionHistory\Version 1.4.3.aml" />
+    <None Include="Content\VersionHistory\Version 1.4.4.aml" />
     <None Include="Content\VersionHistory\Version History.aml" />
-    <None Include="Content\VersionHistory\Version 1.3.0.aml" />
     <None Include="Content\Welcome.aml" />
   </ItemGroup>
   <ItemGroup>
