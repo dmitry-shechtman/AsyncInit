@@ -13,12 +13,8 @@
       <content>
 
         <list class="bullet">
-          <listItem>
-            <para>Updated Project Site in NuGet package</para>
-          </listItem>
-          <listItem>
-            <para>Updated AsyncInit.Unity link in documentation</para>
-          </listItem>
+          <para>Updated Project Site in NuGet package</para>
+          <para>Minor documentation updates</para>
         </list>
 
       </content>
