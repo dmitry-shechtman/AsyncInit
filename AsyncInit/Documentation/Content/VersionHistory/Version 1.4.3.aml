@@ -13,8 +13,8 @@
       <content>
 
         <list class="bullet">
-          <para>Updated Project Site in NuGet package</para>
-          <para>Minor documentation updates</para>
+          <listItem>Updated Project Site in NuGet package</listItem>
+          <listItem>Minor documentation updates</listItem>
         </list>
 
       </content>
