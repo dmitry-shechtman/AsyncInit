@@ -6,7 +6,7 @@ A generic implementation of the asynchronous factory pattern.
 Getting Started
 ---------------
 
-The latest documentation is available at https://dmitry-shechtman.github.io/AsyncInit/
+The latest documentation is available at https://AsyncInit.github.io/AsyncInit/
 
 Notice
 ------
