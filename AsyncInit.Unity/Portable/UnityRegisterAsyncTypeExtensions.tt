@@ -27,6 +27,7 @@ foreach (var lifetimeManager in new[] { false, true })
 		? new[] { "The requested type.", "The actual type." }
 		: new[] { "The type to register." };
 	var tArgList = "<" + string.Join(", ", tArgs) + ">";
+	var cArgList = "{" + string.Join(",", tArgs) + "}";
 
 	var tFromArgList = map
 		? "<TFrom>"
@@ -35,13 +36,15 @@ foreach (var lifetimeManager in new[] { false, true })
 		? tArgList
 		: "<T, T>";
 
-	var paramTypes = new List<string>(new[] { "IUnityContainer" });
-	var paramNames = new List<string>(new[] { "container" });
-	var paramDocs = new List<string>(new[] { "The container." });
+	var paramTypes = new List<string> { "IUnityContainer" };
+	var cParamTypes = new List<string> { "IUnityContainer" };
+	var paramNames = new List<string> { "container" };
+	var paramDocs = new List<string> { "The container." };
 
 	if (name)
 	{
 		paramTypes.Add("string");
+		cParamTypes.Add("String");
 		paramNames.Add("name");
 		paramDocs.Add("The name to use for registration.");
 	}
@@ -49,6 +52,7 @@ foreach (var lifetimeManager in new[] { false, true })
 	if (lifetimeManager)
 	{
 		paramTypes.Add("LifetimeManager");
+		cParamTypes.Add("LifetimeManager");
 		paramNames.Add("lifetimeManager");
 		paramDocs.Add("The <see cref=\"LifetimeManager\"/> that controls the lifetime of the returned instance.");
 	}
@@ -56,17 +60,20 @@ foreach (var lifetimeManager in new[] { false, true })
 	if (args)
 	{
 		paramTypes.Add("AsyncInitArgs");
+		cParamTypes.Add("InjectionMember[]");
 		paramNames.Add("args");
 		paramDocs.Add("Initialization arguments.");
 	}
 	else
 	{
 		paramTypes.Add("params InjectionMember[]");
+		cParamTypes.Add("InjectionMember[]");
 		paramNames.Add("injectionMembers");
 		paramDocs.Add("Injection configuration objects.");
 	}
 
 	var paramList = string.Join(", ", Enumerable.Range(0, paramTypes.Count).Select(j => paramTypes[j] + " " + paramNames[j]));
+	var cParamList = string.Join(",", Enumerable.Range(0, cParamTypes.Count).Select(j => cParamTypes[j]));
 #>
         /// <summary>
         /// Registers the specified asynchronously initialized type with the container.
@@ -86,6 +93,7 @@ foreach (var lifetimeManager in new[] { false, true })
 	}
 #>
         /// <returns>The container.</returns>
+		/// <seealso cref="UnityContainerExtensions.RegisterType<#= cArgList #>(<#= cParamList #>)" />
         public static IUnityContainer RegisterAsyncType<#= tArgList #>(this <#= paramList #>)
 <#
 	if (map)

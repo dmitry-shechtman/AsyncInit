@@ -20,6 +20,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="container">The container.</param>
         /// <param name="overrides">Resolver overrides.</param>
         /// <returns>Task capturing the initialization.</returns>
+		/// <seealso cref="UnityContainerExtensions.Resolve{T}(IUnityContainer,ResolverOverride[])" />
 		public static Task<T> ResolveAsync<T>(this IUnityContainer container, params ResolverOverride[] overrides)
         {
             if (container == null)
@@ -35,6 +36,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <param name="overrides">Resolver overrides.</param>
         /// <returns>Task capturing the initialization.</returns>
+		/// <seealso cref="UnityContainerExtensions.Resolve{T}(IUnityContainer,ResolverOverride[])" />
 		public static Task<T> ResolveAsync<T>(this IUnityContainer container, CancellationToken cancellationToken, params ResolverOverride[] overrides)
         {
             if (container == null)
@@ -50,6 +52,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="name">The name used for registration.</param>
         /// <param name="overrides">Resolver overrides.</param>
         /// <returns>Task capturing the initialization.</returns>
+		/// <seealso cref="UnityContainerExtensions.Resolve{T}(IUnityContainer,String,ResolverOverride[])" />
 		public static Task<T> ResolveAsync<T>(this IUnityContainer container, string name, params ResolverOverride[] overrides)
         {
             if (container == null)
@@ -66,6 +69,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <param name="overrides">Resolver overrides.</param>
         /// <returns>Task capturing the initialization.</returns>
+		/// <seealso cref="UnityContainerExtensions.Resolve{T}(IUnityContainer,String,ResolverOverride[])" />
 		public static Task<T> ResolveAsync<T>(this IUnityContainer container, string name, CancellationToken cancellationToken, params ResolverOverride[] overrides)
         {
             if (container == null)
@@ -81,6 +85,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="args">Initialization arguments.</param>
         /// <param name="overrides">Resolver overrides.</param>
         /// <returns>Task capturing the initialization.</returns>
+		/// <seealso cref="UnityContainerExtensions.Resolve{T}(IUnityContainer,ResolverOverride[])" />
 		public static Task<T> ResolveAsync<T>(this IUnityContainer container, AsyncInitArgs args, params ResolverOverride[] overrides)
         {
             if (container == null)
@@ -98,6 +103,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <param name="overrides">Resolver overrides.</param>
         /// <returns>Task capturing the initialization.</returns>
+		/// <seealso cref="UnityContainerExtensions.Resolve{T}(IUnityContainer,ResolverOverride[])" />
 		public static Task<T> ResolveAsync<T>(this IUnityContainer container, AsyncInitArgs args, CancellationToken cancellationToken, params ResolverOverride[] overrides)
         {
             if (container == null)
@@ -115,6 +121,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="args">Initialization arguments.</param>
         /// <param name="overrides">Resolver overrides.</param>
         /// <returns>Task capturing the initialization.</returns>
+		/// <seealso cref="UnityContainerExtensions.Resolve{T}(IUnityContainer,String,ResolverOverride[])" />
 		public static Task<T> ResolveAsync<T>(this IUnityContainer container, string name, AsyncInitArgs args, params ResolverOverride[] overrides)
         {
             if (container == null)
@@ -133,6 +140,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <param name="overrides">Resolver overrides.</param>
         /// <returns>Task capturing the initialization.</returns>
+		/// <seealso cref="UnityContainerExtensions.Resolve{T}(IUnityContainer,String,ResolverOverride[])" />
 		public static Task<T> ResolveAsync<T>(this IUnityContainer container, string name, AsyncInitArgs args, CancellationToken cancellationToken, params ResolverOverride[] overrides)
         {
             if (container == null)
