@@ -6,7 +6,7 @@
       <title>Introduction</title>
       <content>
         <para>This library adds a dependency injection layer on top of <externalLink>
-          <linkUri>https://dmitry-shechtman.github.io/AsyncInit.Unity</linkUri>
+          <linkUri>https://dmitry-shechtman.github.io/AsyncInit</linkUri>
           <linkText>AsyncInit</linkText>
         </externalLink>. It supports the following platforms:</para>
         <list class="bullet">
