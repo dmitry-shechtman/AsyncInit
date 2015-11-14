@@ -38,6 +38,10 @@
     </section>
 
     <relatedTopics>
+      <externalLink>
+        <linkUri>https://www.nuget.org/packages/Ditto.AsyncInit.Services/</linkUri>
+        <linkText>Ditto.AsyncInit.Services on NuGet Gallery</linkText>
+      </externalLink>
       <link xlink:href="65bb1336-f090-4770-b419-79bc13cde6dd" />
     </relatedTopics>
 
