@@ -40,5 +40,6 @@ Supported Platforms:
     <file src="AsyncInit.Unity\README.txt" />
     <file src="LICENSE" />
     <file src="NOTICE" />
+    <file src="AsyncInit.Unity\Documentation\Help\AsyncInit.Unity.chm" target="doc" />
   </files>
 </package>
