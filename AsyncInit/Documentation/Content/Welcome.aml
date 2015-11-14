@@ -19,8 +19,8 @@
         <para>
           This library might not be of much value on its own. Check out
           <externalLink>
-            <linkUri>https://dmitry-shechtman.github.io/AsyncInit.Unity</linkUri>
-            <linkText>Ditto.AsyncInit.Unity</linkText>
+            <linkUri>https://AsyncInit.github.io/AsyncInit.Unity</linkUri>
+            <linkText>AsyncInit.Unity</linkText>
           </externalLink>
           for more advanced usage scenarios.
         </para>
@@ -32,7 +32,7 @@
       <content>
         <para>
           If you haven't already, <link xlink:href="2ac5864f-d7ba-4ef7-a487-77ecfc2aab3a">install the NuGet package</link>.
-          The current version is <link xlink:href="3899d6a1-b947-42bb-8730-47ee00d66654"/>. Versions prior to <link xlink:href="bb413c18-0796-4d73-8267-642691771441"/> had a bug that rendered them effectively unusable on most platforms.
+          The current version is <link xlink:href="b73c7145-e794-4e09-aba6-e0377c945b69"/>. Versions prior to <link xlink:href="bb413c18-0796-4d73-8267-642691771441"/> had a bug that rendered them effectively unusable on most platforms.
           Their NuGet Gallery dwelling serves as a perpetual monument to the author's vanity.
         </para>
         <para>

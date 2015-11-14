@@ -86,6 +86,7 @@
     <None Include="Content\License.aml" />
     <None Include="Content\Miscellanea\Miscellanea.aml" />
     <None Include="Content\Miscellanea\NAG Constructor.aml" />
+    <None Include="Content\VersionHistory\Version 1.4.3.aml" />
     <None Include="Content\VersionHistory\Version 1.0.0.aml" />
     <None Include="Content\VersionHistory\Version 1.0.2.aml" />
     <None Include="Content\VersionHistory\Version 1.0.3.aml" />
