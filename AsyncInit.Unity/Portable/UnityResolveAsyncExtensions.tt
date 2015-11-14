@@ -16,6 +16,7 @@ namespace Ditto.AsyncInit.Unity
     /// <summary>
     /// Adds a set of asynchronous resolution methods to <see cref="IUnityContainer"/>.
     /// </summary>
+    /// <conceptualLink target="0432922d-9355-47b5-87f0-28feede0474d" />
     public static class UnityResolveAsyncTypeExtensions
     {
 <#
@@ -72,6 +73,7 @@ foreach (var token in new[] { false, true })
 #>
         /// <returns>Task capturing the initialization.</returns>
 		/// <seealso cref="UnityContainerExtensions.Resolve{T}(<#= cParamList #>)" />
+        /// <conceptualLink target="0432922d-9355-47b5-87f0-28feede0474d" />
 		public static Task<T> ResolveAsync<T>(this <#= paramList #>)
         {
             if (container == null)

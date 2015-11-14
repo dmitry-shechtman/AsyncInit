@@ -35,6 +35,9 @@ foreach (var lifetimeManager in new[] { false, true })
 	var tInitArgList = map
 		? tArgList
 		: "<T, T>";
+	var clTarget = map
+		? "773158a0-bea9-482f-b8ac-9670797b0da5"
+		: "30e16988-88d9-400d-bf76-21885513e5df";
 
 	var paramTypes = new List<string> { "IUnityContainer" };
 	var cParamTypes = new List<string> { "IUnityContainer" };
@@ -94,6 +97,7 @@ foreach (var lifetimeManager in new[] { false, true })
 #>
         /// <returns>The container.</returns>
 		/// <seealso cref="UnityContainerExtensions.RegisterType<#= cArgList #>(<#= cParamList #>)" />
+		/// <conceptualLink target="<#= clTarget #>" />
         public static IUnityContainer RegisterAsyncType<#= tArgList #>(this <#= paramList #>)
 <#
 	if (map)

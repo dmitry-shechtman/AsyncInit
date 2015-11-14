@@ -7,6 +7,8 @@ namespace Ditto.AsyncInit.Unity
     /// <summary>
     /// Adds a set of asynchronous registration methods to <see cref="IUnityContainer"/>.
     /// </summary>
+    /// <conceptualLink target="30e16988-88d9-400d-bf76-21885513e5df" />
+    /// <conceptualLink target="773158a0-bea9-482f-b8ac-9670797b0da5" />
     public static class UnityRegisterAsyncTypeExtensions
     {
         /// <summary>
@@ -17,6 +19,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="injectionMembers">Injection configuration objects.</param>
         /// <returns>The container.</returns>
 		/// <seealso cref="UnityContainerExtensions.RegisterType{T}(IUnityContainer,InjectionMember[])" />
+		/// <conceptualLink target="30e16988-88d9-400d-bf76-21885513e5df" />
         public static IUnityContainer RegisterAsyncType<T>(this IUnityContainer container, params InjectionMember[] injectionMembers)
         {
             if (container == null)
@@ -33,6 +36,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="injectionMembers">Injection configuration objects.</param>
         /// <returns>The container.</returns>
 		/// <seealso cref="UnityContainerExtensions.RegisterType{T}(IUnityContainer,LifetimeManager,InjectionMember[])" />
+		/// <conceptualLink target="30e16988-88d9-400d-bf76-21885513e5df" />
         public static IUnityContainer RegisterAsyncType<T>(this IUnityContainer container, LifetimeManager lifetimeManager, params InjectionMember[] injectionMembers)
         {
             if (container == null)
@@ -49,6 +53,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="injectionMembers">Injection configuration objects.</param>
         /// <returns>The container.</returns>
 		/// <seealso cref="UnityContainerExtensions.RegisterType{T}(IUnityContainer,String,InjectionMember[])" />
+		/// <conceptualLink target="30e16988-88d9-400d-bf76-21885513e5df" />
         public static IUnityContainer RegisterAsyncType<T>(this IUnityContainer container, string name, params InjectionMember[] injectionMembers)
         {
             if (container == null)
@@ -66,6 +71,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="injectionMembers">Injection configuration objects.</param>
         /// <returns>The container.</returns>
 		/// <seealso cref="UnityContainerExtensions.RegisterType{T}(IUnityContainer,String,LifetimeManager,InjectionMember[])" />
+		/// <conceptualLink target="30e16988-88d9-400d-bf76-21885513e5df" />
         public static IUnityContainer RegisterAsyncType<T>(this IUnityContainer container, string name, LifetimeManager lifetimeManager, params InjectionMember[] injectionMembers)
         {
             if (container == null)
@@ -81,6 +87,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="args">Initialization arguments.</param>
         /// <returns>The container.</returns>
 		/// <seealso cref="UnityContainerExtensions.RegisterType{T}(IUnityContainer,InjectionMember[])" />
+		/// <conceptualLink target="30e16988-88d9-400d-bf76-21885513e5df" />
         public static IUnityContainer RegisterAsyncType<T>(this IUnityContainer container, AsyncInitArgs args)
         {
             if (container == null)
@@ -98,6 +105,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="args">Initialization arguments.</param>
         /// <returns>The container.</returns>
 		/// <seealso cref="UnityContainerExtensions.RegisterType{T}(IUnityContainer,LifetimeManager,InjectionMember[])" />
+		/// <conceptualLink target="30e16988-88d9-400d-bf76-21885513e5df" />
         public static IUnityContainer RegisterAsyncType<T>(this IUnityContainer container, LifetimeManager lifetimeManager, AsyncInitArgs args)
         {
             if (container == null)
@@ -115,6 +123,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="args">Initialization arguments.</param>
         /// <returns>The container.</returns>
 		/// <seealso cref="UnityContainerExtensions.RegisterType{T}(IUnityContainer,String,InjectionMember[])" />
+		/// <conceptualLink target="30e16988-88d9-400d-bf76-21885513e5df" />
         public static IUnityContainer RegisterAsyncType<T>(this IUnityContainer container, string name, AsyncInitArgs args)
         {
             if (container == null)
@@ -133,6 +142,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="args">Initialization arguments.</param>
         /// <returns>The container.</returns>
 		/// <seealso cref="UnityContainerExtensions.RegisterType{T}(IUnityContainer,String,LifetimeManager,InjectionMember[])" />
+		/// <conceptualLink target="30e16988-88d9-400d-bf76-21885513e5df" />
         public static IUnityContainer RegisterAsyncType<T>(this IUnityContainer container, string name, LifetimeManager lifetimeManager, AsyncInitArgs args)
         {
             if (container == null)
@@ -150,6 +160,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="injectionMembers">Injection configuration objects.</param>
         /// <returns>The container.</returns>
 		/// <seealso cref="UnityContainerExtensions.RegisterType{TFrom,TTo}(IUnityContainer,InjectionMember[])" />
+		/// <conceptualLink target="773158a0-bea9-482f-b8ac-9670797b0da5" />
         public static IUnityContainer RegisterAsyncType<TFrom, TTo>(this IUnityContainer container, params InjectionMember[] injectionMembers)
 			where TTo : TFrom
         {
@@ -168,6 +179,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="injectionMembers">Injection configuration objects.</param>
         /// <returns>The container.</returns>
 		/// <seealso cref="UnityContainerExtensions.RegisterType{TFrom,TTo}(IUnityContainer,LifetimeManager,InjectionMember[])" />
+		/// <conceptualLink target="773158a0-bea9-482f-b8ac-9670797b0da5" />
         public static IUnityContainer RegisterAsyncType<TFrom, TTo>(this IUnityContainer container, LifetimeManager lifetimeManager, params InjectionMember[] injectionMembers)
 			where TTo : TFrom
         {
@@ -186,6 +198,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="injectionMembers">Injection configuration objects.</param>
         /// <returns>The container.</returns>
 		/// <seealso cref="UnityContainerExtensions.RegisterType{TFrom,TTo}(IUnityContainer,String,InjectionMember[])" />
+		/// <conceptualLink target="773158a0-bea9-482f-b8ac-9670797b0da5" />
         public static IUnityContainer RegisterAsyncType<TFrom, TTo>(this IUnityContainer container, string name, params InjectionMember[] injectionMembers)
 			where TTo : TFrom
         {
@@ -205,6 +218,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="injectionMembers">Injection configuration objects.</param>
         /// <returns>The container.</returns>
 		/// <seealso cref="UnityContainerExtensions.RegisterType{TFrom,TTo}(IUnityContainer,String,LifetimeManager,InjectionMember[])" />
+		/// <conceptualLink target="773158a0-bea9-482f-b8ac-9670797b0da5" />
         public static IUnityContainer RegisterAsyncType<TFrom, TTo>(this IUnityContainer container, string name, LifetimeManager lifetimeManager, params InjectionMember[] injectionMembers)
 			where TTo : TFrom
         {
@@ -222,6 +236,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="args">Initialization arguments.</param>
         /// <returns>The container.</returns>
 		/// <seealso cref="UnityContainerExtensions.RegisterType{TFrom,TTo}(IUnityContainer,InjectionMember[])" />
+		/// <conceptualLink target="773158a0-bea9-482f-b8ac-9670797b0da5" />
         public static IUnityContainer RegisterAsyncType<TFrom, TTo>(this IUnityContainer container, AsyncInitArgs args)
 			where TTo : TFrom
         {
@@ -241,6 +256,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="args">Initialization arguments.</param>
         /// <returns>The container.</returns>
 		/// <seealso cref="UnityContainerExtensions.RegisterType{TFrom,TTo}(IUnityContainer,LifetimeManager,InjectionMember[])" />
+		/// <conceptualLink target="773158a0-bea9-482f-b8ac-9670797b0da5" />
         public static IUnityContainer RegisterAsyncType<TFrom, TTo>(this IUnityContainer container, LifetimeManager lifetimeManager, AsyncInitArgs args)
 			where TTo : TFrom
         {
@@ -260,6 +276,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="args">Initialization arguments.</param>
         /// <returns>The container.</returns>
 		/// <seealso cref="UnityContainerExtensions.RegisterType{TFrom,TTo}(IUnityContainer,String,InjectionMember[])" />
+		/// <conceptualLink target="773158a0-bea9-482f-b8ac-9670797b0da5" />
         public static IUnityContainer RegisterAsyncType<TFrom, TTo>(this IUnityContainer container, string name, AsyncInitArgs args)
 			where TTo : TFrom
         {
@@ -280,6 +297,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="args">Initialization arguments.</param>
         /// <returns>The container.</returns>
 		/// <seealso cref="UnityContainerExtensions.RegisterType{TFrom,TTo}(IUnityContainer,String,LifetimeManager,InjectionMember[])" />
+		/// <conceptualLink target="773158a0-bea9-482f-b8ac-9670797b0da5" />
         public static IUnityContainer RegisterAsyncType<TFrom, TTo>(this IUnityContainer container, string name, LifetimeManager lifetimeManager, AsyncInitArgs args)
 			where TTo : TFrom
         {

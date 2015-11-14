@@ -7,6 +7,7 @@ namespace Ditto.AsyncInit.Unity
     /// <summary>
     /// Adds a set of asynchronous registration check methods to <see cref="IUnityContainer"/>.
     /// </summary>
+    /// <conceptualLink target="6f316ae1-44bb-4773-975b-aac2f5a50c49" />
     public static class UnityIsAsyncTypeRegisteredExtensions
     {
         /// <summary>
@@ -16,6 +17,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="container">The container.</param>
         /// <returns><c>true</c> if this type has been registered.</returns>
         /// <seealso cref="UnityContainerExtensions.IsRegistered{T}(IUnityContainer)" />
+        /// <conceptualLink target="6f316ae1-44bb-4773-975b-aac2f5a50c49" />
         public static bool IsAsyncTypeRegistered<T>(this IUnityContainer container)
         {
             if (container == null)
@@ -31,6 +33,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="name">The name to check.</param>
         /// <returns><c>true</c> if this type/name pair has been registered.</returns>
         /// <seealso cref="UnityContainerExtensions.IsRegistered{T}(IUnityContainer,String)" />
+        /// <conceptualLink target="6f316ae1-44bb-4773-975b-aac2f5a50c49" />
         public static bool IsAsyncTypeRegistered<T>(this IUnityContainer container, string name)
         {
             if (container == null)
