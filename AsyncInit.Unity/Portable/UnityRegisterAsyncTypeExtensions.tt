@@ -85,6 +85,7 @@ foreach (var lifetimeManager in new[] { false, true })
 <#
 	}
 #>
+        /// <returns>The container.</returns>
         public static IUnityContainer RegisterAsyncType<#= tArgList #>(this <#= paramList #>)
 <#
 	if (map)

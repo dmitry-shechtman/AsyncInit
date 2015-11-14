@@ -12,7 +12,7 @@ namespace Ditto.AsyncInit.Unity
         where TTo : TFrom
     {
         /// <summary>
-        /// Creates a new initializer with resolved initialization arguments.
+        /// Initializes a new instance of the <see cref="UnityAsyncInitializer{TFrom,TTo}"/> class with resolved initialization arguments.
         /// </summary>
         [InjectionConstructor]
         public UnityAsyncInitializer()
@@ -20,7 +20,7 @@ namespace Ditto.AsyncInit.Unity
         }
 
         /// <summary>
-        /// Creates a new initializer with typed initialization arguments.
+        /// Initializes a new instance of the <see cref="UnityAsyncInitializer{TFrom,TTo}"/> class with typed initialization arguments.
         /// </summary>
         /// <param name="args">Arguments.</param>
         public UnityAsyncInitializer(AsyncInitArgs args)
@@ -29,8 +29,9 @@ namespace Ditto.AsyncInit.Unity
         }
 
         /// <summary>
-        /// Dependency injection container strategy.
+        /// Gets or sets the dependency injection container strategy.
         /// </summary>
+        /// <value>Container strategy.</value>
         [Dependency]
         public override UnityContainerStrategy ContainerStrategy
         {

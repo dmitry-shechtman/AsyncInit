@@ -3,7 +3,7 @@
 	partial class UnityAsyncInitializer<TFrom, TTo>
 	{
         /// <summary>
-        /// Creates a new initializer with untyped initialization arguments.
+        /// Initializes a new instance of the <see cref="UnityAsyncInitializer{TFrom,TTo}"/> class with untyped initialization arguments.
         /// </summary>
         /// <param name="arg">The argument.</param>
         public UnityAsyncInitializer(object arg)
@@ -12,7 +12,7 @@
         }
 
         /// <summary>
-        /// Creates a new initializer with untyped initialization arguments.
+        /// Initializes a new instance of the <see cref="UnityAsyncInitializer{TFrom,TTo}"/> class with untyped initialization arguments.
         /// </summary>
         /// <param name="arg1">The first argument.</param>
         /// <param name="arg2">The second argument.</param>
@@ -22,7 +22,7 @@
         }
 
         /// <summary>
-        /// Creates a new initializer with untyped initialization arguments.
+        /// Initializes a new instance of the <see cref="UnityAsyncInitializer{TFrom,TTo}"/> class with untyped initialization arguments.
         /// </summary>
         /// <param name="arg1">The first argument.</param>
         /// <param name="arg2">The second argument.</param>
@@ -33,7 +33,7 @@
         }
 
         /// <summary>
-        /// Creates a new initializer with untyped initialization arguments.
+        /// Initializes a new instance of the <see cref="UnityAsyncInitializer{TFrom,TTo}"/> class with untyped initialization arguments.
         /// </summary>
         /// <param name="arg1">The first argument.</param>
         /// <param name="arg2">The second argument.</param>
@@ -45,7 +45,7 @@
         }
 
         /// <summary>
-        /// Creates a new initializer with untyped initialization arguments.
+        /// Initializes a new instance of the <see cref="UnityAsyncInitializer{TFrom,TTo}"/> class with untyped initialization arguments.
         /// </summary>
         /// <param name="arg1">The first argument.</param>
         /// <param name="arg2">The second argument.</param>
@@ -58,7 +58,7 @@
         }
 
         /// <summary>
-        /// Creates a new initializer with untyped initialization arguments.
+        /// Initializes a new instance of the <see cref="UnityAsyncInitializer{TFrom,TTo}"/> class with untyped initialization arguments.
         /// </summary>
         /// <param name="arg1">The first argument.</param>
         /// <param name="arg2">The second argument.</param>
@@ -72,7 +72,7 @@
         }
 
         /// <summary>
-        /// Creates a new initializer with untyped initialization arguments.
+        /// Initializes a new instance of the <see cref="UnityAsyncInitializer{TFrom,TTo}"/> class with untyped initialization arguments.
         /// </summary>
         /// <param name="arg1">The first argument.</param>
         /// <param name="arg2">The second argument.</param>

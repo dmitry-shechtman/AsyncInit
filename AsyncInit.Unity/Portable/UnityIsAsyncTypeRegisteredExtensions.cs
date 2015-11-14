@@ -14,7 +14,7 @@ namespace Ditto.AsyncInit.Unity
         /// </summary>
         /// <typeparam name="T">The type to check.</typeparam>
         /// <param name="container">The container.</param>
-        /// <returns><value>true</value> if this type has been registered.</returns>
+        /// <returns><c>true</c> if this type has been registered.</returns>
         public static bool IsAsyncTypeRegistered<T>(this IUnityContainer container)
         {
             if (container == null)
@@ -28,7 +28,7 @@ namespace Ditto.AsyncInit.Unity
         /// <typeparam name="T">The type to check.</typeparam>
         /// <param name="container">The container.</param>
         /// <param name="name">The name to check.</param>
-        /// <returns><value>true</value> if this type/name pair has been registered.</returns>
+        /// <returns><c>true</c> if this type/name pair has been registered.</returns>
         public static bool IsAsyncTypeRegistered<T>(this IUnityContainer container, string name)
         {
             if (container == null)

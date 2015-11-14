@@ -15,6 +15,7 @@ namespace Ditto.AsyncInit.Unity
         /// <typeparam name="T">The type to register.</typeparam>
         /// <param name="container">The container.</param>
         /// <param name="injectionMembers">Injection configuration objects.</param>
+        /// <returns>The container.</returns>
         public static IUnityContainer RegisterAsyncType<T>(this IUnityContainer container, params InjectionMember[] injectionMembers)
         {
             if (container == null)
@@ -29,6 +30,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="container">The container.</param>
         /// <param name="lifetimeManager">The <see cref="LifetimeManager"/> that controls the lifetime of the returned instance.</param>
         /// <param name="injectionMembers">Injection configuration objects.</param>
+        /// <returns>The container.</returns>
         public static IUnityContainer RegisterAsyncType<T>(this IUnityContainer container, LifetimeManager lifetimeManager, params InjectionMember[] injectionMembers)
         {
             if (container == null)
@@ -43,6 +45,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="container">The container.</param>
         /// <param name="name">The name to use for registration.</param>
         /// <param name="injectionMembers">Injection configuration objects.</param>
+        /// <returns>The container.</returns>
         public static IUnityContainer RegisterAsyncType<T>(this IUnityContainer container, string name, params InjectionMember[] injectionMembers)
         {
             if (container == null)
@@ -58,6 +61,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="name">The name to use for registration.</param>
         /// <param name="lifetimeManager">The <see cref="LifetimeManager"/> that controls the lifetime of the returned instance.</param>
         /// <param name="injectionMembers">Injection configuration objects.</param>
+        /// <returns>The container.</returns>
         public static IUnityContainer RegisterAsyncType<T>(this IUnityContainer container, string name, LifetimeManager lifetimeManager, params InjectionMember[] injectionMembers)
         {
             if (container == null)
@@ -71,6 +75,7 @@ namespace Ditto.AsyncInit.Unity
         /// <typeparam name="T">The type to register.</typeparam>
         /// <param name="container">The container.</param>
         /// <param name="args">Initialization arguments.</param>
+        /// <returns>The container.</returns>
         public static IUnityContainer RegisterAsyncType<T>(this IUnityContainer container, AsyncInitArgs args)
         {
             if (container == null)
@@ -86,6 +91,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="container">The container.</param>
         /// <param name="lifetimeManager">The <see cref="LifetimeManager"/> that controls the lifetime of the returned instance.</param>
         /// <param name="args">Initialization arguments.</param>
+        /// <returns>The container.</returns>
         public static IUnityContainer RegisterAsyncType<T>(this IUnityContainer container, LifetimeManager lifetimeManager, AsyncInitArgs args)
         {
             if (container == null)
@@ -101,6 +107,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="container">The container.</param>
         /// <param name="name">The name to use for registration.</param>
         /// <param name="args">Initialization arguments.</param>
+        /// <returns>The container.</returns>
         public static IUnityContainer RegisterAsyncType<T>(this IUnityContainer container, string name, AsyncInitArgs args)
         {
             if (container == null)
@@ -117,6 +124,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="name">The name to use for registration.</param>
         /// <param name="lifetimeManager">The <see cref="LifetimeManager"/> that controls the lifetime of the returned instance.</param>
         /// <param name="args">Initialization arguments.</param>
+        /// <returns>The container.</returns>
         public static IUnityContainer RegisterAsyncType<T>(this IUnityContainer container, string name, LifetimeManager lifetimeManager, AsyncInitArgs args)
         {
             if (container == null)
@@ -132,6 +140,7 @@ namespace Ditto.AsyncInit.Unity
         /// <typeparam name="TTo">The actual type.</typeparam>
         /// <param name="container">The container.</param>
         /// <param name="injectionMembers">Injection configuration objects.</param>
+        /// <returns>The container.</returns>
         public static IUnityContainer RegisterAsyncType<TFrom, TTo>(this IUnityContainer container, params InjectionMember[] injectionMembers)
 			where TTo : TFrom
         {
@@ -148,6 +157,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="container">The container.</param>
         /// <param name="lifetimeManager">The <see cref="LifetimeManager"/> that controls the lifetime of the returned instance.</param>
         /// <param name="injectionMembers">Injection configuration objects.</param>
+        /// <returns>The container.</returns>
         public static IUnityContainer RegisterAsyncType<TFrom, TTo>(this IUnityContainer container, LifetimeManager lifetimeManager, params InjectionMember[] injectionMembers)
 			where TTo : TFrom
         {
@@ -164,6 +174,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="container">The container.</param>
         /// <param name="name">The name to use for registration.</param>
         /// <param name="injectionMembers">Injection configuration objects.</param>
+        /// <returns>The container.</returns>
         public static IUnityContainer RegisterAsyncType<TFrom, TTo>(this IUnityContainer container, string name, params InjectionMember[] injectionMembers)
 			where TTo : TFrom
         {
@@ -181,6 +192,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="name">The name to use for registration.</param>
         /// <param name="lifetimeManager">The <see cref="LifetimeManager"/> that controls the lifetime of the returned instance.</param>
         /// <param name="injectionMembers">Injection configuration objects.</param>
+        /// <returns>The container.</returns>
         public static IUnityContainer RegisterAsyncType<TFrom, TTo>(this IUnityContainer container, string name, LifetimeManager lifetimeManager, params InjectionMember[] injectionMembers)
 			where TTo : TFrom
         {
@@ -196,6 +208,7 @@ namespace Ditto.AsyncInit.Unity
         /// <typeparam name="TTo">The actual type.</typeparam>
         /// <param name="container">The container.</param>
         /// <param name="args">Initialization arguments.</param>
+        /// <returns>The container.</returns>
         public static IUnityContainer RegisterAsyncType<TFrom, TTo>(this IUnityContainer container, AsyncInitArgs args)
 			where TTo : TFrom
         {
@@ -213,6 +226,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="container">The container.</param>
         /// <param name="lifetimeManager">The <see cref="LifetimeManager"/> that controls the lifetime of the returned instance.</param>
         /// <param name="args">Initialization arguments.</param>
+        /// <returns>The container.</returns>
         public static IUnityContainer RegisterAsyncType<TFrom, TTo>(this IUnityContainer container, LifetimeManager lifetimeManager, AsyncInitArgs args)
 			where TTo : TFrom
         {
@@ -230,6 +244,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="container">The container.</param>
         /// <param name="name">The name to use for registration.</param>
         /// <param name="args">Initialization arguments.</param>
+        /// <returns>The container.</returns>
         public static IUnityContainer RegisterAsyncType<TFrom, TTo>(this IUnityContainer container, string name, AsyncInitArgs args)
 			where TTo : TFrom
         {
@@ -248,6 +263,7 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="name">The name to use for registration.</param>
         /// <param name="lifetimeManager">The <see cref="LifetimeManager"/> that controls the lifetime of the returned instance.</param>
         /// <param name="args">Initialization arguments.</param>
+        /// <returns>The container.</returns>
         public static IUnityContainer RegisterAsyncType<TFrom, TTo>(this IUnityContainer container, string name, LifetimeManager lifetimeManager, AsyncInitArgs args)
 			where TTo : TFrom
         {

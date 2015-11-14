@@ -8,7 +8,7 @@ namespace Ditto.AsyncInit.Unity
 	{
 <#@ include file="..\..\AsyncInit.Services\Portable\AsyncInit.Services.t4" #>
         /// <summary>
-        /// Creates a new initializer with untyped initialization arguments.
+        /// Initializes a new instance of the <see cref="UnityAsyncInitializer{TFrom,TTo}"/> class with untyped initialization arguments.
         /// </summary>
 <#
 	for (int j = 0; j < i; ++j)

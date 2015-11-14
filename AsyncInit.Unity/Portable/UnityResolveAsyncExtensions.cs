@@ -19,7 +19,8 @@ namespace Ditto.AsyncInit.Unity
         /// <typeparam name="T">The type of object to resolve.</typeparam>
         /// <param name="container">The container.</param>
         /// <param name="overrides">Resolver overrides.</param>
-        public static Task<T> ResolveAsync<T>(this IUnityContainer container, params ResolverOverride[] overrides)
+        /// <returns>Task capturing the initialization.</returns>
+		public static Task<T> ResolveAsync<T>(this IUnityContainer container, params ResolverOverride[] overrides)
         {
             if (container == null)
                 throw new ArgumentNullException("container");
@@ -33,7 +34,8 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="container">The container.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <param name="overrides">Resolver overrides.</param>
-        public static Task<T> ResolveAsync<T>(this IUnityContainer container, CancellationToken cancellationToken, params ResolverOverride[] overrides)
+        /// <returns>Task capturing the initialization.</returns>
+		public static Task<T> ResolveAsync<T>(this IUnityContainer container, CancellationToken cancellationToken, params ResolverOverride[] overrides)
         {
             if (container == null)
                 throw new ArgumentNullException("container");
@@ -47,7 +49,8 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="container">The container.</param>
         /// <param name="name">The name used for registration.</param>
         /// <param name="overrides">Resolver overrides.</param>
-        public static Task<T> ResolveAsync<T>(this IUnityContainer container, string name, params ResolverOverride[] overrides)
+        /// <returns>Task capturing the initialization.</returns>
+		public static Task<T> ResolveAsync<T>(this IUnityContainer container, string name, params ResolverOverride[] overrides)
         {
             if (container == null)
                 throw new ArgumentNullException("container");
@@ -62,7 +65,8 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="name">The name used for registration.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <param name="overrides">Resolver overrides.</param>
-        public static Task<T> ResolveAsync<T>(this IUnityContainer container, string name, CancellationToken cancellationToken, params ResolverOverride[] overrides)
+        /// <returns>Task capturing the initialization.</returns>
+		public static Task<T> ResolveAsync<T>(this IUnityContainer container, string name, CancellationToken cancellationToken, params ResolverOverride[] overrides)
         {
             if (container == null)
                 throw new ArgumentNullException("container");
@@ -76,7 +80,8 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="container">The container.</param>
         /// <param name="args">Initialization arguments.</param>
         /// <param name="overrides">Resolver overrides.</param>
-        public static Task<T> ResolveAsync<T>(this IUnityContainer container, AsyncInitArgs args, params ResolverOverride[] overrides)
+        /// <returns>Task capturing the initialization.</returns>
+		public static Task<T> ResolveAsync<T>(this IUnityContainer container, AsyncInitArgs args, params ResolverOverride[] overrides)
         {
             if (container == null)
                 throw new ArgumentNullException("container");
@@ -92,7 +97,8 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="args">Initialization arguments.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <param name="overrides">Resolver overrides.</param>
-        public static Task<T> ResolveAsync<T>(this IUnityContainer container, AsyncInitArgs args, CancellationToken cancellationToken, params ResolverOverride[] overrides)
+        /// <returns>Task capturing the initialization.</returns>
+		public static Task<T> ResolveAsync<T>(this IUnityContainer container, AsyncInitArgs args, CancellationToken cancellationToken, params ResolverOverride[] overrides)
         {
             if (container == null)
                 throw new ArgumentNullException("container");
@@ -108,7 +114,8 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="name">The name used for registration.</param>
         /// <param name="args">Initialization arguments.</param>
         /// <param name="overrides">Resolver overrides.</param>
-        public static Task<T> ResolveAsync<T>(this IUnityContainer container, string name, AsyncInitArgs args, params ResolverOverride[] overrides)
+        /// <returns>Task capturing the initialization.</returns>
+		public static Task<T> ResolveAsync<T>(this IUnityContainer container, string name, AsyncInitArgs args, params ResolverOverride[] overrides)
         {
             if (container == null)
                 throw new ArgumentNullException("container");
@@ -125,7 +132,8 @@ namespace Ditto.AsyncInit.Unity
         /// <param name="args">Initialization arguments.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <param name="overrides">Resolver overrides.</param>
-        public static Task<T> ResolveAsync<T>(this IUnityContainer container, string name, AsyncInitArgs args, CancellationToken cancellationToken, params ResolverOverride[] overrides)
+        /// <returns>Task capturing the initialization.</returns>
+		public static Task<T> ResolveAsync<T>(this IUnityContainer container, string name, AsyncInitArgs args, CancellationToken cancellationToken, params ResolverOverride[] overrides)
         {
             if (container == null)
                 throw new ArgumentNullException("container");
