@@ -33,7 +33,10 @@
       <title>Getting Started</title>
       <content>
         <para>
-          The only conceivable reason for anyone installing this package on its own is their planning on developing an AsyncInit dependency injection library of their own. If this happens to be the case, they know what to do.
+          The only conceivable reason for anyone installing this package on its own is their planning on developing an AsyncInit dependency injection library in the vein of <externalLink>
+          <linkUri>https://AsyncInit.github.io/AsyncInit.Unity</linkUri>
+          <linkText>AsyncInit.Unity</linkText>
+        </externalLink>. If this happens to be the case, they know what to do.
         </para>
       </content>
     </section>
