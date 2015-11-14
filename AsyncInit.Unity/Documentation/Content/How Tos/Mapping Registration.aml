@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="773158a0-bea9-482f-b8ac-9670797b0da5" revisionNumber="1">
+  <developerHowToDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <summary>
+      <para>This topic details the steps necessary for registering a mapping to an asynchronously initialized type with a Unity container.</para>
+    </summary>
+
+    <procedure>
+      <steps class="ordered">
+        
+        <step>
+          <content>
+            <para>
+              Make sure the target type either <externalLink>
+                <linkUri>https://asyncinit.github.io/AsyncInit/html/edeb370d-6d7e-4f82-adab-f2326d89c857.htm</linkUri>
+                <linkText>derives from an AsyncInit base class</linkText>
+              </externalLink> or <externalLink>
+                <linkUri>https://asyncinit.github.io/AsyncInit/html/c731bb1a-010a-40c6-856b-421ebbd05a26.htm</linkUri>
+                <linkText>implements an AsyncInit interface</linkText>
+              </externalLink>:
+            </para>
+          <code language="C#">
+        using Ditto.AsyncInit;
+
+        class UniversalAnswerService : CancelableAsyncInitBase&lt;UniversalAnswerService&gt;
+        {
+            private UniversalAnswerService()
+                : base(null)
+            {
+            }
+
+            protected override async Task InitAsync(CancellationToken cancellationToken)
+            {
+                await Task.Delay(TimeSpan.FromDays(7500000 * 365.25), cancellationToken);
+                Answer = 42;
+            }
+
+            public int Answer { get; private set; }
+        }
+          </code>
+          </content>
+        </step>
+
+        <step>
+          <content>
+            <para>Make sure the target type also derives from a base class or implements an interface that will be used for resolving it:</para>
+            <code language="C#">
+        interface IUniversalAnswerService
+        {
+            int Answer { get; }
+        }
+
+        class UniversalAnswerService : CancelableAsyncInitBase&lt;UniversalAnswerService&gt;, IUniversalAnswerService
+        {
+            //...
+        }
+            </code>
+            <para>
+              In this example <codeInline>IUniversalAnswerService</codeInline> is the source type and <codeInline>UniversalAnswerService</codeInline> is the target type.
+            </para>
+          </content>
+        </step>
+
+        <step>
+          <content>
+            <para>Import the Unity Container Async Extensions namespace:</para>
+          </content>
+          <code language="C#">
+            using Ditto.AsyncInit.Unity;
+          </code>
+        </step>
+
+        <step>
+          <content>
+            <para>Register the mapping for asynchronous resolution:</para>
+            <code language="C#">
+              container.RegisterAsyncType&lt;IUniversalAnswerService, UniversalAnswerService&gt;();
+            </code>
+          </content>
+        </step>
+
+      </steps>
+
+      <conclusion>
+        <content>
+          <para>
+            The target type may now be resolved asynchronously via the source type.
+          </para>
+          <para>
+            Unity Container Async Extensions provide support for advanced registration scenarios through overloads of
+            <codeEntityReference autoUpgrade="true">M:Ditto.AsyncInit.Unity.UnityRegisterAsyncTypeExtensions.RegisterAsyncType``2(Microsoft.Practices.Unity.IUnityContainer,Microsoft.Practices.Unity.InjectionMember[])</codeEntityReference>.
+          </para>
+        </content>
+      </conclusion>
+      
+    </procedure>
+
+    <relatedTopics>
+
+      <externalLink>
+        <linkUri>https://asyncinit.github.io/AsyncInit/html/edeb370d-6d7e-4f82-adab-f2326d89c857.htm</linkUri>
+        <linkText>How To Derive from an AsyncInit Base Class</linkText>
+      </externalLink>
+      <externalLink>
+        <linkUri>https://asyncinit.github.io/AsyncInit/html/c731bb1a-010a-40c6-856b-421ebbd05a26.htm</linkUri>
+        <linkText>How To Implement an AsyncInit Interface</linkText>
+      </externalLink>
+
+      <codeEntityReference autoUpgrade="true">M:Ditto.AsyncInit.Unity.UnityRegisterAsyncTypeExtensions.RegisterAsyncType``2(Microsoft.Practices.Unity.IUnityContainer,Microsoft.Practices.Unity.InjectionMember[])</codeEntityReference>
+      <link xlink:href="30e16988-88d9-400d-bf76-21885513e5df"/>
+      <link xlink:href="0432922d-9355-47b5-87f0-28feede0474d"/>
+      <link xlink:href="6f316ae1-44bb-4773-975b-aac2f5a50c49"/>
+      <link xlink:href="8e58cf79-69c3-4993-bc6a-6209cb35cc0a"/>
+      
+    </relatedTopics>
+
+  </developerHowToDocument>
+</topic>

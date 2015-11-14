@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="0432922d-9355-47b5-87f0-28feede0474d" revisionNumber="1">
+  <developerHowToDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <summary>
+      <para>This topic details the steps necessary for asynchronously resolving a type from a Unity container.</para>
+    </summary>
+
+    <procedure>
+      <steps class="ordered">
+
+        <step>
+          <content>
+            <para>
+              Make sure the resolved type is registered with the container, either
+              <link xlink:href="30e16988-88d9-400d-bf76-21885513e5df">directly</link>
+              or as the target type in a
+              <link xlink:href="773158a0-bea9-482f-b8ac-9670797b0da5">mapping</link>
+              .
+            </para>
+            <para>
+              This example assumes a prior registration of a mapping of <codeInline>IUniversalAnswerService</codeInline> to <codeInline>UniversalAnswerService</codeInline>.
+            </para>
+          </content>
+        </step>
+
+        <step>
+          <content>
+            <para>Import the Unity Container Async Extensions namespace:</para>
+          </content>
+          <code language="C#">
+            using Ditto.AsyncInit.Unity;
+          </code>
+        </step>
+
+        <step>
+          <content>
+            <para>Resolve the type asynchronously:</para>
+            <code language="C#">
+              var service = await container.ResolveAsync&lt;IUniversalAnswerService&gt;(cancellationToken);
+              var answer = service.Answer;
+            </code>
+          </content>
+        </step>
+        
+      </steps>
+      
+      <conclusion>
+        <para>
+          Unity Container Async Extensions provide support for advanced resolution scenarios through overloads of
+          <codeEntityReference autoUpgrade="true">M:Ditto.AsyncInit.Unity.UnityResolveAsyncTypeExtensions.ResolveAsync``1(Microsoft.Practices.Unity.IUnityContainer,Microsoft.Practices.Unity.ResolverOverride[])</codeEntityReference>.
+        </para>
+      </conclusion>
+      
+    </procedure>
+
+    <relatedTopics>
+
+      <codeEntityReference autoUpgrade="true">M:Ditto.AsyncInit.Unity.UnityResolveAsyncTypeExtensions.ResolveAsync``1(Microsoft.Practices.Unity.IUnityContainer,Microsoft.Practices.Unity.ResolverOverride[])</codeEntityReference>
+      <link xlink:href="30e16988-88d9-400d-bf76-21885513e5df"/>
+      <link xlink:href="773158a0-bea9-482f-b8ac-9670797b0da5"/>
+      <link xlink:href="6f316ae1-44bb-4773-975b-aac2f5a50c49"/>
+      <link xlink:href="8e58cf79-69c3-4993-bc6a-6209cb35cc0a"/>
+
+    </relatedTopics>
+
+  </developerHowToDocument>
+</topic>

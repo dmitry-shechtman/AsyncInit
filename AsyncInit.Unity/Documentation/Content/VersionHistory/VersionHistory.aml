@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="0caa88a8-58e0-444e-866c-2332ddb7b5d9" revisionNumber="1">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>
+        The topics in this section describe the various changes made to Unity Container Async Extensions over the life of the project.
+      </para>
+		</introduction>
+
+		<section>
+			<title>Version History</title>
+			<content>
+				<para>Select a version below to see a detailed description of its changes.</para>
+
+				<definitionTable>
+
+          <definedTerm>
+            <link xlink:href="5c80623b-72bd-4c67-9c95-7b327faaa5de" />
+          </definedTerm>
+          <definition>
+            Renamed package
+          </definition>
+          <definition>
+            Added HTML Help
+          </definition>
+          
+          <definedTerm>
+            <link xlink:href="2ac61916-0fdf-45bd-a3ff-be580ff7c9c6" />
+          </definedTerm>
+          <definition>
+            Stable — updated to stable Unity 4.0
+          </definition>
+          <definition>
+            Updated AsyncInit dependency
+          </definition>
+          
+          <definedTerm>
+            <link xlink:href="47a5588e-268e-45d4-bd0a-828c3fa52ab8" /> (Prerelease)
+          </definedTerm>
+          <definition>
+            Added Windows Phone 8.1 support
+          </definition>
+          
+          <definedTerm>
+            <link xlink:href="030320a2-7cc3-4e06-9ce4-357a82315d25" />
+          </definedTerm>
+          <definition>
+            Synced version numbers
+          </definition>
+
+          <definedTerm>
+						<link xlink:href="b48688e3-e650-4382-8f0d-76226f2eb89f" />
+					</definedTerm>
+          <definition>
+            Initial release
+          </definition>
+
+				</definitionTable>
+
+			</content>
+		</section>
+
+		<relatedTopics>
+      <externalLink>
+        <linkUri>https://www.nuget.org/packages/Ditto.AsyncInit.Unity/</linkUri>
+        <linkText>This library on NuGet Gallery</linkText>
+      </externalLink>
+      <link xlink:href="53f4a63d-6a7e-45d8-b0da-060bc7f17ced" />
+		</relatedTopics>
+
+	</developerConceptualDocument>
+</topic>

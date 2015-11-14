@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="6f316ae1-44bb-4773-975b-aac2f5a50c49" revisionNumber="1">
+  <developerHowToDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <summary>
+      <para>This topic details the steps necessary for checking whether a type is registered for asynchronous resolution with a Unity container.</para>
+    </summary>
+
+    <procedure>
+      <steps class="ordered">
+
+        <step>
+          <content>
+            <para>Import the Unity Container Async Extensions namespace:</para>
+            <code language="C#">
+              using Ditto.AsyncInit.Unity;
+            </code>
+          </content>
+        </step>
+
+        <step>
+          <content>
+            <para>Query the container for type registration:</para>
+            <code language="C#">
+              if (container.IsAsyncTypeRegistered&lt;IUniversalAnswerService&gt;())
+              {
+                  //...
+              }
+            </code>
+            <para>Named registrations may be queried for by passing a name as an argument:</para>
+            <code language="C#">
+              if (container.IsAsyncTypeRegistered&lt;IUniversalAnswerService&gt;("Deep Thought"))
+              {
+                  //...
+              }
+            </code>
+          </content>
+        </step>
+
+      </steps>
+      
+    </procedure>
+
+    <relatedTopics>
+
+      <codeEntityReference>M:Ditto.AsyncInit.Unity.UnityIsAsyncTypeRegisteredExtensions.IsAsyncTypeRegistered``1(Microsoft.Practices.Unity.IUnityContainer)</codeEntityReference>
+      <codeEntityReference>M:Ditto.AsyncInit.Unity.UnityIsAsyncTypeRegisteredExtensions.IsAsyncTypeRegistered``1(Microsoft.Practices.Unity.IUnityContainer,System.String)</codeEntityReference>
+      <link xlink:href="30e16988-88d9-400d-bf76-21885513e5df"/>
+      <link xlink:href="773158a0-bea9-482f-b8ac-9670797b0da5"/>
+      <link xlink:href="0432922d-9355-47b5-87f0-28feede0474d"/>
+      <link xlink:href="8e58cf79-69c3-4993-bc6a-6209cb35cc0a"/>
+
+    </relatedTopics>
+
+  </developerHowToDocument>
+</topic>

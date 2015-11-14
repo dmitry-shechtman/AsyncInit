@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="b078ce3f-f7cc-41ee-a8fb-0dd91b1b7568" revisionNumber="1">
+  <developerHowToDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <summary>
+      <para>This topic details the steps necessary for adding a Unity Container Async Extensions reference to a project.</para>
+    </summary>
+
+    <procedure>
+      <steps class="ordered">
+        <step>
+          <content>
+            <para>
+              Enter the following command into the Package Manager Console:
+            </para>
+            <code language="PowerShell">
+              Install-Package Ditto.AsyncInit.Unity
+            </code>
+            <para>
+              If the solution contains multiple projects, the command above should be followed by the project name.
+            </para>
+            <para>
+              Alternatively, you may use the Manage NuGet Packages window. Make sure the package ID is <codeInline>Ditto.AsyncInit.Unity</codeInline>.
+            </para>
+          </content>
+        </step>
+      </steps>
+    </procedure>
+
+    <relatedTopics>
+      <externalLink>
+        <linkUri>https://www.nuget.org/packages/Ditto.AsyncInit.Unity/</linkUri>
+        <linkText>This library on NuGet Gallery</linkText>
+      </externalLink>
+      <link xlink:href="8e58cf79-69c3-4993-bc6a-6209cb35cc0a" />
+    </relatedTopics>
+    
+  </developerHowToDocument>
+</topic>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="53f4a63d-6a7e-45d8-b0da-060bc7f17ced" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <section>
+      <title>Introduction</title>
+      <content>
+        <para>
+          Unity Container Async Extensions add asynchronous resolution capabilities to <externalLink>
+            <linkUri>https://github.com/unitycontainer/unity</linkUri>
+            <linkText>the Unity Container</linkText>
+          </externalLink>. The library supports the following platforms:
+        </para>
+        <list class="bullet">
+          <listItem>.NET Framework 4.5</listItem>
+          <listItem>Windows 8</listItem>
+          <listItem>Windows Phone Silverlight 8</listItem>
+          <listItem>Windows Phone 8.1</listItem>
+          <listItem>Xamarin.Android</listItem>
+          <listItem>Xamarin.iOS</listItem>
+          <listItem>Portable Class Libraries</listItem>
+        </list>
+      </content>
+    </section>
+
+    <section>
+      <title>Getting Started</title>
+      <content>
+        <para>
+          If you haven't already, <link xlink:href="b078ce3f-f7cc-41ee-a8fb-0dd91b1b7568">install the NuGet package</link>.
+          The current version is <link xlink:href="5c80623b-72bd-4c67-9c95-7b327faaa5de"/>.
+        </para>
+        <para>
+          Two of the references added to your project are <externalLink>
+            <linkUri>https://github.com/unitycontainer/unity</linkUri>
+            <linkText>Unity</linkText>
+          </externalLink> and <externalLink>
+            <linkUri>https://AsyncInit.github.io/AsyncInit/</linkUri>
+            <linkText>AsyncInit</linkText>
+          </externalLink>. Familiarity with the former is a recommendation, whereas a grasp of the latter's API is a requirement.
+          AsyncInit 1.4.0 and later has extensive online (see link) and offline (see <codeInline>doc/</codeInline>) documentation.
+        </para>
+        <para>
+          Once you define a type that is either a <externalLink>
+            <linkUri>https://asyncinit.github.io/AsyncInit/html/edeb370d-6d7e-4f82-adab-f2326d89c857.htm</linkUri>
+            <linkText>subclass of an AsyncInit base class</linkText>
+          </externalLink> or an <externalLink>
+            <linkUri>https://asyncinit.github.io/AsyncInit/html/c731bb1a-010a-40c6-856b-421ebbd05a26.htm</linkUri>
+            <linkText>implementation of an AsyncInit interface</linkText>
+          </externalLink>, it may now be
+          <link xlink:href="30e16988-88d9-400d-bf76-21885513e5df">registered</link>,
+          <link xlink:href="6f316ae1-44bb-4773-975b-aac2f5a50c49">queried for</link>
+          and
+          <link xlink:href="0432922d-9355-47b5-87f0-28feede0474d">asynchronously resolved</link>.
+        </para>
+      </content>
+    </section>
+
+    <section>
+      <title>Aknowledegments</title>
+      
+      <content>
+        
+        <para>
+          <externalLink>
+            <linkUri>http://stephencleary.com/</linkUri>
+            <linkText>Stephen Cleary</linkText>
+          </externalLink>
+          is the author of an excellent
+          <externalLink>
+            <linkUri>http://blog.stephencleary.com/2013/01/async-oop-2-constructors.html</linkUri>
+            <linkText>article</linkText>
+          </externalLink>
+          that inspired this project.
+        </para>
+
+        <para>
+          <externalLink>
+            <linkUri>https://weblogs.asp.net/cibrax/</linkUri>
+            <linkText>Pablo M. Cibraro</linkText>
+          </externalLink> and <externalLink>
+            <linkUri>https://pedrowood.wordpress.com/</linkUri>
+            <linkText>Pedro Wood</linkText>
+            <linkAlternateText>¿Hablas español?</linkAlternateText>
+          </externalLink> are the maintainers of the Unity Container.
+        </para>
+        
+        <para>
+          <externalLink>
+            <linkUri>https://github.com/EWSoftware/SHFB</linkUri>
+            <linkText>SHFB</linkText>
+          </externalLink>
+          is a tool for authoring great project documentation like this one.
+        </para>
+        
+      </content>
+      
+    </section>
+
+    <section>
+      <title>Notice</title>
+      <content>
+        <para>Copyright © Dmitry Shechtman 2014-2015</para>
+        <para>Licensed under the Apache License, Version 2.0 (the "License").</para>
+        <para>
+          You may obtain a copy of the License at <externalLink>
+            <linkUri>http://www.apache.org/licenses/LICENSE-2.0</linkUri>
+            <linkText>http://www.apache.org/licenses/LICENSE-2.0</linkText>
+          </externalLink>.
+        </para>
+        <para>
+          Unless required by applicable law or agreed to in writing, software
+          distributed under the License is distributed on an "AS IS" BASIS,
+          WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+          See <link xlink:href="fb08e01a-e83f-43ed-8ff2-ca8ec3ba3fbe">the License</link> for the specific language governing permissions and
+          limitations under the License.
+        </para>
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="8e58cf79-69c3-4993-bc6a-6209cb35cc0a" />
+      <link xlink:href="0caa88a8-58e0-444e-866c-2332ddb7b5d9" />
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>
