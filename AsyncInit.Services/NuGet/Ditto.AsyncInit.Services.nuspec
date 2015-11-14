@@ -21,7 +21,7 @@ Supported Platforms:
 * Xamarin.iOS
 * Portable Class Libraries
     </description>
-    <releaseNotes>Fixed broken link</releaseNotes>
+    <releaseNotes>Update Project Site in NuGet package</releaseNotes>
     <language>en-US</language>
     <projectUrl>https://AsyncInit.github.io/AsyncInit.Services/</projectUrl>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
