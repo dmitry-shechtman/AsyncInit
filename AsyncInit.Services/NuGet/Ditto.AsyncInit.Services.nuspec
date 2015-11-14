@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Ditto.AsyncInit.Services</id>
-    <version>1.4.1</version>
+    <version>1.4.2</version>
     <title>AsyncInit Dependency Injection Support</title>
     <authors>Dmitry Shechtman</authors>
     <owners>Dmitry Shechtman</owners>
@@ -23,7 +23,7 @@ Supported Platforms:
     </description>
     <releaseNotes>Fixed broken link</releaseNotes>
     <language>en-US</language>
-    <projectUrl>https://dmitry-shechtman.github.io/AsyncInit.Services/</projectUrl>
+    <projectUrl>https://AsyncInit.github.io/AsyncInit.Services/</projectUrl>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright © Dmitry Shechtman 2014-2015</copyright>

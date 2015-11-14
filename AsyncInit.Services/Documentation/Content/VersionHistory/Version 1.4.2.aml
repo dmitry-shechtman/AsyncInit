@@ -15,6 +15,7 @@
       <content>
 
         <list class="bullet">
+          <listItem>Updated Project Site in NuGet package</listItem>
           <listItem>Minor documentation updates</listItem>
         </list>
 
