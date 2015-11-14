@@ -27,5 +27,6 @@ Notice
 Links
 -----
 
+* [Help](https://AsyncInit.github.io/AsyncInit/)
 * [Blog](https://shecht.wordpress.com/category/asyncactivator/)
 * [NuGet](https://nuget.org/packages/Ditto.AsyncInit)
