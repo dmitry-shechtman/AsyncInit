@@ -30,6 +30,15 @@
     </section>
 
     <section>
+      <title>Getting Started</title>
+      <content>
+        <para>
+          The only conceivable reason for anyone to install this package on its own is if they are planning to develop an AsyncInit dependency injection library of their own. If this happens to be the case, you know what to do.
+        </para>
+      </content>
+    </section>
+
+    <section>
       <title>Notice</title>
       <content>
         <para>Copyright © Dmitry Shechtman 2014-2015</para>
