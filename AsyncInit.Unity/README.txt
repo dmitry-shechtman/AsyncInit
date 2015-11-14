@@ -1,5 +1,5 @@
-﻿AsyncInit Unity Dependency Injection
-====================================
+﻿Unity Container Async Extensions
+================================
 
 Adds support for asynchronously initialized types to Unity Container.
 

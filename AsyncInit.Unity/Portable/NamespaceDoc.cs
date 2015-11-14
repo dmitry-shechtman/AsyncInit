@@ -1,7 +1,7 @@
 ﻿namespace Ditto.AsyncInit.Unity
 {
     /// <summary>
-    /// AsyncInit Unity Dependency Injection classes.
+    /// Unity Container Async Extensions.
     /// </summary>
     [System.Runtime.CompilerServices.CompilerGenerated]
     sealed class NamespaceDoc

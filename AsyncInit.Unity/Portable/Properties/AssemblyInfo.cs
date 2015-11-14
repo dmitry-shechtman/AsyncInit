@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("Ditto.AsyncInit.Unity")]
-[assembly: AssemblyDescription("AsyncInit Unity Dependency Injection")]
+[assembly: AssemblyDescription("Unity Container Async Extensions")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
