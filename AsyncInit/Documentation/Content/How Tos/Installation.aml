@@ -22,7 +22,7 @@
               If the solution contains multiple projects, the command above should be followed by the project name.
             </para>
             <para>
-              Alternatively, you may use the Manage NuGet Packages window. Make sure the package name is <codeInline>Ditto.AsyncInit</codeInline>.
+              Alternatively, you may use the Manage NuGet Packages window. Make sure the package ID is <codeInline>Ditto.AsyncInit</codeInline>.
             </para>
           </content>
         </step>
