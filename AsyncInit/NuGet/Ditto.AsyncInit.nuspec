@@ -46,6 +46,6 @@ Supported Platforms:
     <file src="AsyncInit\README.txt" />
     <file src="LICENSE" />
     <file src="NOTICE" />
-    <file src="Documentation\Help\AsyncInit.chm" target="doc" />
+    <file src="AsyncInit\Documentation\Help\AsyncInit.chm" target="doc" />
   </files>
 </package>
