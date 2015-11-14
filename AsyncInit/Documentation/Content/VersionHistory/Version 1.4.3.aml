@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="b73c7145-e794-4e09-aba6-e0377c945b69" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <introduction>
+      <para>Version 1.4.3 was released on November 14 2014.</para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+
+        <list class="bullet">
+          <listItem>
+            <para>Updated links</para>
+          </listItem>
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <externalLink>
+        <linkUri>https://www.nuget.org/packages/Ditto.AsyncInit/1.4.3</linkUri>
+        <linkText>This version on NuGet Gallery</linkText>
+      </externalLink>
+      <link xlink:href="402b5184-91d1-4bc0-a959-97514187d9f4" />
+    </relatedTopics>
+
+  </developerConceptualDocument>
+</topic>
