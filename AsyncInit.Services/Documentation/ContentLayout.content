@@ -5,11 +5,16 @@
       <HelpKeyword index="K" term="Welcome" />
     </HelpKeywords>
   </Topic>
-  <Topic id="05284ed6-03e8-4665-8764-558ec49bc42e" visible="True" isExpanded="true" title="Version History">
+  <Topic id="05284ed6-03e8-4665-8764-558ec49bc42e" visible="True" isExpanded="true" isSelected="true" title="Version History">
     <HelpKeywords>
       <HelpKeyword index="K" term="version, history" />
     </HelpKeywords>
-    <Topic id="8596ecfd-4163-4216-a724-cc048aadd7b3" visible="True" isSelected="true">
+    <Topic id="eef50ecb-1370-450e-875b-a92bb20021df" visible="True">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="8596ecfd-4163-4216-a724-cc048aadd7b3" visible="True">
       <HelpKeywords>
         <HelpKeyword index="K" term="version" />
       </HelpKeywords>

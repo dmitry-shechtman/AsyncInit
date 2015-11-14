@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<topic id="3e003ba2-a2b9-42d0-b5a1-e9c942d400a2" revisionNumber="1">
+<topic id="eef50ecb-1370-450e-875b-a92bb20021df" revisionNumber="1">
   <developerConceptualDocument
     xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
     xmlns:xlink="http://www.w3.org/1999/xlink">
 
     <introduction>
       <para>
-        Version 1.4.0 was released on Novemeber 14 2015.
+        Version 1.4.2 was released on Novemeber 14 2015.
       </para>
     </introduction>
 
@@ -15,9 +15,7 @@
       <content>
 
         <list class="bullet">
-          <listItem>
-            <para>Added HTML Help</para>
-          </listItem>
+          <listItem>Minor documentation updates</listItem>
         </list>
 
       </content>
@@ -25,7 +23,7 @@
 
     <relatedTopics>
       <externalLink>
-        <linkUri>https://www.nuget.org/packages/Ditto.AsyncInit.Services/1.4.0</linkUri>
+        <linkUri>https://www.nuget.org/packages/Ditto.AsyncInit.Services/1.4.2</linkUri>
         <linkText>This version on NuGet Gallery</linkText>
       </externalLink>
       <link xlink:href="05284ed6-03e8-4665-8764-558ec49bc42e" />

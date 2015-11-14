@@ -13,6 +13,11 @@
         <definitionTable>
 
           <definedTerm>
+            <link xlink:href="eef50ecb-1370-450e-875b-a92bb20021df" />
+          </definedTerm>
+          <definition>Minor documentation updates</definition>
+          
+          <definedTerm>
             <link xlink:href="8596ecfd-4163-4216-a724-cc048aadd7b3"/>
           </definedTerm>
           <definition>Fixed broken link</definition>
@@ -20,7 +25,7 @@
           <definedTerm>
             <link xlink:href="3e003ba2-a2b9-42d0-b5a1-e9c942d400a2"/>
           </definedTerm>
-          <definition>Added Help File</definition>
+          <definition>Added HTML Help</definition>
 
           <definedTerm>
             <link xlink:href="248bc614-e980-4f09-9923-92a037bbec7d"/>
