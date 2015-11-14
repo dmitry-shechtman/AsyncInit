@@ -27,7 +27,7 @@
       <Argument Key="maxVersionParts" Value="" xmlns="" />
     </TransformComponentArguments>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\AsyncInit\Portable.Net45\AsyncInit.Portable.Net45.csproj" xmlns="" />
+      <DocumentationSource sourceFile="..\Portable.Net45\AsyncInit.Portable.Net45.csproj" xmlns="" />
     </DocumentationSources>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <HelpFileFormat>HtmlHelp1, Website</HelpFileFormat>
@@ -103,7 +103,7 @@
     <ContentLayout Include="ContentLayout.content" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AsyncInit\Portable.Net45\AsyncInit.Portable.Net45.csproj">
+    <ProjectReference Include="..\Portable.Net45\AsyncInit.Portable.Net45.csproj">
       <Name>AsyncInit.Portable.Net45</Name>
       <Project>{826891f8-3620-4d30-bb2f-09341a4656f4}</Project>
       <Private>True</Private>

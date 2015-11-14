@@ -22,7 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{677EE96F
 		AsyncInit\NuGet\Ditto.AsyncInit.nuspec = AsyncInit\NuGet\Ditto.AsyncInit.nuspec
 	EndProjectSection
 EndProject
-Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Documentation", "Documentation\Documentation.shfbproj", "{7F557114-05A8-4DF4-878A-EF8AD999A2D9}"
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Documentation", "AsyncInit\Documentation\Documentation.shfbproj", "{7F557114-05A8-4DF4-878A-EF8AD999A2D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
