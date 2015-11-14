@@ -90,6 +90,10 @@
         <linkUri>https://shecht.wordpress.com/2014/11/30/asyncactivator-targeting-multiple-platforms/</linkUri>
         <linkText>The original blog post</linkText>
       </externalLink>
+      <externalLink>
+        <linkUri>https://asyncinit.github.io/AsyncInit/</linkUri>
+        <linkText>AsyncInit</linkText>
+      </externalLink>
     </relatedTopics>
     
   </developerSDKTechnologyOverviewArchitectureDocument>
