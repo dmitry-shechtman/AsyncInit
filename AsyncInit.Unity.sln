@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncInit.Unity", "AsyncInit.Unity\Portable\AsyncInit.Unity.csproj", "{53F47D28-6844-417B-A978-20832359D36F}"
 EndProject
@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Solution Items\CommonAssemblyInfo.cs = Solution Items\CommonAssemblyInfo.cs
 		LICENSE = LICENSE
 		NOTICE = NOTICE
+		AsyncInit.Unity\README.md = AsyncInit.Unity\README.md
 		AsyncInit.Unity\README.txt = AsyncInit.Unity\README.txt
 	EndProjectSection
 EndProject
