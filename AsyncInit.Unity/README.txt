@@ -1,7 +1,7 @@
 ﻿Unity Container Async Extensions
 ================================
 
-Adds support for asynchronously initialized types to Unity Container.
+Adds asynchronous resolution capabilities to the Unity Container.
 
 Getting Started
 ---------------
