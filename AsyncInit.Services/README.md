@@ -6,7 +6,7 @@ Adds support for dependency injection to AsyncInit.
 Getting Started
 ---------------
 
-The latest documentation is available at https://dmitry-shechtman.github.io/AsyncInit.Services/
+The latest documentation is available at https://AsyncInit.github.io/AsyncInit.Services/
 
 Notice
 ------
@@ -27,5 +27,6 @@ Notice
 Links
 -----
 
+* [Help](https://AsyncInit.github.io/AsyncInit.Services/)
 * [Blog](https://shecht.wordpress.com/category/asyncactivator/)
 * [NuGet](https://nuget.org/packages/Ditto.AsyncInit.Services)
