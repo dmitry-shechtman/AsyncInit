@@ -3,4 +3,5 @@
 bin/
 obj/
 packages/
-/Documentation/Help
+/AsyncInit/Documentation/Help
+/AsyncInit.Services/Documentation/Help
