@@ -23,7 +23,7 @@
           This library is meant to serve as a dependency for other libraries. One (and currently only) such library is
           <externalLink>
             <linkUri>https://AsyncInit.github.io/AsyncInit.Unity</linkUri>
-            <linkText>Ditto.AsyncInit.Unity</linkText>
+            <linkText>AsyncInit.Unity</linkText>
           </externalLink>.
         </para>
       </content>
