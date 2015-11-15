@@ -38,7 +38,7 @@
             <linkUri>https://AsyncInit.github.io/AsyncInit/</linkUri>
             <linkText>AsyncInit</linkText>
           </externalLink>. Familiarity with the former is a recommendation, whereas a grasp of the latter's API is a requirement.
-          AsyncInit 1.4.0 and later has extensive online (see link) and offline (see <codeInline>doc/</codeInline>) documentation.
+          Starting with Version 1.4.0, AsyncInit has extensive online (see link) and offline (see <codeInline>doc/</codeInline>) documentation.
         </para>
         <para>
           Once you define a type that is either a <externalLink>
@@ -47,7 +47,7 @@
           </externalLink> or an <externalLink>
             <linkUri>https://asyncinit.github.io/AsyncInit/html/c731bb1a-010a-40c6-856b-421ebbd05a26.htm</linkUri>
             <linkText>implementation of an AsyncInit interface</linkText>
-          </externalLink>, it may now be
+          </externalLink>, it may be
           <link xlink:href="30e16988-88d9-400d-bf76-21885513e5df">registered</link>,
           <link xlink:href="6f316ae1-44bb-4773-975b-aac2f5a50c49">queried for</link>
           and
@@ -58,9 +58,9 @@
 
     <section>
       <title>Aknowledegments</title>
-      
+
       <content>
-        
+
         <para>
           <externalLink>
             <linkUri>http://stephencleary.com/</linkUri>
@@ -84,7 +84,7 @@
             <linkAlternateText>¿Hablas español?</linkAlternateText>
           </externalLink> are the maintainers of the Unity Container.
         </para>
-        
+
         <para>
           <externalLink>
             <linkUri>https://github.com/EWSoftware/SHFB</linkUri>
@@ -92,9 +92,9 @@
           </externalLink>
           is a tool for authoring great project documentation like this one.
         </para>
-        
+
       </content>
-      
+
     </section>
 
     <section>
