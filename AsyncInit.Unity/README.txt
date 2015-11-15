@@ -1,7 +1,7 @@
 ﻿Unity Container Async Extensions
 ================================
 
-Adds asynchronous resolution capabilities to the Unity Container.
+Adds asynchronous capabilities to the Unity Container.
 
 Getting Started
 ---------------

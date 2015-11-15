@@ -6,7 +6,7 @@
       <title>Introduction</title>
       <content>
         <para>
-          Unity Container Async Extensions add asynchronous resolution capabilities to <externalLink>
+          Unity Container Async Extensions add asynchronous capabilities to <externalLink>
             <linkUri>https://github.com/unitycontainer/unity</linkUri>
             <linkText>the Unity Container</linkText>
           </externalLink>. The library supports the following platforms:
