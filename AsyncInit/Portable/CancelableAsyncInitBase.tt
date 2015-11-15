@@ -21,6 +21,7 @@ namespace Ditto.AsyncInit
 <#
 	}
 #>
+	/// <conceptualLink target="edeb370d-6d7e-4f82-adab-f2326d89c857" />
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class CancelableAsyncInitBase<#= tArgList #> : AsyncInitBase<#= tArgList #>, ICancelableAsyncInit<#= baseTArgList #>
         where T : CancelableAsyncInitBase<#= tArgList #>

@@ -5,6 +5,7 @@ namespace Ditto.AsyncInit
     /// <summary>
     /// Interface for asynchronously initialized types.
     /// </summary>
+	/// <conceptualLink target="c731bb1a-010a-40c6-856b-421ebbd05a26" />
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public interface IAsyncInit
     {
@@ -19,6 +20,7 @@ namespace Ditto.AsyncInit
     /// Interface for asynchronously initialized types.
     /// </summary>
     /// <typeparam name="TArg">The type of the initialization argument.</typeparam>
+	/// <conceptualLink target="c731bb1a-010a-40c6-856b-421ebbd05a26" />
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public interface IAsyncInit<TArg>
     {
@@ -35,6 +37,7 @@ namespace Ditto.AsyncInit
     /// </summary>
     /// <typeparam name="TArg1">The type of the first initialization argument.</typeparam>
     /// <typeparam name="TArg2">The type of the second initialization argument.</typeparam>
+	/// <conceptualLink target="c731bb1a-010a-40c6-856b-421ebbd05a26" />
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public interface IAsyncInit<TArg1, TArg2>
     {
@@ -53,6 +56,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg1">The type of the first initialization argument.</typeparam>
     /// <typeparam name="TArg2">The type of the second initialization argument.</typeparam>
     /// <typeparam name="TArg3">The type of the third initialization argument.</typeparam>
+	/// <conceptualLink target="c731bb1a-010a-40c6-856b-421ebbd05a26" />
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public interface IAsyncInit<TArg1, TArg2, TArg3>
     {
@@ -73,6 +77,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg2">The type of the second initialization argument.</typeparam>
     /// <typeparam name="TArg3">The type of the third initialization argument.</typeparam>
     /// <typeparam name="TArg4">The type of the fourth initialization argument.</typeparam>
+	/// <conceptualLink target="c731bb1a-010a-40c6-856b-421ebbd05a26" />
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public interface IAsyncInit<TArg1, TArg2, TArg3, TArg4>
     {
@@ -95,6 +100,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg3">The type of the third initialization argument.</typeparam>
     /// <typeparam name="TArg4">The type of the fourth initialization argument.</typeparam>
     /// <typeparam name="TArg5">The type of the fifth initialization argument.</typeparam>
+	/// <conceptualLink target="c731bb1a-010a-40c6-856b-421ebbd05a26" />
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public interface IAsyncInit<TArg1, TArg2, TArg3, TArg4, TArg5>
     {
@@ -119,6 +125,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg4">The type of the fourth initialization argument.</typeparam>
     /// <typeparam name="TArg5">The type of the fifth initialization argument.</typeparam>
     /// <typeparam name="TArg6">The type of the sixth initialization argument.</typeparam>
+	/// <conceptualLink target="c731bb1a-010a-40c6-856b-421ebbd05a26" />
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public interface IAsyncInit<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>
     {
@@ -145,6 +152,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg5">The type of the fifth initialization argument.</typeparam>
     /// <typeparam name="TArg6">The type of the sixth initialization argument.</typeparam>
     /// <typeparam name="TArg7">The type of the seventh initialization argument.</typeparam>
+	/// <conceptualLink target="c731bb1a-010a-40c6-856b-421ebbd05a26" />
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public interface IAsyncInit<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>
     {

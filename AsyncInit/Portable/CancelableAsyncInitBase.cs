@@ -7,6 +7,7 @@ namespace Ditto.AsyncInit
     /// Base class for asynchronously initialized types supporting cancellation.
     /// </summary>
     /// <typeparam name="T">The deriving type.</typeparam>
+	/// <conceptualLink target="edeb370d-6d7e-4f82-adab-f2326d89c857" />
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class CancelableAsyncInitBase<T> : AsyncInitBase<T>, ICancelableAsyncInit
         where T : CancelableAsyncInitBase<T>
@@ -58,6 +59,7 @@ namespace Ditto.AsyncInit
     /// </summary>
     /// <typeparam name="T">The deriving type.</typeparam>
     /// <typeparam name="TArg">The type of the initialization argument.</typeparam>
+	/// <conceptualLink target="edeb370d-6d7e-4f82-adab-f2326d89c857" />
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class CancelableAsyncInitBase<T, TArg> : AsyncInitBase<T, TArg>, ICancelableAsyncInit<TArg>
         where T : CancelableAsyncInitBase<T, TArg>
@@ -113,6 +115,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="T">The deriving type.</typeparam>
     /// <typeparam name="TArg1">The type of the first initialization argument.</typeparam>
     /// <typeparam name="TArg2">The type of the second initialization argument.</typeparam>
+	/// <conceptualLink target="edeb370d-6d7e-4f82-adab-f2326d89c857" />
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class CancelableAsyncInitBase<T, TArg1, TArg2> : AsyncInitBase<T, TArg1, TArg2>, ICancelableAsyncInit<TArg1, TArg2>
         where T : CancelableAsyncInitBase<T, TArg1, TArg2>
@@ -172,6 +175,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg1">The type of the first initialization argument.</typeparam>
     /// <typeparam name="TArg2">The type of the second initialization argument.</typeparam>
     /// <typeparam name="TArg3">The type of the third initialization argument.</typeparam>
+	/// <conceptualLink target="edeb370d-6d7e-4f82-adab-f2326d89c857" />
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class CancelableAsyncInitBase<T, TArg1, TArg2, TArg3> : AsyncInitBase<T, TArg1, TArg2, TArg3>, ICancelableAsyncInit<TArg1, TArg2, TArg3>
         where T : CancelableAsyncInitBase<T, TArg1, TArg2, TArg3>
@@ -235,6 +239,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg2">The type of the second initialization argument.</typeparam>
     /// <typeparam name="TArg3">The type of the third initialization argument.</typeparam>
     /// <typeparam name="TArg4">The type of the fourth initialization argument.</typeparam>
+	/// <conceptualLink target="edeb370d-6d7e-4f82-adab-f2326d89c857" />
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class CancelableAsyncInitBase<T, TArg1, TArg2, TArg3, TArg4> : AsyncInitBase<T, TArg1, TArg2, TArg3, TArg4>, ICancelableAsyncInit<TArg1, TArg2, TArg3, TArg4>
         where T : CancelableAsyncInitBase<T, TArg1, TArg2, TArg3, TArg4>
@@ -302,6 +307,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg3">The type of the third initialization argument.</typeparam>
     /// <typeparam name="TArg4">The type of the fourth initialization argument.</typeparam>
     /// <typeparam name="TArg5">The type of the fifth initialization argument.</typeparam>
+	/// <conceptualLink target="edeb370d-6d7e-4f82-adab-f2326d89c857" />
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class CancelableAsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5> : AsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5>, ICancelableAsyncInit<TArg1, TArg2, TArg3, TArg4, TArg5>
         where T : CancelableAsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5>
@@ -373,6 +379,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg4">The type of the fourth initialization argument.</typeparam>
     /// <typeparam name="TArg5">The type of the fifth initialization argument.</typeparam>
     /// <typeparam name="TArg6">The type of the sixth initialization argument.</typeparam>
+	/// <conceptualLink target="edeb370d-6d7e-4f82-adab-f2326d89c857" />
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class CancelableAsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6> : AsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>, ICancelableAsyncInit<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>
         where T : CancelableAsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>
@@ -448,6 +455,7 @@ namespace Ditto.AsyncInit
     /// <typeparam name="TArg5">The type of the fifth initialization argument.</typeparam>
     /// <typeparam name="TArg6">The type of the sixth initialization argument.</typeparam>
     /// <typeparam name="TArg7">The type of the seventh initialization argument.</typeparam>
+	/// <conceptualLink target="edeb370d-6d7e-4f82-adab-f2326d89c857" />
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1005:AvoidExcessiveParametersOnGenericTypes")]
     public abstract class CancelableAsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7> : AsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>, ICancelableAsyncInit<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>
         where T : CancelableAsyncInitBase<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>
