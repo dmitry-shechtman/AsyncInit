@@ -12,7 +12,7 @@ namespace Ditto.AsyncInit.Unity
     /// Adds a set of asynchronous resolution methods to <see cref="IUnityContainer"/>.
     /// </summary>
     /// <conceptualLink target="0432922d-9355-47b5-87f0-28feede0474d" />
-    public static class UnityResolveAsyncTypeExtensions
+    public static class UnityResolveAsyncExtensions
     {
         /// <summary>
         /// Resolves and asynchronously initializes an instance.
