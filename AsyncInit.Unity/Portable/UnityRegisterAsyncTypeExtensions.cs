@@ -4,12 +4,7 @@ using System;
 
 namespace Ditto.AsyncInit.Unity
 {
-    /// <summary>
-    /// Adds a set of asynchronous registration methods to <see cref="IUnityContainer"/>.
-    /// </summary>
-    /// <conceptualLink target="30e16988-88d9-400d-bf76-21885513e5df" />
-    /// <conceptualLink target="773158a0-bea9-482f-b8ac-9670797b0da5" />
-    public static class UnityRegisterAsyncTypeExtensions
+    partial class UnityContainerAsyncExtensions
     {
         /// <summary>
         /// Registers the specified asynchronously initialized type with the container.

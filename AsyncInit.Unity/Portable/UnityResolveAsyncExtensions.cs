@@ -8,11 +8,7 @@ using System.Threading.Tasks;
 
 namespace Ditto.AsyncInit.Unity
 {
-    /// <summary>
-    /// Adds a set of asynchronous resolution methods to <see cref="IUnityContainer"/>.
-    /// </summary>
-    /// <conceptualLink target="0432922d-9355-47b5-87f0-28feede0474d" />
-    public static class UnityResolveAsyncExtensions
+    partial class UnityContainerAsyncExtensions
     {
         /// <summary>
         /// Resolves and asynchronously initializes an instance.

@@ -9,10 +9,7 @@ using System;
 
 namespace Ditto.AsyncInit.Unity
 {
-    /// <summary>
-    /// Adds a set of asynchronous registration methods to <see cref="IUnityContainer"/>.
-    /// </summary>
-    public static class UnityRegisterAsyncTypeExtensions
+    partial class UnityContainerAsyncExtensions
     {
 <#
 foreach (var map in new[] { false, true })

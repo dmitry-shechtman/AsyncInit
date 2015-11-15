@@ -63,7 +63,7 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="NamespaceDoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnityIsAsyncTypeRegisteredExtensions.cs" />
+    <Compile Include="UnityContainerAsyncExtensions.cs" />
     <Compile Include="UnityAsyncInitializer.cs" />
     <Compile Include="UnityAsyncInitializer_ctor.cs">
       <AutoGen>True</AutoGen>
