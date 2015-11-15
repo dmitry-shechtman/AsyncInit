@@ -34,7 +34,7 @@
         <HelpKeyword index="K" term="howto,query" />
       </HelpKeywords>
     </Topic>
-    <Topic id="d38428af-c141-4f56-9a1d-8732f6f9a621" visible="True" isSelected="true" title="How To Query for a Named Asynchronous Type Registration" tocTitle="Query for a Named Asynchronous Type Registration" linkText="How To Query for a Named Asynchronous Type Registration">
+    <Topic id="d38428af-c141-4f56-9a1d-8732f6f9a621" visible="True" title="How To Query for a Named Asynchronous Type Registration" tocTitle="Query for a Named Asynchronous Type Registration" linkText="How To Query for a Named Asynchronous Type Registration">
       <HelpKeywords>
         <HelpKeyword index="K" term="howto,query,named" />
       </HelpKeywords>
@@ -44,6 +44,11 @@
     <HelpKeywords>
       <HelpKeyword index="K" term="version, history" />
     </HelpKeywords>
+    <Topic id="68a94beb-6de7-4cce-81a5-a673324e82b6" visible="True" isSelected="true">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version" />
+      </HelpKeywords>
+    </Topic>
     <Topic id="1030daf9-d680-44c5-8a6f-f340d2d34f1d" visible="True">
       <HelpKeywords>
         <HelpKeyword index="K" term="version" />

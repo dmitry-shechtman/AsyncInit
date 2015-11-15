@@ -15,6 +15,16 @@
 				<definitionTable>
 
           <definedTerm>
+            <link xlink:href="68a94beb-6de7-4cce-81a5-a673324e82b6" />
+          </definedTerm>
+          <definition>
+            Unified extensions class
+          </definition>
+          <definition>
+            Minor documentation updates
+          </definition>
+
+          <definedTerm>
             <link xlink:href="1030daf9-d680-44c5-8a6f-f340d2d34f1d" />
           </definedTerm>
           <definition>
