@@ -18,6 +18,15 @@
             </para>
           </content>
         </step>
+
+        <step>
+          <content>
+            <para>Import the AsyncInit namespace:</para>
+            <code language="C#">
+              using Ditto.AsyncInit;
+            </code>
+          </content>
+        </step>
         
         <step>
           <content>
@@ -25,8 +34,6 @@
               Derive from the corresponding <codeInline>AsyncInitBase</codeInline> or <codeInline>CancelableAsyncInitBase</codeInline> <legacyItalic>(recommended)</legacyItalic>, specifying your class as the first generic type argument:
             </para>
             <code language="C#">
-              using Ditto.AsyncInit;
-
               class UniversalAnswerService : CancelableAsyncInitBase&lt;UniversalAnswerService, IProgress&lt;long&gt;&gt;
               {
                   public int Answer { get; private set; }

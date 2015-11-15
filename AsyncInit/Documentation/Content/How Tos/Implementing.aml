@@ -28,12 +28,19 @@
 
         <step>
           <content>
+            <para>Import the AsyncInit namespace:</para>
+            <code language="C#">
+              using Ditto.AsyncInit;
+            </code>
+          </content>
+        </step>
+
+        <step>
+          <content>
             <para>
               Implement the corresponding <codeInline>IAsyncInit</codeInline> or <codeInline>ICancelableAsyncInit</codeInline> <legacyItalic>(recommended)</legacyItalic>:
             </para>
             <code language="C#">
-              using Ditto.AsyncInit;
-
               class UniversalAnswerService : ICancelableAsyncInit&lt;IProgress&lt;long&gt;&gt;
               {
                   public int Answer { get; private set; }
