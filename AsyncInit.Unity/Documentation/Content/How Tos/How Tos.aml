@@ -8,24 +8,28 @@
       <para>The topics in this section detail some of the Unity Container Async Extensions usage scenarios.</para>
     </summary>
 
-    <list style="bulleted">
-      <listItem>
-        <link xlink:href="b078ce3f-f7cc-41ee-a8fb-0dd91b1b7568"/>
-      </listItem>
-      <listItem>
-        <link xlink:href="30e16988-88d9-400d-bf76-21885513e5df"/>
-      </listItem>
-      <listItem>
-        <link xlink:href="773158a0-bea9-482f-b8ac-9670797b0da5"/>
-      </listItem>
-      <listItem>
-        <link xlink:href="0432922d-9355-47b5-87f0-28feede0474d"/>
-      </listItem>
-      <listItem>
-        <link xlink:href="6f316ae1-44bb-4773-975b-aac2f5a50c49"/>
-      </listItem>
-    </list>
-    
+    <section>
+      <content>
+        <list style="bulleted">
+          <listItem>
+            <link xlink:href="b078ce3f-f7cc-41ee-a8fb-0dd91b1b7568"/>
+          </listItem>
+          <listItem>
+            <link xlink:href="30e16988-88d9-400d-bf76-21885513e5df"/>
+          </listItem>
+          <listItem>
+            <link xlink:href="773158a0-bea9-482f-b8ac-9670797b0da5"/>
+          </listItem>
+          <listItem>
+            <link xlink:href="0432922d-9355-47b5-87f0-28feede0474d"/>
+          </listItem>
+          <listItem>
+            <link xlink:href="6f316ae1-44bb-4773-975b-aac2f5a50c49"/>
+          </listItem>
+        </list>
+      </content>
+    </section>
+
     <relatedTopics>
       <externalLink>
         <linkUri>https://github.com/dmitry-shechtman/AsyncInit/</linkUri>
