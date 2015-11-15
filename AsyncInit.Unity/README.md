@@ -1,56 +1,12 @@
 ﻿Unity Container Async Extensions
 ================================
 
-Adds support for asynchronously initialized types to Unity Container.
+Adds asynchronous resolution capabilities to the Unity Container.
 
-Usage
------
+Getting Started
+---------------
 
-0. Install `Ditto.AsyncInit.Unity`:
-
-        Install-Package Ditto.AsyncInit.Unity
-
-1. Define the interface:
-
-        interface IUniversalAnswerService
-        {
-            int Answer { get; }
-        }
-
-2. Implement it, deriving from an appopriate `AsyncInitBase` or `CancelableAsyncInitBase` _(recommended)_:
-
-        using Ditto.AsyncInit;
-
-        class UniversalAnswerService : CancelableAsyncInitBase<UniversalAnswerService>, IUniversalAnswerService
-        {
-            private UniversalAnswerService()
-                : base(null)
-            {
-            }
-
-            protected override async Task InitAsync(CancellationToken cancellationToken)
-            {
-                await Task.Delay(TimeSpan.FromDays(7500000 * 365.25), cancellationToken);
-                Answer = 42;
-            }
-
-            public int Answer { get; private set; }
-        }
-
-2. Register the mapping with the container:
-
-        using Ditto.AsyncInit.Unity;
-
-        container.RegisterAsyncType<IUniversalAnswerService, UniversalAnswerService>(new ContainerControlledLifetimeManager());
-
-3. Resolve the interface:
-
-        using Ditto.AsyncInit.Unity;
-
-        var service = await container.ResolveAsync<IUniversalAnswerService>(cancellationToken);
-        var answer = service.Answer;
-
-**Done!** See the project wiki for advanced usage scenarios.
+The latest documentation is available at https://AsyncInit.github.io/AsyncInit.Unity/
 
 Notice
 ------
@@ -71,7 +27,6 @@ Notice
 Links
 -----
 
-* [Code](https://github.com/dmitry-shechtman/AsyncInit)
-* [Wiki](https://github.com/dmitry-shechtman/AsyncInit/wiki)
+* [Help](https://AsyncInit.github.io/AsyncInit.Unity/)
 * [Blog](https://shecht.wordpress.com/category/asyncactivator/)
 * [NuGet](https://nuget.org/packages/Ditto.AsyncInit.Unity)
