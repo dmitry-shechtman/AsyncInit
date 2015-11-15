@@ -87,10 +87,14 @@
 
         <para>
           <externalLink>
+            <linkUrl>http://www.ewoodruff.us/</linkUrl>
+            <linkText>Eric Woodruff</linkText>
+          </externalLink>
+            is the creator of
+          <externalLink>
             <linkUri>https://github.com/EWSoftware/SHFB</linkUri>
             <linkText>SHFB</linkText>
-          </externalLink>
-          is a tool for authoring great project documentation like this one.
+          </externalLink>, which produces great project documentation like this one.
         </para>
 
       </content>
