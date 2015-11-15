@@ -5,7 +5,7 @@
     xmlns:xlink="http://www.w3.org/1999/xlink">
 
     <summary>
-      <para>This topic details the procedure of defining a type that implements an AsyncInit interface.</para>
+      <para>This topic details the steps necessary for defining a type that implements an AsyncInit interface.</para>
     </summary>
 
     <introduction>
@@ -75,13 +75,14 @@
           </content>
         </step>
       </steps>
-    </procedure>
 
-    <conclusion>
-      <content>
-        <legacyBold>Done!</legacyBold> Your class may now be consumed asynchronously:
-      </content>
-    </conclusion>
+      <conclusion>
+        <content>
+          Your class may now be consumed asynchronously:
+        </content>
+      </conclusion>
+
+    </procedure>
 
     <codeExample>
       <code language="C#">
@@ -101,8 +102,8 @@
     <!-- <security>Optional discussion of security issues.</security> -->
 
     <relatedTopics>
-      <link xlink:href="c0f9e874-dd33-473b-a245-85fc69447a4b"/>
       <link xlink:href="edeb370d-6d7e-4f82-adab-f2326d89c857"/>
+      <link xlink:href="c0f9e874-dd33-473b-a245-85fc69447a4b"/>
     </relatedTopics>
   </developerHowToDocument>
 </topic>

@@ -5,7 +5,7 @@
     xmlns:xlink="http://www.w3.org/1999/xlink">
 
     <summary>
-      <para>This topic explains how to create AsyncInit asynchronously initialized types with AsyncInit on Silverlight 4 and 5.</para>
+      <para>This topic details the steps necessary for creating asynchronously initialized types with AsyncInit on Silverlight 4 and 5.</para>
     </summary>
 
     <introduction>
@@ -27,7 +27,7 @@
 
         <step>
           <para>
-            Expose it to <codeInline>Ditto.AsyncInit</codeInline> by adding the following to <codeInline>Properties\AssemblyInfo.cs</codeInline>:
+            Expose it to <codeInline>Ditto.AsyncInit</codeInline> by adding the following attribute to <codeInline>Properties\AssemblyInfo.cs</codeInline>:
           </para>
           <code language="C#">
             [assembly: InternalsVisibleTo("Ditto.AsyncInit")]
@@ -35,13 +35,14 @@
         </step>
         
       </steps>
-    </procedure>
 
-    <conclusion>
-      <content>
-        <legacyBold>Done!</legacyBold> Your class may now be consumed asynchronously:
-      </content>
-    </conclusion>
+      <conclusion>
+        <content>
+          Your class may now be consumed asynchronously:
+        </content>
+      </conclusion>
+
+    </procedure>
 
     <codeExample>
       <code language="C#">
@@ -53,11 +54,11 @@
     <robustProgramming>Since all asynchronously initialized types must declare internal constructors (on Silverlight), it is advisable to keep them in an assembly of their own, in order to prevent others from inadvertently accessing uninitialized instances thereof.</robustProgramming>
     
     <relatedTopics>
-      <link xlink:href="c0f9e874-dd33-473b-a245-85fc69447a4b"/>
       <externalLink>
         <linkUrl>https://shecht.wordpress.com/2014/12/13/asyncactivator-targeting-silverlight/</linkUrl>
         <linkText>Blog post detailing the issue</linkText>
       </externalLink>
+      <link xlink:href="c0f9e874-dd33-473b-a245-85fc69447a4b"/>
     </relatedTopics>
   </developerHowToDocument>
 </topic>
