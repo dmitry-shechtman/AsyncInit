@@ -17,10 +17,10 @@
           <listItem>Portable Class Libraries</listItem>
         </list>
         <para>
-          This library might not be of much value on its own. Check out
+          This library might not be of much value on its own. Check out the
           <externalLink>
             <linkUri>https://AsyncInit.github.io/AsyncInit.Unity</linkUri>
-            <linkText>AsyncInit.Unity</linkText>
+            <linkText>Unity Container Async Extensions</linkText>
           </externalLink>
           for more advanced usage scenarios.
         </para>
