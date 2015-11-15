@@ -8,7 +8,7 @@
       <para>The topics in this section contain articles on miscellaneous aspects of AsyncInit design and implementation.</para>
     </summary>
 
-    <list>
+    <list class="bullet">
       <listItem>
         <link xlink:href="ff3a9984-a817-400e-be0d-6231ad026f50"/>
       </listItem>
