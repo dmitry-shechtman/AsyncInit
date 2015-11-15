@@ -15,10 +15,10 @@ Supported Platforms
 * Xamarin.iOS
 * Portable Class Libraries
 
-Usage
------
+Help
+----
 
-See [wiki](https://github.com/dmitry-shechtman/AsyncInit/wiki).
+[AsyncInit online documentation](https://AsyncInit.github.io/AsyncInit/).
 
 Notice
 ------
