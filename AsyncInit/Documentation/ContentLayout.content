@@ -1,39 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Topics>
-  <Topic id="a920d297-289f-46ea-aa8b-338f484ad83c" visible="True" isDefault="true" apiParentMode="InsertAfter" title="Welcome to AsyncInit" tocTitle="Welcome">
+  <Topic id="a920d297-289f-46ea-aa8b-338f484ad83c" visible="True" isDefault="true" apiParentMode="InsertAfter" title="Welcome to AsyncInit" tocTitle="Welcome" linkText="Welcome to AsyncInit">
     <HelpKeywords>
       <HelpKeyword index="K" term="Welcome" />
     </HelpKeywords>
   </Topic>
-  <Topic id="c0f9e874-dd33-473b-a245-85fc69447a4b" visible="True" isExpanded="true" title="How Tos">
+  <Topic id="c0f9e874-dd33-473b-a245-85fc69447a4b" visible="True" isExpanded="true" title="AsyncInit How Tos" tocTitle="How To" linkText="AsyncInit How Tos">
     <HelpKeywords>
       <HelpKeyword index="K" term="howto" />
     </HelpKeywords>
-    <Topic id="2ac5864f-d7ba-4ef7-a487-77ecfc2aab3a" visible="True" title="Installation Instructions" tocTitle="Installation" linkText="Installation Instructions">
+    <Topic id="2ac5864f-d7ba-4ef7-a487-77ecfc2aab3a" visible="True" title="How To Install AsyncInit" tocTitle="Install AsyncInit" linkText="How To Install AsyncInit">
       <HelpKeywords>
-        <HelpKeyword index="K" term="howto,installation,instructions" />
+        <HelpKeyword index="K" term="howto,install" />
       </HelpKeywords>
     </Topic>
-    <Topic id="edeb370d-6d7e-4f82-adab-f2326d89c857" visible="True" title="Deriving from an AsyncInit Base Class" tocTitle="Deriving" linkText="Deriving from an AsyncInit Base Class">
+    <Topic id="edeb370d-6d7e-4f82-adab-f2326d89c857" visible="True" title="How To Derive from an AsyncInit Base Class" tocTitle="Derive from an AsyncInit Base Class" linkText="How To Derive from an AsyncInit Base Class">
       <HelpKeywords>
-        <HelpKeyword index="K" term="howto" />
+        <HelpKeyword index="K" term="howto,derive" />
       </HelpKeywords>
     </Topic>
-    <Topic id="c731bb1a-010a-40c6-856b-421ebbd05a26" visible="True" title="Implementing an AsyncInit Interface" tocTitle="Implementing" linkText="Implementing an AsyncInit Interface">
+    <Topic id="c731bb1a-010a-40c6-856b-421ebbd05a26" visible="True" title="How To Implement an AsyncInit Interface" tocTitle="Implement an AsyncInit Interface" linkText="How To Implement an AsyncInit Interface">
       <HelpKeywords>
-        <HelpKeyword index="K" term="howto" />
+        <HelpKeyword index="K" term="howto,implement" />
       </HelpKeywords>
     </Topic>
-    <Topic id="f175305f-89a6-498e-add6-e803be90433e" visible="True" title="Silverlight Usage" tocTitle="Silverlight" linkText="Silverlight Usage">
+    <Topic id="f175305f-89a6-498e-add6-e803be90433e" visible="True" title="How To Use AsyncInit on Silverlight" tocTitle="Use AsyncInit on Silverlight" linkText="How To Use AsyncInit on Silverlight">
       <HelpKeywords>
-        <HelpKeyword index="K" term="howto" />
+        <HelpKeyword index="K" term="howto,silverlight" />
       </HelpKeywords>
     </Topic>
   </Topic>
-  <Topic id="e4e8dc54-685e-481b-bdec-c19ffb971294" visible="True" isExpanded="true">
-    <Topic id="ff3a9984-a817-400e-be0d-6231ad026f50" visible="True" title="The NAG Constructor Pattern" tocTitle="NAG Constructor" linkText="The NAG Constructor Pattern" />
+  <Topic id="e4e8dc54-685e-481b-bdec-c19ffb971294" visible="True" isExpanded="true" isSelected="true" title="AsyncInit Miscellaneous Topics" tocTitle="Miscellanea" linkText="AsyncInit Miscellaneous Topics">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="misc" />
+    </HelpKeywords>
+    <Topic id="ff3a9984-a817-400e-be0d-6231ad026f50" visible="True" title="The NAG Constructor Pattern" tocTitle="NAG Constructor" linkText="The NAG Constructor Pattern">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="misc,nag constructor" />
+      </HelpKeywords>
+    </Topic>
   </Topic>
-  <Topic id="402b5184-91d1-4bc0-a959-97514187d9f4" visible="True" isSelected="true" title="Version History">
+  <Topic id="402b5184-91d1-4bc0-a959-97514187d9f4" visible="True" title="AsyncInit Version History" tocTitle="Version History" linkText="AsyncInit Version History">
     <HelpKeywords>
       <HelpKeyword index="K" term="version, history" />
     </HelpKeywords>
@@ -98,7 +105,7 @@
       </HelpKeywords>
     </Topic>
   </Topic>
-  <Topic id="835cb0e6-3fac-4aac-ace3-db119c394b4b" visible="True" title="Apache License Version 2.0" tocTitle="License" linkText="License">
+  <Topic id="835cb0e6-3fac-4aac-ace3-db119c394b4b" visible="True" title="Apache License Version 2.0" tocTitle="License" linkText="Apache License Version 2.0">
     <HelpKeywords>
       <HelpKeyword index="K" term="license" />
     </HelpKeywords>
