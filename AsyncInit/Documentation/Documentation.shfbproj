@@ -96,7 +96,7 @@
     <None Include="Content\VersionHistory\Version 1.4.1.aml" />
     <None Include="Content\VersionHistory\Version 1.4.2.aml" />
     <None Include="Content\VersionHistory\Version 1.4.3.aml" />
-    <None Include="Content\VersionHistory\Version 1.4.4.aml" />
+    <None Include="Content\VersionHistory\Version 1.5.0.aml" />
     <None Include="Content\VersionHistory\Version History.aml" />
     <None Include="Content\Welcome.aml" />
   </ItemGroup>

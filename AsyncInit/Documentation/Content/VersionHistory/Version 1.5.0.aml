@@ -5,7 +5,7 @@
     xmlns:xlink="http://www.w3.org/1999/xlink">
 
     <introduction>
-      <para>Version 1.4.4 was released on November 15 2014.</para>
+      <para>Version 1.5.0 was released on November 15 2014.</para>
     </introduction>
 
     <section>
@@ -13,6 +13,7 @@
       <content>
 
         <list class="bullet">
+          <listItem>Fixed assembly versions</listItem>
           <listItem>Documentation updates</listItem>
         </list>
 
@@ -21,7 +22,7 @@
 
     <relatedTopics>
       <externalLink>
-        <linkUri>https://www.nuget.org/packages/Ditto.AsyncInit/1.4.4</linkUri>
+        <linkUri>https://www.nuget.org/packages/Ditto.AsyncInit/1.5.0</linkUri>
         <linkText>This version on NuGet Gallery</linkText>
       </externalLink>
       <link xlink:href="402b5184-91d1-4bc0-a959-97514187d9f4" />
