@@ -50,7 +50,7 @@
       <conclusion>
         <para>
           Unity Container Async Extensions provide support for advanced resolution scenarios through overloads of
-          <codeEntityReference autoUpgrade="true">M:Ditto.AsyncInit.Unity.UnityResolveAsyncTypeExtensions.ResolveAsync``1(Microsoft.Practices.Unity.IUnityContainer,Microsoft.Practices.Unity.ResolverOverride[])</codeEntityReference>.
+          <codeEntityReference autoUpgrade="true">M:Ditto.AsyncInit.Unity.UnityContainerAsyncExtensions.ResolveAsync``1(Microsoft.Practices.Unity.IUnityContainer,Microsoft.Practices.Unity.ResolverOverride[])</codeEntityReference>.
         </para>
       </conclusion>
       
@@ -58,7 +58,7 @@
 
     <relatedTopics>
 
-      <codeEntityReference autoUpgrade="true">M:Ditto.AsyncInit.Unity.UnityResolveAsyncTypeExtensions.ResolveAsync``1(Microsoft.Practices.Unity.IUnityContainer,Microsoft.Practices.Unity.ResolverOverride[])</codeEntityReference>
+      <codeEntityReference autoUpgrade="true">M:Ditto.AsyncInit.Unity.UnityContainerAsyncExtensions.ResolveAsync``1(Microsoft.Practices.Unity.IUnityContainer,Microsoft.Practices.Unity.ResolverOverride[])</codeEntityReference>
       <link xlink:href="30e16988-88d9-400d-bf76-21885513e5df"/>
       <link xlink:href="773158a0-bea9-482f-b8ac-9670797b0da5"/>
       <link xlink:href="6f316ae1-44bb-4773-975b-aac2f5a50c49"/>

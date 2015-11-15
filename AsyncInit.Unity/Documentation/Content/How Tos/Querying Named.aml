@@ -38,7 +38,7 @@
 
     <relatedTopics>
 
-      <codeEntityReference>M:Ditto.AsyncInit.Unity.UnityIsAsyncTypeRegisteredExtensions.IsAsyncTypeRegistered``1(Microsoft.Practices.Unity.IUnityContainer,System.String)</codeEntityReference>
+      <codeEntityReference>M:Ditto.AsyncInit.Unity.UnityContainerAsyncExtensions.IsAsyncTypeRegistered``1(Microsoft.Practices.Unity.IUnityContainer,System.String)</codeEntityReference>
       <link xlink:href="30e16988-88d9-400d-bf76-21885513e5df"/>
       <link xlink:href="773158a0-bea9-482f-b8ac-9670797b0da5"/>
       <link xlink:href="0432922d-9355-47b5-87f0-28feede0474d"/>
