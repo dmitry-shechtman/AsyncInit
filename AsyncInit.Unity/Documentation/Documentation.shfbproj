@@ -79,7 +79,8 @@
     <None Include="Content\How Tos\How Tos.aml" />
     <None Include="Content\How Tos\Installation.aml" />
     <None Include="Content\How Tos\Mapping Registration.aml" />
-    <None Include="Content\How Tos\Querying.aml" />
+    <None Include="Content\How Tos\Querying Named.aml" />
+    <None Include="Content\How Tos\Querying Unnamed.aml" />
     <None Include="Content\How Tos\Resolution.aml" />
     <None Include="Content\How Tos\Type Registration.aml" />
     <None Include="Content\VersionHistory\License.aml" />

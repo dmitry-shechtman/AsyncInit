@@ -9,7 +9,7 @@
     <HelpKeywords>
       <HelpKeyword index="K" term="howto" />
     </HelpKeywords>
-    <Topic id="b078ce3f-f7cc-41ee-a8fb-0dd91b1b7568" visible="True" isSelected="true" title="How To Install Unity Container Async Extensions" tocTitle="Install Unity Container Async Extensions" linkText="How To Install Unity Container Async Extensions">
+    <Topic id="b078ce3f-f7cc-41ee-a8fb-0dd91b1b7568" visible="True" title="How To Install Unity Container Async Extensions" tocTitle="Install Unity Container Async Extensions" linkText="How To Install Unity Container Async Extensions">
       <HelpKeywords>
         <HelpKeyword index="K" term="howto,install" />
       </HelpKeywords>
@@ -32,6 +32,11 @@
     <Topic id="6f316ae1-44bb-4773-975b-aac2f5a50c49" visible="True" title="How To Query for an Asynchronous Type Registration" tocTitle="Query for an Asynchronous Type Registration" linkText="How To Query for an Asynchronous Type Registration">
       <HelpKeywords>
         <HelpKeyword index="K" term="howto,query" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="d38428af-c141-4f56-9a1d-8732f6f9a621" visible="True" isSelected="true" title="How To Query for a Named Asynchronous Type Registration" tocTitle="Query for a Named Asynchronous Type Registration" linkText="How To Query for a Named Asynchronous Type Registration">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="howto,query,named" />
       </HelpKeywords>
     </Topic>
   </Topic>

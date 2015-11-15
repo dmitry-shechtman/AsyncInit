@@ -29,13 +29,6 @@
                   //...
               }
             </code>
-            <para>Named registrations may be queried for by passing a name as an argument:</para>
-            <code language="C#">
-              if (container.IsAsyncTypeRegistered&lt;IUniversalAnswerService&gt;("Deep Thought"))
-              {
-                  //...
-              }
-            </code>
           </content>
         </step>
 
@@ -46,10 +39,10 @@
     <relatedTopics>
 
       <codeEntityReference>M:Ditto.AsyncInit.Unity.UnityIsAsyncTypeRegisteredExtensions.IsAsyncTypeRegistered``1(Microsoft.Practices.Unity.IUnityContainer)</codeEntityReference>
-      <codeEntityReference>M:Ditto.AsyncInit.Unity.UnityIsAsyncTypeRegisteredExtensions.IsAsyncTypeRegistered``1(Microsoft.Practices.Unity.IUnityContainer,System.String)</codeEntityReference>
       <link xlink:href="30e16988-88d9-400d-bf76-21885513e5df"/>
       <link xlink:href="773158a0-bea9-482f-b8ac-9670797b0da5"/>
       <link xlink:href="0432922d-9355-47b5-87f0-28feede0474d"/>
+      <link xlink:href="d38428af-c141-4f56-9a1d-8732f6f9a621"/>
       <link xlink:href="8e58cf79-69c3-4993-bc6a-6209cb35cc0a"/>
 
     </relatedTopics>
