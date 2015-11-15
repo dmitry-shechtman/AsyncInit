@@ -82,7 +82,6 @@
     <None Include="Content\How Tos\Installation.aml" />
     <None Include="Content\How Tos\Implementing.aml" />
     <None Include="Content\How Tos\Silverlight.aml" />
-    <None Include="Content\How Tos\Unity.aml" />
     <None Include="Content\License.aml" />
     <None Include="Content\Miscellanea\Miscellanea.aml" />
     <None Include="Content\Miscellanea\NAG Constructor.aml" />
