@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Ditto.AsyncInit.Services</id>
-    <version>1.4.2</version>
+    <version>1.5.0</version>
     <title>AsyncInit Dependency Injection Support</title>
     <authors>Dmitry Shechtman</authors>
     <owners>Dmitry Shechtman</owners>
@@ -21,7 +21,8 @@ Supported Platforms:
 * Xamarin.iOS
 * Portable Class Libraries
     </description>
-    <releaseNotes>Update Project Site in NuGet package</releaseNotes>
+    <releaseNotes>Fixed assembly versions
+Minor documentation updates</releaseNotes>
     <language>en-US</language>
     <projectUrl>https://AsyncInit.github.io/AsyncInit.Services/</projectUrl>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
@@ -29,7 +30,7 @@ Supported Platforms:
     <copyright>Copyright © Dmitry Shechtman 2014-2015</copyright>
     <tags>async await task constructor factory dependency injection DI IoC AsyncInit AsyncInitializer ContainerAsyncInitializerBase Ditto</tags>
     <dependencies>
-      <dependency id="Ditto.AsyncInit" version="1.4.0" />
+      <dependency id="Ditto.AsyncInit" version="1.5.0" />
     </dependencies>
   </metadata>
   <files>
