@@ -10,7 +10,7 @@
 
     <section>
       <content>
-        <list style="bulleted">
+        <list class="bullet">
           <listItem>
             <link xlink:href="b078ce3f-f7cc-41ee-a8fb-0dd91b1b7568"/>
           </listItem>

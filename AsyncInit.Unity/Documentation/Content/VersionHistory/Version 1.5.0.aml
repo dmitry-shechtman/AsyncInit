@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="1030daf9-d680-44c5-8a6f-f340d2d34f1d" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <introduction>
+      <para>Version 1.5.0 was released on November 15 2014.</para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+
+        <list class="bullet">
+          <listItem>Fixed assembly version</listItem>
+          <listItem>Minor documentation updates</listItem>
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <externalLink>
+        <linkUri>https://www.nuget.org/packages/Ditto.AsyncInit.Unity/1.5.0</linkUri>
+        <linkText>This version on NuGet Gallery</linkText>
+      </externalLink>
+      <link xlink:href="0caa88a8-58e0-444e-866c-2332ddb7b5d9" />
+    </relatedTopics>
+
+  </developerConceptualDocument>
+</topic>

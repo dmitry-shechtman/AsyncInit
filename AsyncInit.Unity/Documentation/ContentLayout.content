@@ -9,29 +9,29 @@
     <HelpKeywords>
       <HelpKeyword index="K" term="howto" />
     </HelpKeywords>
-    <Topic id="b078ce3f-f7cc-41ee-a8fb-0dd91b1b7568" visible="True" title="How To Install Unity Container Async Extensions" tocTitle="Install Unity Container Async Extensions" linkText="How To Install Unity Container Async Extensions">
+    <Topic id="b078ce3f-f7cc-41ee-a8fb-0dd91b1b7568" visible="True" isSelected="true" title="How To Install Unity Container Async Extensions" tocTitle="Install Unity Container Async Extensions" linkText="How To Install Unity Container Async Extensions">
       <HelpKeywords>
-        <HelpKeyword index="K" term="howto,installation,install" />
+        <HelpKeyword index="K" term="howto,install" />
       </HelpKeywords>
     </Topic>
     <Topic id="30e16988-88d9-400d-bf76-21885513e5df" visible="True" title="How To Register an Asynchronous Type" tocTitle="Register an Asynchronous Type" linkText="How To Register an Asynchronous Type">
       <HelpKeywords>
-        <HelpKeyword index="K" term="howto,registration,register,type" />
+        <HelpKeyword index="K" term="howto,register type" />
       </HelpKeywords>
     </Topic>
     <Topic id="773158a0-bea9-482f-b8ac-9670797b0da5" visible="True" title="How To Register an Asynchronous Type Mapping" tocTitle="Register an Asynchronous Type Mapping" linkText="How To Register an Asynchronous Type Mapping">
       <HelpKeywords>
-        <HelpKeyword index="K" term="howto,registration,register,mapping" />
+        <HelpKeyword index="K" term="howto,register mapping" />
       </HelpKeywords>
     </Topic>
     <Topic id="0432922d-9355-47b5-87f0-28feede0474d" visible="True" title="How To Asynchronously Resolve a Type" tocTitle="Asynchronously Resolve a Type" linkText="How To Asynchronously Resolve a Type">
       <HelpKeywords>
-        <HelpKeyword index="K" term="howto,resolution,resolve" />
+        <HelpKeyword index="K" term="howto,resolve" />
       </HelpKeywords>
     </Topic>
     <Topic id="6f316ae1-44bb-4773-975b-aac2f5a50c49" visible="True" title="How To Query for an Asynchronous Type Registration" tocTitle="Query for an Asynchronous Type Registration" linkText="How To Query for an Asynchronous Type Registration">
       <HelpKeywords>
-        <HelpKeyword index="K" term="howto,querying,query" />
+        <HelpKeyword index="K" term="howto,query" />
       </HelpKeywords>
     </Topic>
   </Topic>
@@ -39,6 +39,11 @@
     <HelpKeywords>
       <HelpKeyword index="K" term="version, history" />
     </HelpKeywords>
+    <Topic id="1030daf9-d680-44c5-8a6f-f340d2d34f1d" visible="True">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version" />
+      </HelpKeywords>
+    </Topic>
     <Topic id="5c80623b-72bd-4c67-9c95-7b327faaa5de" visible="True">
       <HelpKeywords>
         <HelpKeyword index="K" term="version" />
@@ -65,7 +70,7 @@
       </HelpKeywords>
     </Topic>
   </Topic>
-  <Topic id="fb08e01a-e83f-43ed-8ff2-ca8ec3ba3fbe" visible="True" isSelected="true" title="Apache License Version 2.0" tocTitle="License" linkText="Apache License Version 2.0">
+  <Topic id="fb08e01a-e83f-43ed-8ff2-ca8ec3ba3fbe" visible="True" title="Apache License Version 2.0" tocTitle="License" linkText="Apache License Version 2.0">
     <HelpKeywords>
       <HelpKeyword index="K" term="license" />
     </HelpKeywords>

@@ -15,6 +15,16 @@
 				<definitionTable>
 
           <definedTerm>
+            <link xlink:href="1030daf9-d680-44c5-8a6f-f340d2d34f1d" />
+          </definedTerm>
+          <definition>
+            Fixed assembly version
+          </definition>
+          <definition>
+            Minor documentation updates
+          </definition>
+
+          <definedTerm>
             <link xlink:href="5c80623b-72bd-4c67-9c95-7b327faaa5de" />
           </definedTerm>
           <definition>
