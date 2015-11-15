@@ -38,7 +38,13 @@
             <linkUri>https://AsyncInit.github.io/AsyncInit/</linkUri>
             <linkText>AsyncInit</linkText>
           </externalLink>. Familiarity with the former is a recommendation, whereas a grasp of the latter's API is a requirement.
-          Starting with Version 1.4.0, AsyncInit has extensive online (see link) and offline (see <codeInline>doc/</codeInline>) documentation.
+          Starting with AsyncInit 1.4.0 it has extensive <externalLink>
+          <linkUri>https://AsyncInit.github.io/AsyncInit/</linkUri>
+          <linkText>online</linkText>
+        </externalLink> and <externalLink>
+          <linkUri>https://AsyncInit.github.io/AsyncInit/AsyncInit.chm</linkUri>
+          <linkText>offline</linkText>
+        </externalLink> documentation.
         </para>
         <para>
           Once you define a type that is either a <externalLink>
