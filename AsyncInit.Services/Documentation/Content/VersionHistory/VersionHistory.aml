@@ -13,6 +13,16 @@
         <definitionTable>
 
           <definedTerm>
+            <link xlink:href="b2a47b18-ac4b-4b8b-9b93-b9edde55c1d6" />
+          </definedTerm>
+          <definition>
+            Fixed assembly versions
+          </definition>
+          <definition>
+            Minor documentation updates
+          </definition>
+
+          <definedTerm>
             <link xlink:href="eef50ecb-1370-450e-875b-a92bb20021df" />
           </definedTerm>
           <definition>
@@ -55,7 +65,7 @@
     <relatedTopics>
       <externalLink>
         <linkUri>https://www.nuget.org/packages/Ditto.AsyncInit.Services/</linkUri>
-        <linkText>Ditto.AsyncInit.Services on NuGet Gallery</linkText>
+        <linkText>This library on NuGet Gallery</linkText>
       </externalLink>
       <link xlink:href="65bb1336-f090-4770-b419-79bc13cde6dd" />
     </relatedTopics>

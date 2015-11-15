@@ -20,10 +20,10 @@
           <listItem>Portable Class Libraries</listItem>
         </list>
         <para>
-          This library is meant to serve as a dependency for other libraries. One (and currently only) such library is
+          This library is meant to serve as a dependency for other libraries. One (and currently only) such library is the
           <externalLink>
-            <linkUri>https://AsyncInit.github.io/AsyncInit.Unity</linkUri>
-            <linkText>AsyncInit.Unity</linkText>
+            <linkUri>https://AsyncInit.github.io/AsyncInit.Unity/</linkUri>
+            <linkText>Unity Container Async Extensions</linkText>
           </externalLink>.
         </para>
       </content>
@@ -33,10 +33,35 @@
       <title>Getting Started</title>
       <content>
         <para>
-          The only conceivable reason for anyone installing this package on its own is their planning on developing an AsyncInit dependency injection library in the vein of <externalLink>
-          <linkUri>https://AsyncInit.github.io/AsyncInit.Unity</linkUri>
-          <linkText>AsyncInit.Unity</linkText>
+          The only conceivable reason for anyone installing this package on its own is their planning on developing an AsyncInit dependency injection library in the vein of the <externalLink>
+          <linkUri>https://AsyncInit.github.io/AsyncInit.Unity/</linkUri>
+          <linkText>Unity Container Async Extensions</linkText>
         </externalLink>. If this happens to be the case, they know what to do.
+        </para>
+      </content>
+    </section>
+
+    <section>
+      <title>Aknowledegments</title>
+      <content>
+        <para>
+          <externalLink>
+            <linkUri>http://stephencleary.com/</linkUri>
+            <linkText>Stephen Cleary</linkText>
+          </externalLink>
+          is the author of an excellent
+          <externalLink>
+            <linkUri>http://blog.stephencleary.com/2013/01/async-oop-2-constructors.html</linkUri>
+            <linkText>article</linkText>
+          </externalLink>
+          that inspired this project.
+        </para>
+        <para>
+          <externalLink>
+            <linkUri>https://github.com/EWSoftware/SHFB</linkUri>
+            <linkText>SHFB</linkText>
+          </externalLink>
+          is a tool for authoring great project documentation like this one.
         </para>
       </content>
     </section>

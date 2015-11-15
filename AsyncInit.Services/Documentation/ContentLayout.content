@@ -5,10 +5,15 @@
       <HelpKeyword index="K" term="Welcome" />
     </HelpKeywords>
   </Topic>
-  <Topic id="05284ed6-03e8-4665-8764-558ec49bc42e" visible="True" isExpanded="true" isSelected="true" title="Version History">
+  <Topic id="05284ed6-03e8-4665-8764-558ec49bc42e" visible="True" isExpanded="true" isSelected="true" title="AsyncInit Dependency Injection Support Version History" tocTitle="Version History" linkText="AsyncInit Dependency Injection Support Version History">
     <HelpKeywords>
       <HelpKeyword index="K" term="version, history" />
     </HelpKeywords>
+    <Topic id="b2a47b18-ac4b-4b8b-9b93-b9edde55c1d6" visible="True">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version" />
+      </HelpKeywords>
+    </Topic>
     <Topic id="eef50ecb-1370-450e-875b-a92bb20021df" visible="True">
       <HelpKeywords>
         <HelpKeyword index="K" term="version" />
@@ -40,7 +45,7 @@
       </HelpKeywords>
     </Topic>
   </Topic>
-  <Topic id="7bf9f2f5-216e-4bba-92e2-e113ddc0cc2f" visible="True" title="Apache License Version 2.0" tocTitle="License" linkText="License">
+  <Topic id="7bf9f2f5-216e-4bba-92e2-e113ddc0cc2f" visible="True" title="Apache License Version 2.0" tocTitle="License" linkText="Apache License Version 2.0">
     <HelpKeywords>
       <HelpKeyword index="K" term="license" />
     </HelpKeywords>
