@@ -44,7 +44,7 @@
     <RootNamespaceContainer>True</RootNamespaceContainer>
     <PresentationStyle>VS2013</PresentationStyle>
     <Preliminary>False</Preliminary>
-    <NamingMethod>Guid</NamingMethod>
+    <NamingMethod>MemberName</NamingMethod>
     <HelpTitle>AsyncInit Dependency Injection Support</HelpTitle>
     <CopyrightText>Copyright &amp;#169%3b Dmitry Shechtman 2014-2015</CopyrightText>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
