@@ -35,7 +35,7 @@
     <KeepLogFile>True</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
     <CleanIntermediates>True</CleanIntermediates>
-    <HelpFileVersion>1.5.0</HelpFileVersion>
+    <HelpFileVersion>1.6.0</HelpFileVersion>
     <MaximumGroupParts>2</MaximumGroupParts>
     <NamespaceGrouping>False</NamespaceGrouping>
     <SyntaxFilters>Standard</SyntaxFilters>
@@ -44,7 +44,7 @@
     <RootNamespaceContainer>True</RootNamespaceContainer>
     <PresentationStyle>VS2013</PresentationStyle>
     <Preliminary>False</Preliminary>
-    <NamingMethod>Guid</NamingMethod>
+    <NamingMethod>MemberName</NamingMethod>
     <HelpTitle>Unity Container Async Extensions</HelpTitle>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
     <CopyrightText>Copyright &amp;#169%3b Dmitry Shechtman 2014-2015</CopyrightText>
